@@ -6,7 +6,7 @@
     <div id="routes">
         <a class="nav-item" href="/">Home</a>
         <a class="nav-item" href="/events">Events</a>
-        <a class="nav-item" href="/">Workshops</a>
+        <a class="nav-item" href="/workshops">Workshops</a>
         <a class="nav-item" href="/board">Board</a>
         <a class="nav-item" href="/">Consulting</a>
         <a class="nav-item" href="/">Get Involved</a>
