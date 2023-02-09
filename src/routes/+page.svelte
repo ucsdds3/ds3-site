@@ -11,6 +11,7 @@
 <section id="title-section">
     <div class="seperator">
         <h1 id="title">Expanding the Data Science Community at UCSD</h1>
+        <img src="svgs/splash.svg" alt="computer splash">
     </div>
 </section>
 <section id="info-section">
@@ -60,8 +61,15 @@
         padding: 10vh 0;
         /* height: 100vh; */
     }
-    .seperator {
-        margin: 0 10vw;
+    @media (min-height: 1200px) {
+        .seperator {
+            margin: 0 17.5vw;
+        }
+    }
+    @media (max-height: 1199px) {
+        .seperator {
+            margin: 0 10vw;
+        }
     }
     .lower-title {
         font-size: 75px;
@@ -69,20 +77,44 @@
         text-align: center;
     }
 
-    
     /* Individual section styling */
+    @media (min-height: 1200px) {
+        #title {
+            font-size: 8vh;
+            color: #333333;
+            font-weight: bolder;
+            width: 35vw;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+    @media (max-height: 1199px) {
+        #title {
+            font-size: 10vh;
+            color: #333333;
+            font-weight: bolder;
+            width: 45vw;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
     #title-section {
         height: 75vh;
         display: flex;
         align-items: center;
     }
-    #title {
-        font-size: 80px;
-        color: #333333;
-        font-weight: bolder;
-        width: 50vw;
+    #title-section div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5vh;
     }
-
+    #title-section img {
+        height: 60vh;
+        -webkit-animation: MoveUpDown 5s infinite linear;
+        animation: MoveUpDown 5s infinite linear;
+    }
 
     #info-section {
         background-image: url("/images/stock-people/librarywalk.png");
@@ -128,5 +160,19 @@
     .company-logos {
         max-width: 50%;
         margin: 0 auto;
+    }
+
+
+    /* Animation */
+    @keyframes MoveUpDown {
+        0%, 50%, 100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-10px);
+        }
+        75% {
+            transform: translateY(10px);
+        }
     }
 </style>

@@ -51,6 +51,7 @@
         background-color: #f8f8f8;
         width: 100%;
         height: 10vh;
+        z-index: 1;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         position: fixed;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -63,7 +64,7 @@
         margin-left: 1vw;
     }
     img {
-        height: 75%;
+        height: 45%;
     }  
     #routes {
         text-align: right;
