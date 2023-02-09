@@ -64,20 +64,23 @@
         margin: 0 10vw;
     }
     .lower-title {
-        font-size: 80px;
+        font-size: 75px;
         font-weight: 1000;
         text-align: center;
     }
 
     
     /* Individual section styling */
-
+    #title-section {
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
     #title {
-        font-size: 9vh;
+        font-size: 80px;
         color: #333333;
         font-weight: bolder;
-        width: 45vw;
-        margin-top: 5vh;
+        width: 50vw;
     }
 
 
@@ -90,7 +93,7 @@
         margin: 10vh 0 4vh;
     }
     #info-section #info-paragraph {
-        font-size: 45px;
+        font-size: 30px;
     }
     #info-section #countbox-row {
         display: flex;
@@ -98,7 +101,7 @@
         font-size: 4vh;
         text-align: center;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         margin: 7vh auto;
     }
     #countbox-row .countbox {
@@ -107,7 +110,7 @@
         font-size: 5vh;
     }
     .countbox p {
-        font-size: 140px;
+        font-size: 100px;
         margin: 1vh 0;
         color: var(--ds3-orange);
         font-weight: bold;

@@ -43,21 +43,31 @@
     }
     .card-information {
         flex: 1;
-        padding: 5%;
+        padding: 2.5% 5%;
+        display: flex;
+        vertical-align: middle;
+        flex-direction: column;
+        justify-content: space-evenly;
         
     }
     .card-title {
-        font-size: 50px;
-        margin-bottom: 0;
+        font-size: 25px;
+        margin: 0;
     }
     .card-description {
-        font-size: 25px;
+        font-size: 20px;
+        margin: 0;
     }
     button {
         background-color: var(--ds3-orange);
         color: white;
         padding: 1.25% 4%;
         border-style: none;
-        font-size: 25px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: var(--ds3-orange-lighten);
+        cursor: pointer;
     }
 </style>
