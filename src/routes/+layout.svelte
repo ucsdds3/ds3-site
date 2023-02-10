@@ -9,7 +9,7 @@
         <!-- <a class="nav-item" href="/workshops">Workshops</a> -->
         <a class="nav-item" href="/board">Board</a>
         <a class="nav-item" href="https://ds3.ucsd.edu/528491.html">Consulting</a>
-        <a class="nav-item" href="/">Get Involved</a>
+        <a class="nav-item last" href="/"><span>Get Involved</span></a>
     </div>
 </nav>
 <slot></slot>
@@ -28,6 +28,7 @@
 
 <style global>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @import url(//db.onlinewebfonts.com/c/06cab1a0b0536008f269a1323d2598b6?family=Montserrat+SemiBold);
     :global(body) {
         /* General Styling */
         box-sizing: border-box;
@@ -45,10 +46,12 @@
         --discord: #8C9EFF;
         --instagram: url(#SVGID_1_);
         --spotify: #10BC4C;
+
+        --base-bg: #f8f8f8;
     }
   
     nav {
-        background-color: #f8f8f8;
+        background-color: #fff;
         width: 100%;
         height: 10vh;
         z-index: 1;
@@ -67,45 +70,81 @@
         height: 45%;
     }  
     #routes {
-        text-align: right;
         float: right;
         height: 100%;
-        display: table;
+        display: flex;
+        align-items: center;
     }
     .nav-item {
-        display: table-cell;
         vertical-align: middle;
         font-size: 23px;
         text-decoration: none;
-        padding-right: 1.75vw;
+        margin-right: 1.75vw;
+        padding: 1%;
         color: black;
+        margin-left: auto;
+    }
+    .last {
+        font-family: "Montserrat SemiBold";
+        color: white;
+        background-color: var(--ds3-orange);
+        width: auto;
+        white-space: nowrap;
+        margin-right: 100px;
     }
 
-    footer {
-        background-color: #ccc;
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        padding: 2.5% 0;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+    @media (min-height: 1200px) {
+        #footer-title {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 0;
+        }
+        #socials-section {
+            display: flex;
+            width: 20%;
+            justify-content: space-evenly;
+        }
+        #socials-section img {
+            height: 50px;
+            vertical-align: middle;
+        }
+        footer {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            padding: 1% 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        }
     }
-    #footer-title {
-        font-size: 33px;
-        font-weight: bold;
-    }
-    #socials-section {
-        display: flex;
-        width: 30%;
-        justify-content: space-evenly;
-    }
-    #socials-section img {
-        max-height: 55px;
-        color: red;
-        fill: red;
-        /* filter: invert(0%) sepia(100%) saturate(20%) hue-rotate(39deg) brightness(0%) contrast(107%); */
-    }
-    #socials-section img:hover {
+    @media (max-height: 1199px) {
+        #footer-title {
+            font-size: 33px;
+            font-weight: bold;
+            margin: 0;
+        }
+        #socials-section {
+            display: flex;
+            width: 25%;
+            justify-content: space-evenly;
+        }
+        #socials-section img {
+            height: 30px;
+            vertical-align: middle;
+        }
+        footer {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            padding: 2% 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        }
     }
 </style>

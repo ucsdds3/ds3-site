@@ -56,9 +56,14 @@
 <style>
     /* Meta Styling */
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    @font-face {
+        font-family: "Montserrat Bold";
+        src: url("/fonts/montserrat.bold.ttf");
+    }
     section {
         font-family: 'Montserrat', 'Poppins';
         padding: 10vh 0;
+        background-color: var(--base-bg);
         /* height: 100vh; */
     }
     @media (min-height: 1200px) {
@@ -72,7 +77,8 @@
         }
     }
     .lower-title {
-        font-size: 75px;
+        font-family: 'Montserrat Bold';
+        font-size: 67.5px;
         font-weight: 1000;
         text-align: center;
     }
@@ -80,9 +86,10 @@
     /* Individual section styling */
     @media (min-height: 1200px) {
         #title {
+            font-family: 'Montserrat Bold';
             font-size: 8vh;
             color: #333333;
-            font-weight: bolder;
+            font-weight: bold;
             width: 35vw;
             margin: 0;
             display: flex;
@@ -91,6 +98,7 @@
     }
     @media (max-height: 1199px) {
         #title {
+            font-family: 'Montserrat Bold';
             font-size: 10vh;
             color: #333333;
             font-weight: bolder;
@@ -142,6 +150,7 @@
         font-size: 5vh;
     }
     .countbox p {
+        font-family: 'Montserrat Bold';
         font-size: 100px;
         margin: 1vh 0;
         color: var(--ds3-orange);
