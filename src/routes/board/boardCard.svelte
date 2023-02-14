@@ -1,12 +1,15 @@
 <script lang='ts'>
+    import Modal, {getModal} from './Modal.svelte'
+
     export let name: string;
     export let title: string;
     export let linkedin: string;
     export let email: string;
     export let img: string;
+
 </script>
 
-<div class="card">
+<div class="card" on:click={()=>getModal(name).open()} on:keydown={()=>getModal(name).open()}>
     <div class="image-wrapper">
         <img class="pfp" src=/images/people/{img} alt="{name} pfp">
         <div class="contact">
@@ -19,12 +22,16 @@
         <h2>{title}</h2>
     </div>
 </div>
+<Modal id="{name}">
+    <h1>{name}</h1>
+</Modal>
 
 <style>
+    /* Page Cards */
     .card {
         display: flex;
         flex-direction: column;
-        height: 50vh;
+        height: 45vh;
         margin: 2.5%;
         border-radius: 5px;
         background: white;
@@ -53,7 +60,47 @@
         right: 0;
         bottom: 0;
     }
-    .info {
-        padding: 2.5%;
+    .contact a img {
+        height: 5vh;
+        width: 5vh;
     }
+    
+    @media (min-height: 1200px) {
+        .info {
+            padding: 5%;
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            margin: 0;
+        }
+        .info h1 {
+            font-size: 35px;
+            margin: 1% 0;
+        }
+        .info h2 {
+            font-size: 23px;
+            margin: 1% 0;
+        }
+    }
+    @media (max-height: 1200px) {
+        .info {
+            padding: 5%;
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            margin: 0;
+        }
+        .info h1 {
+            font-size: 20px;
+            margin: 1% 0;
+        }
+        .info h2 {
+            font-size: 15px;
+            margin: 1% 0;
+        }
+    }
+
+
+    /* Popup Modal */
+
 </style>

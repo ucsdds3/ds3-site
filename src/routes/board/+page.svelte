@@ -52,7 +52,7 @@
     #people-grid {
         display: grid;
         grid-template-columns: repeat(4, 25%);
-        grid-auto-rows: 0.5fr;
+        grid-auto-rows: 1fr;
         gap: 1rem;
         justify-content: space-between;
         align-items: center;
