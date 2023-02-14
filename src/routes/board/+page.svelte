@@ -44,6 +44,9 @@
         font-family: 'Montserrat Bold';
     }
 
+    .board-sec {
+        padding-bottom: 5vh;
+    }
     .board-sec h2 {
         text-align: center;
         font-family: 'Montserrat Bold';

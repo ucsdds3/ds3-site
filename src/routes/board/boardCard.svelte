@@ -23,7 +23,19 @@
     </div>
 </div>
 <Modal id="{name}">
-    <h1>{name}</h1>
+    <div class="modal">
+        <img id="modal-bg" src="/images/people-backgrounds/placeholder.jpg" alt="board bg">
+        <div class="modal-info">
+            <img src="/images/people/{img}" alt="{name} pfp">
+            <h1>{name}</h1>
+            <h2>{title}</h2>
+            <div>
+                <a href="{linkedin}" rel="noreferrer" target="_blank">LinkedIn</a>
+                <a href="/" rel="noreferrer" target="_blank">Resume</a>
+                <a href="mailto:{email}" rel="noreferrer" target="_blank">Email</a>
+            </div>
+        </div>
+    </div>
 </Modal>
 
 <style>
@@ -100,7 +112,19 @@
         }
     }
 
-
     /* Popup Modal */
-
+    .modal {
+        width: 70vw;
+    }
+    .modal #modal-bg {
+        position: absolute;
+        width: 100%;
+    }
+    .modal-info {
+        position: absolute;
+        z-index: 10000;
+        width: 100%;
+    }
+    .modal-info img {
+    }
 </style>

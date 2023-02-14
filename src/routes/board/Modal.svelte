@@ -58,8 +58,10 @@
     })    
 </script>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <div id="topModal" class:visible bind:this={topDiv} on:click={()=>close()} on:keydown={()=>close()}>
 	<div id='modal' on:click|stopPropagation={()=>{}} on:keydown|stopPropagation={()=>{}}>
+		<span class="material-symbols-outlined" on:click={()=>close()} on:keydown={()=>close()}>close</span>
 		<div id='modal-content'>
 			<slot></slot>
 		</div>
@@ -75,46 +77,30 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: #4448;
+		background: rgba(48, 48, 48, 0.533);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 	#modal {
 		position: relative;
-		border-radius: 6px;
+		border-radius: 5px;
 		background: white;
-        border: 2px solid #000;
 		filter: drop-shadow(5px 5px 5px #555);
-		padding: 1em;
 	}
 
 	.visible {
 		visibility: visible !important;
 	}
-
-	#close {
-		position: absolute;
-		top:-12px;
-		right:-12px;
-		width:24px;
-		height:24px;
-		cursor: pointer;
-		fill:#F44;
-		transition: transform 0.3s;
-	}	
-
-	#close:hover {
-		transform: scale(2);
-	}
-
-	#close line {
-		stroke:#FFF;
-		stroke-width:2;
-	}
 	#modal-content {
 		max-width: calc(100vw - 20px);
 		max-height: calc(100vh - 20px);
 		overflow: auto;
+	}
+	.material-symbols-outlined {
+		position: absolute;
+	}
+	.material-symbols-outlined:hover {
+		cursor: pointer;
 	}
 </style>
