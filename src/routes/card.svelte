@@ -1,9 +1,9 @@
 <script lang='ts'>
-    export let title: string
-    export let description: string
-    export let imageURL: string
-    export let imageDirection: boolean
-    export let link: any
+    export let title: string;
+    export let description: string;
+    export let imageURL: string;
+    export let imageDirection: boolean;
+    export let link: any;
 </script>
 
 
