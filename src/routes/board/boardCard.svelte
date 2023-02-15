@@ -26,19 +26,21 @@
     <div class="modal">
         <img id="modal-bg" src="/images/people-backgrounds/placeholder.jpg" alt="board bg">
         <div class="modal-info">
-            <img src="/images/people/{img}" alt="{name} pfp">
+            <img id="modal-pfp" src="/images/people/{img}" alt="{name} pfp">
             <h1>{name}</h1>
             <h2>{title}</h2>
-            <div>
-                <a href="{linkedin}" rel="noreferrer" target="_blank">LinkedIn</a>
-                <a href="/" rel="noreferrer" target="_blank">Resume</a>
-                <a href="mailto:{email}" rel="noreferrer" target="_blank">Email</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente necessitatibus, eligendi aspernatur eaque sint doloribus iste officiis veritatis asperiores aut magnam eius tempora maiores consectetur atque aliquam excepturi deleniti.</p>
+            <div class="modal-links">
+                <a class="orange" href="{linkedin}" rel="noreferrer" target="_blank">LinkedIn</a>
+                <a class="blue" href="/" rel="noreferrer" target="_blank">Resume</a>
+                <a class="grey" href="mailto:{email}" rel="noreferrer" target="_blank">Email</a>
             </div>
         </div>
     </div>
 </Modal>
 
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
     /* Page Cards */
     .card {
         display: flex;
@@ -114,17 +116,69 @@
 
     /* Popup Modal */
     .modal {
-        width: 70vw;
+        position: relative;
+        height: 75vh;
     }
     .modal #modal-bg {
+        max-width: 80vw;
+        width: 100%;  
+    }
+    .modal #modal-pfp {
+        width: 25vh;
+        height: 25vh;
         position: absolute;
-        width: 100%;
+        z-index: 100001;
+        text-align: center;
+        top: -21vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 2px;
     }
     .modal-info {
-        position: absolute;
+        position: absolute; 
+        background-color: white; 
         z-index: 10000;
         width: 100%;
+        height: 40vh;
+        bottom: 0;
+        text-align: center;
+        /* display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column; */
+        font-family: 'Montserrat';
     }
-    .modal-info img {
+    .modal-info h1 {
+        font-size: 40px;
+        margin: 5vh 0 1vh;
     }
+    .modal-info h2 {
+        margin: 0;
+    }
+    .modal-info p {
+        width: 75%;
+        margin: 2.5vh auto;
+    }
+    .modal-links {
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3, 33%);
+        grid-auto-rows: 0.5fr;
+        width: 75%;
+    }
+    .modal-links a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 3%;
+        padding: 3%;
+    }
+    .orange { background-color: var(--ds3-orange); }
+    .blue { background-color: var(--ds3-blue); }
+    .grey { background-color: var(--ds3-gray); }
+    
+
+
 </style>

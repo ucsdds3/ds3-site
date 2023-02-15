@@ -86,19 +86,20 @@
 		position: relative;
 		border-radius: 5px;
 		background: white;
-		filter: drop-shadow(5px 5px 5px #555);
 	}
 
 	.visible {
 		visibility: visible !important;
 	}
 	#modal-content {
-		max-width: calc(100vw - 20px);
-		max-height: calc(100vh - 20px);
-		overflow: auto;
+		overflow: hidden;
 	}
 	.material-symbols-outlined {
 		position: absolute;
+		font-size: 5vh;
+		top: 1vh;
+		left: 1vh;
+		z-index: 10002;
 	}
 	.material-symbols-outlined:hover {
 		cursor: pointer;
