@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Arunav Gupta",
+        "title": "President",
+        "linkedin": "https://www.linkedin.com/in/arunav-gupta",
+        "email": "arunavg@ucsd.edu",
+        "img": "arunav.jpg"
+    },
+    {
+        "name": "Kent Utama",
+        "title": "VP External",
+        "linkedin": "https://www.linkedin.com/in/kent-utama-42984419b//",
+        "email": "kutama@ucsd.edu",
+        "img": "kentutama.jpg"
+    },
+    {
+        "name": "Lauren Sidarto",
+        "title": "VP Internal",
+        "linkedin": "https://www.linkedin.com/in/lauren-sidarto-57ba9b196",
+        "email": "lsidarto@ucsd.edu",
+        "img": "lauren.jpg"
+    },
+    {
+        "name": "Rohit Mishra",
+        "title": "VP Finance",
+        "linkedin": "https://www.linkedin.com/in/ro-mish/",
+        "email": "r1mishra@ucsd.edu",
+        "img": "rohit.jpeg"
+    },
+    {
+        "name": "Riya Mhatre",
+        "title": "Online Content Director",
+        "linkedin": "https://www.linkedin.com/in/riya-mhatre/",
+        "email": "rmhatre@ucsd.edu",
+        "img": "riya.png"
+    },
+    {
+        "name": "Gauri Samith",
+        "title": "Projects Committee Director",
+        "linkedin": "https://www.linkedin.com/in/gauri-samith-7b489919a/",
+        "email": "gsamith@ucsd.edu",
+        "img": "gauri.jpg"
+    },
+    {
+        "name": "Brian Huang",
+        "title": "Workshops Director",
+        "linkedin": "https://www.linkedin.com/in/brian-huang-b5238817b",
+        "email": "bjh009@ucsd.edu",
+        "img": "bhuang.jpg"
+    },
+    {
+        "name": "Pravar Bhandari",
+        "title": "Professional Events Director",
+        "linkedin": "https://www.linkedin.com/in/pravar-bhandari/",
+        "email": "psbhanda@ucsd.edu",
+        "img": "pravarb.jpg"
+    },
+    {
+        "name": "Goldie Jin",
+        "title": "Design Director",
+        "linkedin": "https://www.linkedin.com/in/shengqiujin/",
+        "email": "s3jin@ucsd.edu",
+        "img": "goldiej.jpeg"
+    },  
+    {
+        "name": "Aryaman Sinha",
+        "title": "Projects Co-Director",
+        "linkedin": "https://www.linkedin.com/in/aryaman-sinha/",
+        "email": "a2sinha@ucsd.edu",
+        "img": "aryaman.jpeg"
+    },
+    {
+        "name": "Francisco Chavez",
+        "title": "Marketing Director",
+        "linkedin": "https://www.linkedin.com/in/chavez-francisco/",
+        "email": "fchavezg@ucsd.edu",
+        "img": "fchavez.jpg"
+    },
+    {
+        "name": "Joseph Guzman",
+        "title": "DEI Director",
+        "linkedin": "https://www.linkedin.com/in/josephguzman03/",
+        "email": "j4guzman@ucsd.edu",
+        "img": "jguzman.jpg"
+    },
+    {
+        "name": "John Mauricio",
+        "title": "Social Events Director",
+        "linkedin": "https://www.linkedin.com/in/john-mauricio-b427a4216/",
+        "email": "jxmauric@ucsd.edu",
+        "img": "jmauricio.jpeg"
+    },
+    {
+        "name": "Jonathan Lo",
+        "title": "Webmaster",
+        "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
+        "email": "jolo@ucsd.edu",
+        "img": "jonathan.jpg"
+    }
+]
