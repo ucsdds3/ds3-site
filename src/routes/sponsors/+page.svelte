@@ -38,7 +38,9 @@
     
     .title-sec {
         height: 40vh;
-        background-image: url("/images/people-backgrounds/placeholder.jpg");
+        background-image: url("/images/people-backgrounds/city_skyline.jpg");
+        background-position: center;
+        background-size: cover;
         display: flex;
         align-items: center;
         text-align: center;
@@ -53,8 +55,8 @@
     
     .sponsor-sec {
         padding-bottom: 5vh;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
     .sponsor-sec h2 {
         text-align: center;
@@ -80,7 +82,7 @@
         align-items: center;
         vertical-align: middle;
     }
-    
+
     .company-logos {
         max-width: 50%;
         margin: 0 auto;

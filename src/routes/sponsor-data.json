@@ -1,143 +1,155 @@
 [
     {
         "name": "amazon",
-        "logo_src": "/images/company-logos/amazon.png"
+        "logo_src": "/images/sponsors/amazon.png"
     },
     {
         "name": "amex",
-        "logo_src": "/images/company-logos/amex.png"
+        "logo_src": "/images/sponsors/amex.png"
     },
     {
         "name": "atnt",
-        "logo_src": "/images/company-logos/atnt.png"
+        "logo_src": "/images/sponsors/atnt.png"
     },
     {
         "name": "aurora",
-        "logo_src": "/images/company-logos/aurora.png"
+        "logo_src": "/images/sponsors/aurora.png"
     },
     {
         "name": "aws",
-        "logo_src": "/images/company-logos/aws.png"
+        "logo_src": "/images/sponsors/aws.png"
     },
     {
-        "name": "bulakapak",
-        "logo_src": "/images/company-logos/bulakapak.png"
+        "name": "bukalapak",
+        "logo_src": "/images/sponsors/bukalapak.png"
     },
     {
         "name": "cisco",
-        "logo_src": "/images/company-logos/cisco.png"
+        "logo_src": "/images/sponsors/cisco.png"
     },
     {
         "name": "citi",
-        "logo_src": "/images/company-logos/citi.png"
+        "logo_src": "/images/sponsors/citi.png"
     },
     {
         "name": "citibank",
-        "logo_src": "/images/company-logos/citibank.png"
+        "logo_src": "/images/sponsors/citibank.png"
+    },
+    {
+        "name": "cse_ucsd",
+        "logo_src": "/images/sponsors/cse_ucsd.png"
     },
     {
         "name": "datastandard",
-        "logo_src": "/images/company-logos/datastandard.png"
+        "logo_src": "/images/sponsors/datastandard.png"
     },
     {
         "name": "deloitte",
-        "logo_src": "/images/company-logos/deloitte.png"
+        "logo_src": "/images/sponsors/deloitte.png"
     },
     {
         "name": "dexcom",
-        "logo_src": "/images/company-logos/dexcom.png"
+        "logo_src": "/images/sponsors/dexcom.jpg"
     },
     {
         "name": "facebook",
-        "logo_src": "/images/company-logos/facebook.png"
+        "logo_src": "/images/sponsors/facebook.png"
     },
     {
         "name": "fico",
-        "logo_src": "/images/company-logos/fico.png"
+        "logo_src": "/images/sponsors/fico.png"
     },
     {
         "name": "flock",
-        "logo_src": "/images/company-logos/flock.png"
+        "logo_src": "/images/sponsors/flock.png"
     },
     {
         "name": "goldman",
-        "logo_src": "/images/company-logos/goldman.png"
+        "logo_src": "/images/sponsors/goldman.png"
     },
     {
         "name": "google",
-        "logo_src": "/images/company-logos/google.png"
+        "logo_src": "/images/sponsors/google.png"
+    },
+    {
+        "name": "hdsi",
+        "logo_src": "/images/sponsors/hdsi.png"
     },
     {
         "name": "intel",
-        "logo_src": "/images/company-logos/intel.png"
+        "logo_src": "/images/sponsors/intel.png"
     },
     {
         "name": "lytx",
-        "logo_src": "/images/company-logos/lytx.png"
+        "logo_src": "/images/sponsors/lytx.png"
+    },
+    {
+        "name": "palantir",
+        "logo_src": "/images/sponsors/palantir.png"
     },
     {
         "name": "pandio",
-        "logo_src": "/images/company-logos/pandio.png"
+        "logo_src": "/images/sponsors/pandio.png"
     },
     {
         "name": "petco",
-        "logo_src": "/images/company-logos/petco.png"
+        "logo_src": "/images/sponsors/petco.png"
     },
     {
         "name": "qualcomm",
-        "logo_src": "/images/company-logos/qualcomm.png"
+        "logo_src": "/images/sponsors/qualcomm.png"
     },
     {
         "name": "qualcomminstitute",
-        "logo_src": "/images/company-logos/qualcomminstitute.png"
+        "logo_src": "/images/sponsors/qualcomminstitute.jpg"
     },
     {
         "name": "quidel",
-        "logo_src": "/images/company-logos/quidel.png"
+        "logo_src": "/images/sponsors/quidel.png"
     },
     {
         "name": "sandag",
-        "logo_src": "/images/company-logos/sandag.png"
+        "logo_src": "/images/sponsors/sandag.webp"
     },
     {
         "name": "sas",
-        "logo_src": "/images/company-logos/sas.png"
+        "logo_src": "/images/sponsors/sas.png"
     },
     {
         "name": "slalom",
-        "logo_src": "/images/company-logos/slalom.png"
+        "logo_src": "/images/sponsors/slalom.png"
     },
     {
         "name": "sony",
-        "logo_src": "/images/company-logos/sony.png"
+        "logo_src": "/images/sponsors/sony.png"
     },
     {
         "name": "splunk",
-        "logo_src": "/images/company-logos/splunk.png"
+        "logo_src": "/images/sponsors/splunk.png"
     },
     {
         "name": "tesla",
-        "logo_src": "/images/company-logos/tesla_logo_PNG21.png"
+        "logo_src": "/images/sponsors/tesla_logo_PNG21.png"
     },
     {
         "name": "thermo",
-        "logo_src": "/images/company-logos/thermo.png"
+        "logo_src": "/images/sponsors/thermo.png"
     },
     {
         "name": "tiger",
-        "logo_src": "/images/company-logos/tiger.png"
+        "logo_src": "/images/sponsors/tiger.png"
     },
     {
         "name": "toyota",
-        "logo_src": "/images/company-logos/toyota.png"
+        "logo_src": "/images/sponsors/toyota.png"
     },
     {
         "name": "westernunion",
-        "logo_src": "/images/company-logos/westernunion.png"
+        "logo_src": "/images/sponsors/westernunion.png"
     },
     {
         "name": "zelig",
-        "logo_src": "/images/company-logos/zelig.png"
+        "logo_src": "/images/sponsors/zelig.png"
     }
     
 ]
