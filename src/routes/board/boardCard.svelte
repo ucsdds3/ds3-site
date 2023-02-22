@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import Modal, {getModal} from './Modal.svelte'
+    import Modal, {getModal} from '../../modules/Modal.svelte'
 
     export let name: string;
     export let title: string;
@@ -24,7 +24,7 @@
 </div>
 <Modal id="{name}">
     <div class="modal">
-        <img id="modal-bg" src="/images/people-backgrounds/placeholder.jpg" alt="board bg">
+        <img id="modal-bg" src="/images/backgrounds/placeholder.jpg" alt="board bg">
         <div class="modal-info">
             <img id="modal-pfp" src="/images/people/{img}" alt="{name} pfp">
             <h1>{name}</h1>
