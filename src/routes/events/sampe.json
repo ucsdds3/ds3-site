@@ -1,0 +1,284 @@
+{
+    "kind": "calendar#events",
+    "etag": "\"p324et3vngiivq0g\"",
+    "summary": "DS3 Official 2022-23",
+    "description": "Public-facing events calendar for Data Science Student Society at UCSD",
+    "updated": "2023-02-20T21:25:54.613Z",
+    "timeZone": "America/Los_Angeles",
+    "accessRole": "reader",
+    "defaultReminders": [],
+    "items": [
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856707242000\"",
+      "id": "o8s1p1nocsondkfgd91omjk0vc",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=bzhzMXAxbm9jc29uZGtmZ2Q5MW9tamswdmMgY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:53.000Z",
+      "updated": "2023-02-20T21:25:53.621Z",
+      "summary": "Web Scraping & Requests [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: \u003c/b\u003eSSC 260  \u003cbr\u003e\u003cb\u003eHosted by Victor Thai and Navneet Sharma\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eReady to uncover hidden gems of data on the web? Join our Web Scraping workshop and learn how to scrape and collect data from the internet like a pro!\u003cbr\u003eIn this dynamic workshop, you'll learn how to use Python to automate web scraping, extract data from websites, and organize it into structured datasets. Our expert instructors will guide you through the entire process, from setting up your scraping environment to navigating complex web structures and handling common challenges.\u003cbr\u003eBy the end of the workshop, you'll have a solid foundation in web scraping techniques and the confidence to apply them to real-world scenarios. Whether you're a data analyst, researcher, or just looking to add a valuable skill to your repertoire, our Web Scraping workshop is the perfect opportunity to level up your skills and unlock new possibilities.",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-02-24T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-02-24T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "o8s1p1nocsondkfgd91omjk0vc@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856692124000\"",
+      "id": "qfrsqi37foprggv4i2s241k29g",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cWZyc3FpMzdmb3ByZ2d2NGkyczI0MWsyOWcgY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:46.000Z",
+      "updated": "2023-02-20T21:25:46.062Z",
+      "summary": "Web Scraping & Requests [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: \u003c/b\u003eSSC 260  \u003cbr\u003e\u003cb\u003eHosted by Victor Thai and Navneet Sharma\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eReady to uncover hidden gems of data on the web? Join our Web Scraping workshop and learn how to scrape and collect data from the internet like a pro!\u003cbr\u003eIn this dynamic workshop, you'll learn how to use Python to automate web scraping, extract data from websites, and organize it into structured datasets. Our expert instructors will guide you through the entire process, from setting up your scraping environment to navigating complex web structures and handling common challenges.\u003cbr\u003eBy the end of the workshop, you'll have a solid foundation in web scraping techniques and the confidence to apply them to real-world scenarios. Whether you're a data analyst, researcher, or just looking to add a valuable skill to your repertoire, our Web Scraping workshop is the perfect opportunity to level up your skills and unlock new possibilities.",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-02-24T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-02-24T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "qfrsqi37foprggv4i2s241k29g@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856705084000\"",
+      "id": "af26uu59pheivra5579dnaqg08",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=YWYyNnV1NTlwaGVpdnJhNTU3OWRuYXFnMDggY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:52.000Z",
+      "updated": "2023-02-20T21:25:52.542Z",
+      "summary": "Last Lecture - Shannon Ellis [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: SDSC Auditorium\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Shannon Ellis and DS3 Board\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eShannon Ellis is an associate teaching professor in the Cognitive Science Department at UC San Diego. Ellis has taught many of the core Data Science courses within the CogSci department such as COGS9 (Introduction to Data Science), COGS108 (Practice of Data Science), and many more.\u003cbr\u003e\u003cbr\u003eEllis found her passion for data science when shown how programming could speed up the productivity of her research. She received a Ph.D in human genetics from the Johns Hopkins School of Medicine, where she focused on improving the understanding of autism through post-mortem cortical brain samples. She was a post-doctoral fellow in the biostatistics department at Johns Hopkins under Jeff Leek where she worked on developing data science content for groups with no background and/or little access to data science education. Her work in democratizing data science and positive experiences working in her lab have led her to San Diego as one of our beloved Professors.\u003cbr\u003e\u003cbr\u003eJoin us as we listen in on her journey and learn from her unique experiences!",
+      "location": "San Diego Supercomputer Center, 10100 Hopkins Dr, La Jolla, CA 92093, USA",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-01T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-01T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "af26uu59pheivra5579dnaqg08@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856693008000\"",
+      "id": "qi3dl9vha29l04up26k32ujjro",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cWkzZGw5dmhhMjlsMDR1cDI2azMydWpqcm8gY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:46.000Z",
+      "updated": "2023-02-20T21:25:46.504Z",
+      "summary": "Excel and JMP for Data Analysis [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: SSC 260\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Josh Wang and Joyce Lu\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e&lt;AWAITING DESCRIPTION&gt;",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-03T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-03T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "qi3dl9vha29l04up26k32ujjro@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856708028000\"",
+      "id": "tlm1oklljk83knsaokpucr916s",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dGxtMW9rbGxqazgza25zYW9rcHVjcjkxNnMgY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:54.000Z",
+      "updated": "2023-02-20T21:25:54.014Z",
+      "summary": "Excel and JMP for Data Analysis [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: SSC 260\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Josh Wang and Joyce Lu\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e&lt;AWAITING DESCRIPTION&gt;",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-03T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-03T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "tlm1oklljk83knsaokpucr916s@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856693862000\"",
+      "id": "c9jo2q6nnk37ekjnuo2juk8et8",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=YzlqbzJxNm5uazM3ZWtqbnVvMmp1azhldDggY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:46.000Z",
+      "updated": "2023-02-20T21:25:46.931Z",
+      "summary": "Applied Deep Learning [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: CSE 4140\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Keagan Benson and Radu Manea\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e&lt;AWAITING DESCRIPTION&gt;",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-08T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-08T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "c9jo2q6nnk37ekjnuo2juk8et8@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856708676000\"",
+      "id": "rfncc1ovf4r7sl8ebdkdtph798",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cmZuY2Mxb3ZmNHI3c2w4ZWJka2R0cGg3OTggY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:54.000Z",
+      "updated": "2023-02-20T21:25:54.338Z",
+      "summary": "Applied Deep Learning [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: CSE 4140\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Keagan Benson and Radu Manea\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e&lt;AWAITING DESCRIPTION&gt;",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-08T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-08T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "rfncc1ovf4r7sl8ebdkdtph798@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353856709226000\"",
+      "id": "8a5vlag68ju0j0ncm7ta6ut0q0",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=OGE1dmxhZzY4anUwajBuY203dGE2dXQwcTAgY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-20T21:25:54.000Z",
+      "updated": "2023-02-20T21:25:54.613Z",
+      "summary": "Model Design, Training, and Tuning [autogen]",
+      "description": "https://oq2voqd6dmx.typeform.com/to/IUBZn0O7 \n\n\u003cb\u003eLocation: CSE 4140\u003c/b\u003e\u003cbr\u003e\u003cb\u003eHosted by Barry Xue and Manav Jairam\u003c/b\u003e\u003cbr\u003e\u003cbr\u003e&lt;AWAITING DESCRIPTION&gt;",
+      "creator": {
+       "email": "ds3@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-10T17:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-10T18:00:00-08:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "8a5vlag68ju0j0ncm7ta6ut0q0@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     },
+     {
+      "kind": "calendar#event",
+      "etag": "\"3353170677792000\"",
+      "id": "61q158skpqvnfsdudbnk8altn2",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NjFxMTU4c2twcXZuZnNkdWRibms4YWx0bjIgY19jODNhNTcxYjM4Mzc3M2M4OWM1N2YyYTZjMzliOTYxOTc1OWJjZTRjMmU4ZDdmM2Y2ZTVlNTU4YWExYjlmYjMyQGc",
+      "created": "2023-02-16T22:08:58.000Z",
+      "updated": "2023-02-16T22:08:58.896Z",
+      "summary": "MLOps Panel",
+      "location": "Great Hall, 9500 Gilman Dr, La Jolla, CA 92093, USA",
+      "creator": {
+       "email": "arg002@ucsd.edu"
+      },
+      "organizer": {
+       "email": "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com",
+       "displayName": "DS3 Official 2022-23",
+       "self": true
+      },
+      "start": {
+       "dateTime": "2023-03-14T14:00:00-07:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "end": {
+       "dateTime": "2023-03-14T15:45:00-07:00",
+       "timeZone": "America/Los_Angeles"
+      },
+      "iCalUID": "61q158skpqvnfsdudbnk8altn2@google.com",
+      "sequence": 0,
+      "eventType": "default"
+     }
+    ]
+   }
+   );

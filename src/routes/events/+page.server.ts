@@ -1,19 +1,38 @@
 import { GCP_API_KEY } from '$env/static/private'
 
-const CALENDAR_ID: string = "c_6a154893689d6a0906f6311d88adf4ca5c125aa6de0dc09e95375593071ff40b@group.calendar.google.com"
+const CALENDAR_ID: string = "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com"
 
+async function fetchGoogleCalendar(calenderID: string, APIkey: string): Promise<JSON> {
+    const calendarEndpoint: string = `https://www.googleapis.com/calendar/v3/calendars/${calenderID}/events`
+    const params: string = `?key=${APIkey}&timeMin=${new Date().toISOString()}&maxResults=9&singleEvents=true&orderBy=startTime`
+    
+    let response: Response = await fetch(
+        calendarEndpoint + params,
+        {
+            method: 'GET',
+            cache: 'no-cache',
+            mode: 'cors',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json'
+            }
+        }
+    )
 
-function fetchGoogleCalendar(calenderID: string, api_key: string): Object[] {
-    return [{ md: "md5hash"}, { md: "md5hash"}]
+    return response.json()
+}
+
+function handleGoogleCalendarResponse(raw: JSON) {
+    return raw
 }
 
 
-export const load = (async ({}) => {
+export async function load()  {
 
-    fetchGoogleCalendar(CALENDAR_ID, GCP_API_KEY)
+    const rawCalendarData: JSON = await fetchGoogleCalendar(CALENDAR_ID, GCP_API_KEY)
+    const cleanedData: any = handleGoogleCalendarResponse(rawCalendarData)
 
     return {
-        helw: "Hello World"
+        calendarData: cleanedData
     }
-
-})
+}

@@ -2,6 +2,7 @@
     import type { PageData } from './$types';
 
     export let data: PageData;
+    console.log(data.calendarData)
 </script>
 
 <section>
@@ -12,7 +13,6 @@
         <div class="event-display">
             <h2>Upcomming Events</h2>
             <div class="event-grid">
-                {data.helw}
             </div>
         </div>
         <div class="event-display">
