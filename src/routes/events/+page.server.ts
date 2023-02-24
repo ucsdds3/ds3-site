@@ -1,59 +1,8 @@
 import { GCP_API_KEY } from '$env/static/private'
+import type { GoogleCalendarEvent, GoogleCalendarResponse, CleanEvent, parseDescription } from './calendarInterfaces'
 
 const CALENDAR_ID: string = "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com"
-interface GoogleCalendarResponse {
-    error?: string,
-    items?: GoogleCalendarEvent[]
-}
-interface GoogleCalendarEvent {
-    kind: string,
-    etag: string,
-    id: string,
-    status: string,
-    htmlLink: string,
-    created: string,
-    updated: string,
-    summary: string,
-    description: string,
-    creator: {
-        email: string
-    },
-    organizer: {
-        email: string,
-        displayName: string,
-        self: boolean
-    },
-    start: {
-        dateTime?: string,
-        date?: string,
-        timeZone: string
-    },
-    end: {
-        dateTime?: string,
-        date?: string
-        timeZone: string
-    },
-    iCalUID: string,
-    sequence: number,
-    eventType: string
-}
-interface CleanEvent {
-    title: string,
-    datetime: string,
-    location: {
-        mapsLocation: string,
-        roomLocation: string
-    },
-    presenters: string,
-    description: string
-    registerFormURL?: string
-}
-interface parseDescription {
-    hosts: string ;
-    trueDescription: string;
-    roomLocation: string;
-    regForm?: string;
-}
+
 
 async function fetchGoogleCalendar(calenderID: string, APIkey: string): Promise<GoogleCalendarResponse> {
     const calendarEndpoint: string = `https://www.googleapis.com/calendar/v3/calendars/${calenderID}/events`
@@ -90,21 +39,22 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
     var cleanedEvents: CleanEvent[] = new Array;
     const eventsList: GoogleCalendarEvent[] = raw['items']!;
     for (var i: number = 0; i < eventsList.length; i ++) {
+        // Parsing information
         const event: GoogleCalendarEvent = eventsList[i]
+        const parsed: parseDescription | undefined = (event["description"]) ? parseDescriptionInformation(event["description"]): undefined
+        const dtString: string[] = parseDTInfo(event["start"], event["end"])
 
-        let parsed: parseDescription = parseDescriptionInformation(event["description"])
-
-
-        const cleanEvent: event = {
+        const cleanEvent: CleanEvent = {
             title: event['summary'].replaceAll("[autogen]", ""),
-            datetime: datetimeString,
+            date: dtString[0],
+            time: dtString[1],
             location: {
-                mapsLocation: event["location"].trim(),
-                roomLocation: parsed["roomLocation"]
+                mapsLocation: (event["location"]) ? event["location"].trim() : undefined,
+                roomLocation: (parsed) ? parsed["roomLocation"] : undefined
             },
-            presenters: parsed["hosts"],
-            description: parsed["trueDescription"],
-            registerFormURL: string
+            presenters: (parsed) ? parsed["hosts"] : undefined,
+            description: (parsed) ? parsed["trueDescription"] : undefined,
+            registerFormURL: (parsed) ? parsed["regForm"] : undefined
         }
         
         cleanedEvents.push(cleanEvent)
@@ -130,12 +80,30 @@ function parseDescriptionInformation(body: string): parseDescription {
     const roomLocation: RegExp = /(?<=Location:)(.*?)(?=<br>)/gi
     const hosts: RegExp = /(?<=<br>).*?(?=<br>)/
     const trueDescription: RegExp = /([^>]*)$/
+    const registrationForm: RegExp = /href="(.*form.*)"|(https:.+typeform.+)/gm
     
-    
+    // Finding matches
+    const rL = body.match(roomLocation)
+    const hS = body.match(hosts)
+    const rF = body.match(registrationForm)
+
     const parsedData: parseDescription = {
-        roomLocation: body.match(roomLocation)[0].replace(/<b>/g, '').replace(/<\/b>/g, '').trim(),
-        trueDescription: body.match(trueDescription)[0].trim(),
-        hosts: body.match(hosts)[0].replace(/<b>/g, '').replace(/<\/b>/g, '').trim()
+        roomLocation: (rL) ? rL[0].replace(/<b>/g, '').replace(/<\/b>/g, '').trim() : undefined,
+        trueDescription: body.match(trueDescription)![0].trim(),
+        hosts: (hS) ? hS[0].replace(/<b>/g, '').replace(/<\/b>/g, '').trim() : undefined,
+        regForm: (rF) ? rF[0].replace("href=", "").replaceAll('"', "") : undefined
     }
     return parsedData
+}
+
+function parseDTInfo(start: any, end: any): string[] {
+    const monthHash: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    const startObject: Date = new Date(start["dateTime"])
+    const endObject: Date = new Date(end["dateTime"])
+
+    const date: string = `${monthHash[startObject.getMonth()]} ${startObject.getDate()}`
+    const startTime: string = startObject.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    const endTime: string = endObject.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+
+    return [date, `${startTime} - ${endTime}`]
 }
