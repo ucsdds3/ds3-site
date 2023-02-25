@@ -1,6 +1,6 @@
 <script lang='ts'>
     import Card from "./card.svelte";
-    import cardData from "./landing-cards.json"
+    import cardData from "$web-config/landing-cards.json"
 
     const imageGlob: Object = import.meta.glob("/static/images/company-logos/*.png");
     const imageURLs: string[] = Object.keys(imageGlob);

@@ -6,10 +6,10 @@
     <div id="routes">
         <a class="nav-item" href="/">Home</a>
         <a class="nav-item" href="/events">Events</a>
-        <!-- <a class="nav-item" href="/workshops">Workshops</a> -->
         <a class="nav-item" href="/board">Board</a>
+        <a class="nav-item" href="/sponsors">Sponsors</a>
         <a class="nav-item" href="https://ds3.ucsd.edu/528491.html">Consulting</a>
-        <a class="nav-item last" href="/"><span>Get Involved</span></a>
+        <a class="nav-item last" href="/">Get Involved</a>
     </div>
 </nav>
 <slot></slot>
@@ -28,7 +28,7 @@
 
 <style global>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-    @import url(//db.onlinewebfonts.com/c/06cab1a0b0536008f269a1323d2598b6?family=Montserrat+SemiBold);
+    @import url("//db.onlinewebfonts.com/c/06cab1a0b0536008f269a1323d2598b6?family=Montserrat+SemiBold");
     :global(body) {
         /* General Styling */
         box-sizing: border-box;
@@ -56,6 +56,9 @@
         height: 10vh;
         z-index: 1;
         top: 0;
+        display: flex;
+        align-items: right;
+        justify-content: flex-end;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         position: fixed;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -63,15 +66,14 @@
     #img-wrapper {
         display: flex;
         height: 100%;
-        float: left;
+        position: absolute;
+        left: 2vh;
         align-items: center;
-        margin-left: 1vw;
     }
     img {
         height: 45%;
     }  
     #routes {
-        float: right;
         height: 100%;
         display: flex;
         align-items: center;
@@ -80,18 +82,22 @@
         vertical-align: middle;
         font-size: 23px;
         text-decoration: none;
-        margin-right: 1.75vw;
-        padding: 1%;
+        margin-right: 2vw;
         color: black;
-        margin-left: auto;
+        text-align: right;
     }
     .last {
         font-family: "Montserrat SemiBold";
         color: white;
+        padding: 1%;
+        border-radius: 5px;
         background-color: var(--ds3-orange);
         width: auto;
         white-space: nowrap;
-        margin-right: 100px;
+        transition: 0.3s;
+    }
+    .last:hover {
+        background-color: var(--ds3-orange-lighten);
     }
 
     

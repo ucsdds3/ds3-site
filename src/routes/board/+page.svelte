@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import boardMembers from "./../board.json"
+    import boardMembers from "$web-config/board.json"
     import BoardCard from "./boardCard.svelte";
 </script>
 

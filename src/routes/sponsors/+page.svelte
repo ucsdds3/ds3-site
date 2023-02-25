@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import sponsors from "./../sponsor-data.json"
+    import sponsors from "$web-config/sponsor-data.json"
 </script>
 
 <section>
@@ -38,7 +38,7 @@
     
     .title-sec {
         height: 40vh;
-        background-image: url("/images/people-backgrounds/city_skyline.jpg");
+        background-image: url("/images/backgrounds/city_skyline.jpg");
         background-position: center;
         background-size: cover;
         display: flex;

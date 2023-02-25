@@ -38,8 +38,8 @@
     }
     .card #img {
         background-position: center;
-        background-size: 50vh;
-        height: 15vh;
+        background-size: cover;
+        height: 17vh;
         width: 100%;
         border-radius: 5px 5px 0 0;
     }
