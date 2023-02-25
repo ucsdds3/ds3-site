@@ -102,8 +102,8 @@ function parseDTInfo(start: any, end: any): string[] {
     const endObject: Date = new Date(end["dateTime"])
 
     const date: string = `${monthHash[startObject.getMonth()]} ${startObject.getDate()}`
-    const startTime: string = startObject.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
-    const endTime: string = endObject.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    const startTime: string = startObject.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
+    const endTime: string = endObject.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })
 
     return [date, `${startTime} - ${endTime}`]
 }

@@ -1,5 +1,6 @@
 <script lang='ts'>
     import type { PageData } from './$types';
+    import EventCard from './eventCard.svelte';
 
     export let data: PageData;
 </script>
@@ -8,19 +9,21 @@
     <div class="title-sec">
         <h1>EVENTS</h1>
     </div>
-    <div id="event-sec">
-        <div class="event-display">
-            <h2>Upcomming Events</h2>
-            <div class="event-grid">
-                {#each data.calendarData as calendarData}
-                    <div>{calendarData.title}</div>
-                {/each}
+    <div id="centralizer">
+        <div id="event-sec">
+            <div class="event-display">
+                <h2>Upcomming Events</h2>
+                <div class="event-grid">
+                    {#each data.calendarData as event}
+                        <EventCard {event} />
+                    {/each}
+                </div>
             </div>
-        </div>
-        <div class="event-display">
-            <h2>Past Events</h2>
-            <div class="event-grid">
-                <h3>Temporarily Unavailable</h3>
+            <div class="event-display">
+                <h2>Past Events</h2>
+                <div class="event-grid">
+                    <h3>Temporarily Unavailable</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -36,6 +39,10 @@
         margin-top: 10vh;
         font-family: 'Montserrat';
         background-color: var(--base-bg);
+    }
+    #centralizer {
+        width: 90%;
+        margin: auto;
     }
     .title-sec {
         height: 40vh;
@@ -54,9 +61,6 @@
         font-family: 'Montserrat Bold';
     }
 
-    #event-sec {
-        height: 50vh;
-    }
     .event-display {
         margin: 2vh auto;
     }
@@ -65,4 +69,15 @@
         font-family: 'Montserrat Bold', 'Montserrat';
         margin: 0;
     }
+
+    .event-grid {
+        margin-top: 1vh;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-auto-rows: 1fr;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+    }
+    
 </style>
