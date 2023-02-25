@@ -1,7 +1,6 @@
 import { GCP_API_KEY } from '$env/static/private'
+import { GoogleCalenderID } from '$web-config/master-config.json'
 import type { GoogleCalendarEvent, GoogleCalendarResponse, CleanEvent, parseDescription } from './calendarInterfaces'
-
-const CALENDAR_ID: string = "c_c83a571b383773c89c57f2a6c39b9619759bce4c2e8d7f3f6e5e558aa1b9fb32@group.calendar.google.com"
 
 
 async function fetchGoogleCalendar(calenderID: string, APIkey: string): Promise<GoogleCalendarResponse> {
@@ -23,6 +22,7 @@ async function fetchGoogleCalendar(calenderID: string, APIkey: string): Promise<
 
     return response.json()
 }
+
 
 function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[] | undefined {
     // If json error
@@ -66,13 +66,14 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
 
 export async function load()  {
 
-    const rawCalendarData: GoogleCalendarResponse = await fetchGoogleCalendar(CALENDAR_ID, GCP_API_KEY)
+    const rawCalendarData: GoogleCalendarResponse = await fetchGoogleCalendar(GoogleCalenderID, GCP_API_KEY)
     const cleanedData: any = handleGoogleCalendarResponse(rawCalendarData)
 
     return {
         calendarData: cleanedData
     }
 }
+
 
 // Helpers
 function parseDescriptionInformation(body: string): parseDescription {
