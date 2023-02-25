@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import Modal, {getModal} from '../../modules/Modal.svelte'
+    import Modal, {getModal} from '$modules/Modal.svelte'
 
     export let name: string;
     export let title: string;
