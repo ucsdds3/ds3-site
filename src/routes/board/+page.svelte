@@ -31,7 +31,7 @@
     
     .title-sec {
         height: 40vh;
-        background-image: url("/images/stock-people/dh3.jpg");
+        background-image: url("/images/backgrounds/board.jpg");
         display: flex;
         align-items: center;
         text-align: center;
