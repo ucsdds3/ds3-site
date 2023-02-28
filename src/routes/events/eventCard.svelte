@@ -1,12 +1,15 @@
 <script lang='ts'>
     import type { CleanEvent } from "./calendarInterfaces";
+    import Modal, {getModal} from "$modules/Modal.svelte";
 
     export let event: CleanEvent;
     
     const eventImage: string = (event.image) ? event.image : "event-placeholder.jpg";
+    const eventLocation: string = (event.location.mapsLocation) ? event.location.mapsLocation : "UCSD, La Jolla, CA";
+    const GCP_MAPS_KEY: string = "";
 </script>
 
-<div class="card">
+<div class="card" on:click={()=>getModal(event.title).open()} on:keydown={()=>getModal(event.title).open()}>
     <div id="img" style="background-image: url('/images/stock-people/{eventImage}');"></div>
     <div class="card-info">
         <div class="info-split"><h1>{event.title}</h1></div>
@@ -19,6 +22,34 @@
         </div></div>
     </div>
 </div>
+<Modal id="{event.title}">
+    <div id="modal">
+        <div id="modal-img" style="background-image: url('/images/stock-people/{eventImage}');"></div>
+        <div id="modal-information">
+            <div class="left">
+                <h1 id="modal-title">{event.title}</h1>
+                <div id="modal-info-split">
+                    <span>{event.date}</span>
+                    <span>{event.time}</span>
+                </div>
+                <p>{event.description}</p>
+                <!-- If have hosts, present hosts -->
+                <!-- If have register form, show -->
+            </div>
+            <div class="right">
+                <iframe
+                    title="{event.title} location"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key={GCP_MAPS_KEY}
+                    &q={eventLocation}}">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</Modal>
 
 <style>
     @font-face {
@@ -85,5 +116,11 @@
     .info-split button:hover {
         cursor: pointer;
         background-color: var(--ds3-orange-lighten);
+    }
+
+    /* Modal Styling */
+    #modal {
+        height: 70vh;
+        width: 80vw;
     }
 </style>
