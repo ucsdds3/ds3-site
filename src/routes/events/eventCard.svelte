@@ -5,7 +5,8 @@
     export let event: CleanEvent;
     
     const eventImage: string = (event.image) ? event.image : "event-placeholder.jpg";
-    const eventLocation: string = (event.location.mapsLocation) ? event.location.mapsLocation : "UCSD, La Jolla, CA";
+    const eventMapsLocation: string = (event.location.mapsLocation) ? event.location.mapsLocation : "UCSD, La Jolla, CA";
+    // const eventRoom: stirng = (event.location.)
     const GCP_MAPS_KEY: string = "";
 </script>
 
@@ -29,8 +30,8 @@
             <div class="left">
                 <h1 id="modal-title">{event.title}</h1>
                 <div id="modal-info-split">
-                    <span>{event.date}</span>
-                    <span>{event.time}</span>
+                    <span>Date: {event.date}, {event.time}</span><br>
+                    <span>Location: {event.location.roomLocation}</span>
                 </div>
                 <p>{event.description}</p>
                 <!-- If have hosts, present hosts -->
@@ -44,7 +45,7 @@
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed/v1/place?key={GCP_MAPS_KEY}
-                    &q={eventLocation}}">
+                    &q={eventMapsLocation}}">
                 </iframe>
             </div>
         </div>
@@ -121,6 +122,49 @@
     /* Modal Styling */
     #modal {
         height: 70vh;
-        width: 80vw;
+        width: 60vw;
+    }
+    #modal #modal-img {
+        background-position: center;
+        background-size: cover;
+        height: 30vh;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    #modal #modal-information {
+        width: 100%;
+        font-family: 'Montserrat';
+        display: flex;
+        flex-direction: row;
+        height: 40vh;
+    }
+    #modal-information * {
+        flex: 1;
+    }
+    .left {
+        padding: 2%;
+    }
+    .left #modal-title {
+        font-family: 'Montserrat Bold', 'Montserrat';
+        font-size: 30px;
+    }
+    .left span {
+        font-size: 20px;
+        font-weight: 700;
+        width: 100%;
+
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        padding: 2%;
+    }
+    .right iframe {
+        background: transparent url("gifs/loading.gif") no-repeat center center;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        border-radius: 5px;
     }
 </style>
