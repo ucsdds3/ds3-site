@@ -1,13 +1,40 @@
 <script lang='ts'>
     import type { CleanEvent } from "./calendarInterfaces";
     import Modal, {getModal} from "$modules/Modal.svelte";
-
     export let event: CleanEvent;
-    
+
+    const GCP_MAPS_KEY: string = "AIzaSyBzh2sTgUsP1KpuzOlI1OiYgg--qXn41ak";  
     const eventImage: string = (event.image) ? event.image : "event-placeholder.jpg";
-    const eventMapsLocation: string = (event.location.mapsLocation) ? event.location.mapsLocation : "UCSD, La Jolla, CA";
-    // const eventRoom: stirng = (event.location.)
-    const GCP_MAPS_KEY: string = "";
+
+    // Get Google Maps Location Query
+    let eventGoogleMapLocation: string;
+    if (event.location.mapsLocation) {
+        eventGoogleMapLocation = event.location.mapsLocation;
+    } else if (event.location.roomLocation) {
+        eventGoogleMapLocation = `UCSD ${event.location.roomLocation}`;
+    } else {
+        eventGoogleMapLocation = `UCSD, La Jolla, CA`;
+    }
+
+    // Get Room Number information
+    let eventRoomLocation: string;
+    if (event.location.roomLocation && event.location.roomLocation != "undefined") {
+        eventRoomLocation = event.location.roomLocation;
+    } else if (event.location.mapsLocation  && event.location.mapsLocation != "undefined") {
+        eventRoomLocation = event.location.mapsLocation;
+    } else {
+        eventRoomLocation = "Location TBD";
+    }
+
+    // Display Logical Description
+    let eventDescription: string;
+    if (event.description && event.description != "&lt;AWAITING DESCRIPTION&gt;") {
+        eventDescription = event.description
+    } else {
+        eventDescription = ""
+    }
+
+
 </script>
 
 <div class="card" on:click={()=>getModal(event.title).open()} on:keydown={()=>getModal(event.title).open()}>
@@ -30,22 +57,27 @@
             <div class="left">
                 <h1 id="modal-title">{event.title}</h1>
                 <div id="modal-info-split">
-                    <span>Date: {event.date}, {event.time}</span><br>
-                    <span>Location: {event.location.roomLocation}</span>
+                    <span>{event.date}, {event.time}</span><br>
+                    <span>{eventRoomLocation}</span>
                 </div>
-                <p>{event.description}</p>
-                <!-- If have hosts, present hosts -->
-                <!-- If have register form, show -->
+                {#if eventDescription != ""}
+                    <p>{eventDescription}</p>
+                {/if}
+                {#if event.presenters}
+                    <h2>{event.presenters}</h2>
+                {/if}
+                {#if event.registerFormURL}
+                    <a href="{event.registerFormURL}" target="_blank" rel="noreferrer">Register</a>
+                {/if}
             </div>
             <div class="right">
                 <iframe
                     title="{event.title} location"
-                    style="border:0"
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed/v1/place?key={GCP_MAPS_KEY}
-                    &q={eventMapsLocation}}">
+                    &q={eventGoogleMapLocation}}">
                 </iframe>
             </div>
         </div>
@@ -122,7 +154,7 @@
     /* Modal Styling */
     #modal {
         height: 70vh;
-        width: 60vw;
+        width: 65vw;
     }
     #modal #modal-img {
         background-position: center;
@@ -143,6 +175,7 @@
     }
     .left {
         padding: 2%;
+        overflow: auto;
     }
     .left #modal-title {
         font-family: 'Montserrat Bold', 'Montserrat';
@@ -165,6 +198,7 @@
         width: 100%;
         height: 100%;
         margin: auto;
+        border: none;
         border-radius: 5px;
     }
 </style>
