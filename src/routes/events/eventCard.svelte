@@ -20,7 +20,7 @@
     let eventRoomLocation: string;
     if (event.location.roomLocation && event.location.roomLocation != "undefined") {
         eventRoomLocation = event.location.roomLocation;
-    } else if (event.location.mapsLocation  && event.location.mapsLocation != "undefined") {
+    } else if (event.location.mapsLocation && event.location.mapsLocation != "undefined") {
         eventRoomLocation = event.location.mapsLocation;
     } else {
         eventRoomLocation = "Location TBD";
@@ -34,7 +34,7 @@
         eventDescription = ""
     }
 
-
+    const redirect = (url: string | undefined) => window.open(url, '_blank')
 </script>
 
 <div class="card" on:click={()=>getModal(event.title).open()} on:keydown={()=>getModal(event.title).open()}>
@@ -55,20 +55,30 @@
         <div id="modal-img" style="background-image: url('/images/stock-people/{eventImage}');"></div>
         <div id="modal-information">
             <div class="left">
-                <h1 id="modal-title">{event.title}</h1>
-                <div id="modal-info-split">
-                    <span>{event.date}, {event.time}</span><br>
+                <div id="modal-info-top">
+                    <h1 id="modal-title">{event.title}</h1>
+                    <span>{event.date}, {event.time}</span>
                     <span>{eventRoomLocation}</span>
                 </div>
-                {#if eventDescription != ""}
-                    <p>{eventDescription}</p>
-                {/if}
-                {#if event.presenters}
-                    <h2>{event.presenters}</h2>
-                {/if}
+                <div id="modal-info-split">
+                    {#if eventDescription != ""}
+                        <p id="desc">{eventDescription}</p>
+                    {/if}
+                    {#if event.presenters}
+                        <h2 id="hosts">{event.presenters}</h2>
+                    {/if}
+                </div>
+                <div id="modal-info-lower">
                 {#if event.registerFormURL}
-                    <a href="{event.registerFormURL}" target="_blank" rel="noreferrer">Register</a>
+                    <div id="button-wrapper">
+                        <button on:click={() => redirect(event.registerFormURL)}>Register</button>
+                    </div>
+                {:else}
+                    <div id="button-wrapper">
+                        <button class="reg disabled" disabled>Register</button>
+                    </div>
                 {/if}
+                </div>
             </div>
             <div class="right">
                 <iframe
@@ -176,16 +186,68 @@
     .left {
         padding: 2%;
         overflow: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh clamp(10vh, 12vh, 13vh) 4vh;
+    }
+    .left * {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
     }
     .left #modal-title {
         font-family: 'Montserrat Bold', 'Montserrat';
-        font-size: 30px;
+        font-size: 4vh;
     }
-    .left span {
-        font-size: 20px;
-        font-weight: 700;
+    #modal-info-top span {
+        font-size: 2vh;
+        font-weight: 1000;
         width: 100%;
-
+    }
+    #modal-info-split {
+        align-items: start;
+        justify-content: start;
+    }
+    #modal-info-split * {
+        margin-bottom: 1%;
+    }
+    #modal-info-split #desc {
+        font-size: 1.5vh;
+    }
+    #modal-info-split #hosts {
+        font-size: 1.5vh;
+        font-weight: 400;
+    }
+    #modal-info-lower {
+        width: 100%;
+        display: inline-block;
+    }
+    #modal-info-lower * { display: inline-block; }
+    #modal-info-lower button {
+        background-color: var(--ds3-orange);
+        border: none;
+        font-size: 1.5vh;
+        font-weight: bold;
+        padding: 1.5% 4%;
+        color: white;
+        border-radius: 5px;
+        text-align: center; 
+        display: inline-block;
+        align-items: center;
+        width: auto;
+    }
+    #modal-info-lower button:hover {
+        cursor: pointer;
+        background-color: var(--ds3-orange-lighten);
+    }
+    #modal-info-lower .disabled {
+        opacity: 0.5;
+    }
+    #modal-info-lower .disabled:hover {
+        cursor: not-allowed;
+        background-color: var(--ds3-orange);
     }
     .right {
         display: flex;
