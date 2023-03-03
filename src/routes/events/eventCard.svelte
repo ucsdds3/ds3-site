@@ -55,29 +55,26 @@
         <div id="modal-img" style="background-image: url('/images/stock-people/{eventImage}');"></div>
         <div id="modal-information">
             <div class="left">
-                <div id="modal-info-top">
+                <div id="modal-info">
                     <h1 id="modal-title">{event.title}</h1>
                     <span>{event.date}, {event.time}</span>
                     <span>{eventRoomLocation}</span>
-                </div>
-                <div id="modal-info-split">
                     {#if eventDescription != ""}
                         <p id="desc">{eventDescription}</p>
                     {/if}
                     {#if event.presenters}
                         <h2 id="hosts">{event.presenters}</h2>
                     {/if}
-                </div>
-                <div id="modal-info-lower">
-                {#if event.registerFormURL}
-                    <div id="button-wrapper">
-                        <button on:click={() => redirect(event.registerFormURL)}>Register</button>
-                    </div>
-                {:else}
-                    <div id="button-wrapper">
-                        <button class="reg disabled" disabled>Register</button>
-                    </div>
-                {/if}
+                    {#if event.registerFormURL}
+                        <div id="button-wrapper">
+                            <button on:click={() => redirect(event.registerFormURL)}>Register</button>
+                        </div>
+                    {:else}
+                        <div id="button-wrapper">
+                            <button class="reg disabled" disabled>Register</button>
+                        </div>
+                    {/if}
+                    <div id="modal-spacer">.</div>
                 </div>
             </div>
             <div class="right">
@@ -186,12 +183,11 @@
     .left {
         padding: 2%;
         overflow: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 15vh clamp(10vh, 12vh, 13vh) 4vh;
     }
+    .left::-webkit-scrollbar { size: 0; }
     .left * {
         margin: 0;
+        margin-bottom: 0.75vh;
         display: flex;
         flex-direction: column;
         align-self: center;
@@ -200,33 +196,39 @@
     .left #modal-title {
         font-family: 'Montserrat Bold', 'Montserrat';
         font-size: 4vh;
+        margin-top: 0;
     }
-    #modal-info-top span {
+    #modal-info {
+        display: relative;
+    }
+    #modal-info::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 0;
+        height: 10%;
+        width: 100%;
+        background: linear-gradient(transparent, white);
+    }
+    #modal span {
         font-size: 2vh;
         font-weight: 1000;
         width: 100%;
     }
-    #modal-info-split {
-        align-items: start;
-        justify-content: start;
-    }
-    #modal-info-split * {
-        margin-bottom: 1%;
-    }
-    #modal-info-split #desc {
+    #desc {
         font-size: 1.5vh;
     }
-    #modal-info-split #hosts {
+    #hosts {
         font-size: 1.5vh;
         font-weight: 400;
     }
-    #modal-info-lower {
+    #button-wrapper {
         width: 100%;
         display: inline-block;
     }
-    #modal-info-lower * { display: inline-block; }
-    #modal-info-lower button {
+    #button-wrapper button {
         background-color: var(--ds3-orange);
+        display: inline-block;
         border: none;
         font-size: 1.5vh;
         font-weight: bold;
@@ -237,15 +239,16 @@
         display: inline-block;
         align-items: center;
         width: auto;
+        margin-top: 1.5vh;
     }
-    #modal-info-lower button:hover {
+    button:hover {
         cursor: pointer;
         background-color: var(--ds3-orange-lighten);
     }
-    #modal-info-lower .disabled {
+    .disabled {
         opacity: 0.5;
     }
-    #modal-info-lower .disabled:hover {
+    .disabled:hover {
         cursor: not-allowed;
         background-color: var(--ds3-orange);
     }
@@ -257,10 +260,14 @@
     .right iframe {
         background: transparent url("gifs/loading.gif") no-repeat center center;
         background-size: contain;
-        width: 100%;
+        width: 45%;
         height: 100%;
         margin: auto;
         border: none;
         border-radius: 5px;
+    }
+    #modal-spacer {
+        height: 2vh;
+        color: white;
     }
 </style>
