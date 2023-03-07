@@ -1,26 +1,32 @@
 <script lang='ts'>
-    import sponsors from "$web-config/sponsor-data.json"
+    import type { PageData } from './$types';
+    
+    export let data: PageData;
 </script>
 
 <section>
     <div class="title-sec">
-        <h1>Sponsors & Partners</h1>
+        <h1>Sponsors</h1>
     </div>
     <div class= "sponsor-sec">
-        <h2>Our Sponsors</h2>
+        <h2>Thank you to our current Sponsors!</h2>
         <div id= "sponsor-grid">
-            {#each sponsors as sponsor}
-            <img src="{sponsor.logo_src}" alt="{sponsor.name}" class='company-logos'>
+            {#each data.imageURLs as filepath}
+                <img src="{filepath.replace("/static", "")}"
+                    alt="{filepath
+                    .replaceAll("/static/images/sponsors/", "")
+                    .replace(".png", "")}"
+                    class='company-logos'
+                />
             {/each}
         </div>
     </div>
-    <div class= "sponsor-sec">
-        <h2>Our Partners</h2>
-        <div id= "partner-grid">
-            {#each sponsors as sponsor}
-            <img src="{sponsor.logo_src}" alt="{sponsor.name}" class='company-logos'>
-            {/each}
-        </div>
+    <div id="sponsor-info">
+        <h5 class="sponsor-msg">Interested in hearing how we can help you? Contact us at&nbsp;</h5>
+        <a class="sponsor-msg" href="mailto:ds3@ucsd.edu">ds3.ucsd.edu</a>
+        <h5 class="sponsor-msg">or view our sponsor packet&nbsp;</h5>
+        <a class="sponsor-msg" href="/">here</a>
+        <h5 class="sponsor-msg">.</h5>
     </div>
 </section>
 
@@ -61,32 +67,43 @@
     .sponsor-sec h2 {
         text-align: center;
         font-family: 'Montserrat Bold';
-        font-size: 60px;
+        font-size: 50px;
     }
     #sponsor-grid {
         display: grid;
-        grid-template-columns: repeat(5, 19%);
-        grid-auto-rows: 0.5fr;
+        grid-template-columns: repeat(3, 33%);
+        grid-auto-rows: 1fr;
         gap: 1rem;
         justify-content: space-between;
         align-items: center;
         vertical-align: middle;
-    }
-
-    #partner-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 19%);
-        grid-auto-rows: 0.5fr;
-        gap: 1rem;
-        justify-content: space-between;
-        align-items: center;
-        vertical-align: middle;
+        margin: auto;
     }
 
     .company-logos {
         max-width: 50%;
         margin: 0 auto;
     }
+
+    #sponsor-info {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        padding: 5%;
+    }
+    #sponsor-info .sponsor-msg {
+        font-weight: 650;
+        font-size: 30px;
+        display: inline;
+        width: auto;
+        margin: 0;
+    }
+    #sponsor-info a {
+        color: black;
+        transition: 0.15s;
+    }
+    #sponsor-info a:visited { color: black;}
+    #sponsor-info a:hover { color: var(--ds3-orange); }
 </style>
 
 
