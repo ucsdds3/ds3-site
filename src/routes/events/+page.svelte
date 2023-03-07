@@ -12,7 +12,7 @@
     <div id="centralizer">
         <div id="event-sec">
             <div class="event-display">
-                <h2>Upcomming Events</h2>
+                <h2>Upcoming Events</h2>
                 <div class="event-grid">
                     {#each data.calendarData as event}
                         <EventCard {event} />
@@ -80,4 +80,9 @@
         vertical-align: middle;
     }
     
+    h3 {
+        margin-left: 0.75vw;
+        width: 100%;
+        font-size: 30px;
+    }
 </style>

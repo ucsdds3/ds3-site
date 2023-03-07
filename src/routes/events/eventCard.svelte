@@ -3,10 +3,12 @@
     import Modal, {getModal} from "$modules/Modal.svelte";
     export let event: CleanEvent;
 
+    // GCP key can be exposed because reqeuests are restricted from the domain request
+    // See the ds3-site GCP project under ds3@ucsd.edu for more information
     const GCP_MAPS_KEY: string = "AIzaSyBzh2sTgUsP1KpuzOlI1OiYgg--qXn41ak";  
     const eventImage: string = (event.image) ? event.image : "event-placeholder.jpg";
 
-    // Get Google Maps Location Query
+    // Process Google Maps Location Query
     let eventGoogleMapLocation: string;
     if (event.location.mapsLocation) {
         eventGoogleMapLocation = event.location.mapsLocation;
@@ -16,7 +18,7 @@
         eventGoogleMapLocation = `UCSD, La Jolla, CA`;
     }
 
-    // Get Room Number information
+    // Process Room Number information
     let eventRoomLocation: string;
     if (event.location.roomLocation && event.location.roomLocation != "undefined") {
         eventRoomLocation = event.location.roomLocation;
@@ -139,7 +141,7 @@
         font-family: 'Montserrat Bold', 'Montserrat';
     }
     .info-split span {
-        font-size: 2vh;
+        font-size: 1.8vh;
         font-weight: 700;
     }
     .info-split button {
