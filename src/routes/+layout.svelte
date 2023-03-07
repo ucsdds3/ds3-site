@@ -28,7 +28,10 @@
 
 <style global>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-    @import url("//db.onlinewebfonts.com/c/06cab1a0b0536008f269a1323d2598b6?family=Montserrat+SemiBold");
+    @font-face {
+        font-family: "Montserrat SemiBold";
+        src: url("/fonts/montserrat.semibold.ttf");
+    }
     :global(body) {
         /* General Styling */
         box-sizing: border-box;
