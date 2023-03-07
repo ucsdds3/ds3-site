@@ -42,7 +42,7 @@
         
     function close(retVal?: any){
         if(!visible) return
-        window.removeEventListener("keydown",keyPress)
+		if (window) { window.removeEventListener("keydown",keyPress) }
         onTop=prevOnTop
         if(onTop==null) document.body.style.overflow=""
         visible=false
@@ -54,19 +54,21 @@
         
     onDestroy(()=>{
         delete modals[id]
-        window.removeEventListener("keydown",keyPress)
+        if (window) { window.removeEventListener("keydown",keyPress) }
     })    
 </script>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<div id="topModal" class:visible bind:this={topDiv} on:click={()=>close()} on:keydown={()=>close()}>
-	<div id='modal' on:click|stopPropagation={()=>{}} on:keydown|stopPropagation={()=>{}}>
-		<span class="material-symbols-outlined" on:click={()=>close()} on:keydown={()=>close()}>close</span>
-		<div id='modal-content'>
-			<slot></slot>
+{#if typeof window !== 'undefined'}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<div id="topModal" class:visible bind:this={topDiv} on:click={()=>close()} on:keydown={()=>close()}>
+		<div id='modal' on:click|stopPropagation={()=>{}} on:keydown|stopPropagation={()=>{}}>
+			<span class="material-symbols-outlined" on:click={()=>close()} on:keydown={()=>close()}>close</span>
+			<div id='modal-content'>
+				<slot></slot>
+			</div>
 		</div>
 	</div>
-</div>
+{/if}
 
 <style>
 	#topModal {
