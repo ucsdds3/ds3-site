@@ -1,38 +1,15 @@
-# create-svelte
+# Data Science Student Society Website
+This is the website used by the Data Science Student Society to host information about the club. 
+## Overview
+This application is a Svelte/[SvelteKit](https://kit.svelte.dev/docs/introduction) app built using `create vite` and written in [TypeScript](https://www.typescriptlang.org/docs/) (a version of Javascript with Static Typing)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Requirements
+This app requires Node.js in order to run and develop on. It can be installed [here](https://nodejs.org/en/).
 
-## Creating a project
+## Running
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+ 1. Clone the Repository
+ 2. Install [Node](https://nodejs.org/en/)
+ 3. Install dependencies with `npm -i`
+ 4. Launch the app with `npm run dev`
+ 5. Open the app in your web browser by going to localhost (the default is `http://localhost:5173`)
