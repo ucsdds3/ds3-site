@@ -1,9 +1,9 @@
 <script lang='ts'>
+    import type { PageData } from './$types';
     import Card from "./card.svelte";
     import cardData from "$web-config/landing-cards.json"
 
-    const imageGlob: Object = import.meta.glob("/static/images/company-logos/*.png");
-    const imageURLs: string[] = Object.keys(imageGlob);
+    export let data: PageData;
 </script>
 
 
@@ -30,7 +30,7 @@
     <div class="seperator">
         <h2 class="lower-title">Where We've been</h2>
         <div id="logo-grid">
-            {#each imageURLs as imageURL}
+            {#each data.imagePaths as imageURL}
                 <img 
                     src="{imageURL.replace("/static", "")}" 
                     alt={`${(imageURL.replace(".png", "")
