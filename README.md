@@ -12,4 +12,4 @@ This app requires Node.js in order to run and develop on. It can be installed [h
  2. Install [Node](https://nodejs.org/en/)
  3. Install dependencies with `npm -i`
  4. Launch the app with `npm run dev`
- 5. Open the app in your web browser by going to localhost (the default is `http://localhost:5173`)
+ 5. Open the app in your web browser by going to localhost (the default is `http://localhost:5173`). Alternatively use `npm run dev -- --open`.
