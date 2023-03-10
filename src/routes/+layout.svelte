@@ -8,7 +8,7 @@
         <a class="nav-item" href="/events">Events</a>
         <a class="nav-item" href="/board">Board</a>
         <a class="nav-item" href="/sponsors">Sponsors</a>
-        <a class="nav-item" href="https://ds3.ucsd.edu/528491.html">Consulting</a>
+        <a class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer">Consulting</a>
         <a class="nav-item last" href="/">Get Involved</a>
     </div>
 </nav>
