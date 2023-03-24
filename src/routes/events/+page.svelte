@@ -13,17 +13,32 @@
         <div id="event-sec">
             <div class="event-display">
                 <h2>Upcoming Events</h2>
-                <div class="event-grid">
-                    {#each data.calendarData as event}
-                        <EventCard {event} />
-                    {/each}
-                </div>
+                {#if data.calendarData}
+                    <div class="event-grid">
+                        {#each data.calendarData as event}
+                            <EventCard {event} />
+                        {/each}
+                    </div>
+                {:else}
+                    <div>
+                        <h3>No Upcoming Events</h3>
+                    </div>
+                {/if}
             </div>
             <div class="event-display">
                 <h2>Past Events</h2>
+                <!-- Need to add past events here -->
+                {#if data.pastEvents}
                 <div class="event-grid">
-                    <h3>Temporarily Unavailable</h3>
+                    {#each data.pastEvents as event}
+                        ...
+                    {/each}
                 </div>
+                {:else}
+                    <div>
+                        <h3>Temporarily Unavailable</h3>
+                    </div>
+                {/if}
             </div>
         </div>
     </div>
@@ -82,6 +97,7 @@
     
     h3 {
         margin-left: 0.75vw;
+        padding-bottom: 10vh;
         width: 100%;
         font-size: 30px;
     }
