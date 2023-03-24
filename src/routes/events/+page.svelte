@@ -62,7 +62,9 @@
     .title-sec {
         height: 40vh;
         font-family: 'Montserrat Bold', 'Montserrat';
-        background-image: url("/images/backgrounds/event.png");
+        background-image: url("/images/backgrounds/events.png");
+        background-size: cover;
+        background-position: center;
         background-position: center;
         display: flex;
         align-items: center;

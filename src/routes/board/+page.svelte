@@ -31,7 +31,9 @@
     
     .title-sec {
         height: 40vh;
-        background-image: url("/images/backgrounds/board.jpg");
+        background-image: url("/images/backgrounds/placeholder.jpg");
+        background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
         text-align: center;
