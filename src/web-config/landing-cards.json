@@ -2,7 +2,7 @@
     {
         "title": "Professional Events",
         "description": "Developing students' professionalism through 30+ networking events, technical skill building events, recruiting sessions, career information events, and more!",
-        "imageURL": "/images/stock-people/talentday.jpg",
+        "imageURL": "/images/stock-people/talentday2.jpg",
         "imageDirection": false,
         "link": false
     },
@@ -16,14 +16,14 @@
     {
         "title": "Projects",
         "description": "Assisting students with 25+ projects to gain practical data-science experience by working on real-world problems, in collaboration with both faculty and industry.",
-        "imageURL": "/images/stock-people/dh.jpg",
+        "imageURL": "/images/stock-people/projects.jpg",
         "imageDirection": false,
         "link": false
     },
     {
         "title": "Workshops",
         "description": "Lecturing 20+ workshops throughout the year for students of all skill levels on technical topics, including Machine Learning, Deep Learning, Scalable Analytics, Pandas, and more!",
-        "imageURL": "/images/stock-people/datahacks.jpg",
+        "imageURL": "/images/stock-people/workshop.jpg",
         "imageDirection": true,
         "link": false
     }

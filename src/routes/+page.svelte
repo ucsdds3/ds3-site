@@ -126,6 +126,8 @@
 
     #info-section {
         background-image: url("/images/stock-people/librarywalk.png");
+        background-size: cover;
+        background-position: center;
         color: white;
     }
     #info-section img {
