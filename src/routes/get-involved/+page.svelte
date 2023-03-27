@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import InfoCard from "./infoCard.svelte";
-    import infoCardData from "./infoCardData.json";
+    import infoCardData from "../../web-config/infoCardData.json";
 </script>
 
 <section>
