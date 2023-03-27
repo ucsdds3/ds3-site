@@ -32,7 +32,7 @@
         margin-top: 7.5vh;
         margin-bottom: 7.5vh;
         height: 35vh;
-        padding-inline: 5vh;
+        padding-inline: 4vh;
         width: 15vw;
         word-wrap: break-word;
         position: relative;
@@ -42,11 +42,13 @@
         flex-direction: column;
     }
     .card-header {
-        font-size: 20px;
+        font-size: 2.5vmin;
         font-family: "Montserrat Bold";
         margin-bottom: 1vh;
+        margin-top: 4vh;
     }
     .card-description {
+        font-size: 2vmin;
         margin-top: 1vh;
         margin-bottom: auto;
     }
@@ -56,7 +58,7 @@
         color: white;
         padding: 1.5% 5%;
         border-style: none;
-        font-size: 20px;
+        font-size: 2.5vmin;
         font-weight: bold;
         transition: 0.3s;
     }
