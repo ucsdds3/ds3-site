@@ -6,7 +6,8 @@
     export let linkedin: string;
     export let email: string;
     export let img: string;
-
+    export let resume: string;
+    export let description: string;
 </script>
 
 <div class="card" on:click={()=>getModal(name).open()} on:keydown={()=>getModal(name).open()}>
@@ -29,10 +30,10 @@
             <img id="modal-pfp" src="/images/people/{img}" alt="{name} pfp">
             <h1>{name}</h1>
             <h2>{title}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente necessitatibus, eligendi aspernatur eaque sint doloribus iste officiis veritatis asperiores aut magnam eius tempora maiores consectetur atque aliquam excepturi deleniti.</p>
+            <p>{description}</p>
             <div class="modal-links">
                 <a class="orange" href="{linkedin}" rel="noreferrer" target="_blank">LinkedIn</a>
-                <a class="blue" href="/" rel="noreferrer" target="_blank">Resume</a>
+                <a class="blue" href="{resume}" rel="noreferrer" target="_blank">Resume</a>
                 <a class="grey" href="mailto:{email}" rel="noreferrer" target="_blank">Email</a>
             </div>
         </div>
