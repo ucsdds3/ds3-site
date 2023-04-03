@@ -13,7 +13,7 @@
         <div class="card-information">
             <h3 class="card-title">{title}</h3>
             <p class="card-description">{description}</p>
-            <a href="{link}" target="_blank" rel="noreferrer">
+            <a href="{link}">
                 <button>Learn More</button>
             </a>
         </div>
