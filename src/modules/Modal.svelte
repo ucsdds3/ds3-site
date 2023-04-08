@@ -11,6 +11,7 @@
 
 <script lang="ts">
     import {onDestroy} from 'svelte'
+	import {browser} from "$app/environment"
         
     let topDiv: any;
     let visible: boolean = false;
@@ -26,36 +27,39 @@
 
     /**  API **/
     function open(callback: Function){
-        closeCallback=callback
-        if(visible) return
-        prevOnTop=onTop
-        onTop=topDiv
-        window.addEventListener("keydown",keyPress)
-        
-        //this prevents scrolling of the main window on larger screens
-        document.body.style.overflow="hidden" 
+		if (browser) {
+			closeCallback=callback
+			if(visible) return
+			prevOnTop=onTop
+			onTop=topDiv
+			window.addEventListener("keydown",keyPress)
+			
+			//this prevents scrolling of the main window on larger screens
+			document.body.style.overflow="hidden" 
 
-        visible=true
-        //Move the modal in the DOM to be the last child of <BODY> so that it can be on top of everything
-        document.body.appendChild(topDiv)
-    }
+			visible=true
+			//Move the modal in the DOM to be the last child of <BODY> so that it can be on top of everything
+			document.body.appendChild(topDiv)
+	}}
         
     function close(retVal?: any){
         if(!visible) return
-		if (window) { window.removeEventListener("keydown",keyPress) }
-        onTop=prevOnTop
-        if(onTop==null) document.body.style.overflow=""
-        visible=false
-        if(closeCallback) closeCallback(retVal)
-    }
+		if (browser) {
+			if (window) { window.removeEventListener("keydown",keyPress) } 
+			onTop=prevOnTop
+			if(onTop==null) document.body.style.overflow=""
+			visible=false
+			if(closeCallback) closeCallback(retVal)
+	}}
         
     //expose the API
     modals[id] = { open,close }
         
     onDestroy(()=>{
-        delete modals[id]
-        if (window) { window.removeEventListener("keydown",keyPress) }
-    })    
+		if (browser) {
+			delete modals[id]
+			if (window) { window.removeEventListener("keydown",keyPress) }
+    }})    
 </script>
 
 {#if typeof window !== 'undefined'}
