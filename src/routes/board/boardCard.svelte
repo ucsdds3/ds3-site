@@ -177,28 +177,27 @@
         padding: 3%;
     }
 
-    @media (min-width: 1500px) {
+    @media (min-height: 1200px) {
         .modal #modal-pfp {
             width: 30vh;
             height: 30vh;
             top: -27vh;
         }
         .modal-info p {
-            font-size: 1.25rem;
+            font-size: 1.75vh;
         }
         .modal-info h1 {
-            font-size: 2.5rem;
+            font-size: 4vh;
         }
         .modal-info h2 {
-            font-size: 1.75rem;
+            font-size: 2.5vh;
         }
         .modal-links {
-            /* height: 30%; */
+            height: 30%;
         }
         .modal-links a {
-            font-size: 1.5rem;
+            font-size: 2vh;
             padding: 6%;
-            /* width: 75%; */
         }
     }
 
