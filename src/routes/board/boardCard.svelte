@@ -176,6 +176,32 @@
         margin: 0 3%;
         padding: 3%;
     }
+
+    @media (min-width: 1500px) {
+        .modal #modal-pfp {
+            width: 30vh;
+            height: 30vh;
+            top: -27vh;
+        }
+        .modal-info p {
+            font-size: 1.25rem;
+        }
+        .modal-info h1 {
+            font-size: 2.5rem;
+        }
+        .modal-info h2 {
+            font-size: 1.75rem;
+        }
+        .modal-links {
+            /* height: 30%; */
+        }
+        .modal-links a {
+            font-size: 1.5rem;
+            padding: 6%;
+            /* width: 75%; */
+        }
+    }
+
     .orange { background-color: var(--ds3-orange); }
     .blue { background-color: var(--ds3-blue); }
     .grey { background-color: var(--ds3-gray); }
