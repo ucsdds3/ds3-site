@@ -3,7 +3,19 @@
     import EventCard from './eventCard.svelte';
 
     export let data: PageData;
+    
+    export let EventsMetaData = {
+      title: "Events Page",
+      description: "Check out our upcoming events!",
+      image: "/images/events.jpg"
+    };
 </script>
+
+<head>
+    <meta property="og:title" content="{EventsMetaData.title}">
+    <meta property="og:description" content="{EventsMetaData.description}">
+    <meta property="og:image" content="{EventsMetaData.image}">
+</head>
 
 <section>
     <div class="title-sec">
