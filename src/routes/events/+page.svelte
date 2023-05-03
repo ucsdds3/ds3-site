@@ -1,3 +1,13 @@
+<script>
+  import EventsPreviewCard from '../components/EventsPreviewCard.svelte';
+  export let endpoint = 'events';
+</script>
+
+<main>
+  {#if endpoint === 'events'}
+    <EventsPreviewCard title="My Events Page" description="Check out my latest events!" image="/events-preview.jpg" />
+</main>
+
 <script lang='ts'>
     import type { PageData } from './$types';
     import EventCard from './eventCard.svelte';
