@@ -1,4 +1,4 @@
-<script> <!-- This is the main page preview card -->
+<script>
   export let title = 'DS3 UCSD';
    export let description = `DS3 is the largest interdisciplinary data science organization 
      on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, 
