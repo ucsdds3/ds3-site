@@ -17,23 +17,6 @@
   <meta property="og:type" content="website">
 </svelte:head>
 
-<script>  <!-- This is the events page preview card -->
-  export let title = 'DS3 UCSD';
-   export let description = `This is for testing.`;
-</script>
-
-<svelte:head> 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title}</title>
-  <meta name="description" content="{description}">
-  <meta property="og:title" content="{title}">
-  <meta property="og:description" content="{description}">
-  <meta property="og:image" content="/favicon.png">
-  <meta property="og:url" content="https://www.ds3ucsd.com/events">
-  <meta property="og:type" content="website">
-</svelte:head>
-
 <nav>
     <a href='/'>
         <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
