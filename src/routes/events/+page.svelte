@@ -1,8 +1,3 @@
-<script>
-  export let title = 'DS3 UCSD - Events';
-  export let description = `Check out our upcoming events and join us for community building and career development opportunities.`;
-</script>
-
 <script lang='ts'>
     import type { PageData } from './$types';
     import EventCard from './eventCard.svelte';
