@@ -1,4 +1,5 @@
 <script lang='ts'>
+    import { Helmet } from 'react-helmet-async';
     import type { PageData } from './$types';
     import EventCard from './eventCard.svelte';
     export let data: PageData;
@@ -14,11 +15,16 @@
     export let EventsMetaData = getEventsMetaData();
 </script>
 
-<head>
-    <meta property="og:title" content="{EventsMetaData.title}">
-    <meta property="og:description" content="{EventsMetaData.description}">
-    <meta property="og:image" content="{EventsMetaData.image}">
-</head>
+<svelte:head>
+  <Helmet>
+    <title>{EventsMetaData.title}</title>
+    <meta name="description" content={EventsMetaData.description} />
+    <meta property="og:title" content={EventsMetaData.title} />
+    <meta property="og:description" content={EventsMetaData.description} />
+    <meta property="og:image" content={EventsMetaData.image} />
+  </Helmet>
+</svelte:head>
+
 
 <section>
     <div class="title-sec">
