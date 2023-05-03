@@ -7,11 +7,7 @@
   export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
 </script>
 
-
-
-<section>
-  
-  <svelte:head>
+<svelte:head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
@@ -22,7 +18,10 @@
   <meta property="og:url" content="https://www.ds3ucsd.com/events">
   <meta property="og:type" content="website">
   </svelte:head>
-  
+
+
+
+<section>
     <div class="title-sec">
         <h1>EVENTS</h1>
     </div>
