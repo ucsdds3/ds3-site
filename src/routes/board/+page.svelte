@@ -13,7 +13,7 @@
   <meta name="description" content="{description}">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
-  <meta property="og:image" content="/images/board-preview.jpg">
+  <meta property="og:image" content="/favicon.png">
   <meta property="og:url" content="https://www.ds3ucsd.com/board">
   <meta property="og:type" content="website">
 </svelte:head>
