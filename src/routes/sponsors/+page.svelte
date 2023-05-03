@@ -5,7 +5,7 @@
     
     export let title = 'Upcoming Events - DS3 UCSD';
     
-    export let description = `Test for sponsors.`;
+    export let description = `Discover the organizations powering DS3's mission - meet our esteemed sponsors, including CSE UCSD, Halıcıoğlu Data Science Institute, and Palantir.`;
 </script>
 
 <svelte:head>
