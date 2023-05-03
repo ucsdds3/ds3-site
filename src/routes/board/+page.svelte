@@ -2,7 +2,7 @@
     import boardMembers from "$web-config/board.json"
     import BoardCard from "./boardCard.svelte";
     
-    export let title = 'Upcoming Events - DS3 UCSD';
+    export let title = 'Get to know the board - DS3 UCSD';
     export let description = `Learn about the brilliant minds behind DS3 - meet the team of dedicated undergraduates leading the charge.`;
 </script>
 
