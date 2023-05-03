@@ -5,18 +5,6 @@
     export let data: PageData;
 </script>
 
-<svelte:head> 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title}</title>
-  <meta name="description" content="This is for testing">
-  <meta property="og:title" content="DS3 UCSD">
-  <meta property="og:description" content="{description}">
-  <meta property="og:image" content="/favicon.png">
-  <meta property="og:url" content="https://www.ds3ucsd.com/events">
-  <meta property="og:type" content="website">
-</svelte:head>
-
 <section>
     <div class="title-sec">
         <h1>EVENTS</h1>
