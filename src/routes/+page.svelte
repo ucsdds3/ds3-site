@@ -5,8 +5,10 @@
 
 	export let data: PageData;
 	
-	export let title = 'Upcoming Events - DS3 UCSD';
-        export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
+	export let title = 'Home page - DS3 UCSD';
+        export let description = `DS3 is the largest interdisciplinary data science organization
+		   on campus, comprising of 100+ passionate undergraduate students. We offer resources, events,
+		   and opportunities for career development and community building.`;
 </script>
 
 <svelte:head>
@@ -17,7 +19,7 @@
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{description}">
   <meta property="og:image" content="/favicon.png">
-  <meta property="og:url" content="https://www.ds3ucsd.com/events">
+  <meta property="og:url" content="https://www.ds3ucsd.com/">
   <meta property="og:type" content="website">
   </svelte:head>
 
