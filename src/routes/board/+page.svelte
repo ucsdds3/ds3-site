@@ -3,7 +3,7 @@
     import BoardCard from "./boardCard.svelte";
     
     export let title = 'Upcoming Events - DS3 UCSD';
-    export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
+    export let description = `Test for boards preview card.`;
 </script>
 
 <svelte:head>
