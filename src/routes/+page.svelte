@@ -4,7 +4,21 @@
 	import cardData from '$web-config/landing-cards.json';
 
 	export let data: PageData;
-</script>
+	
+	export let title = 'Upcoming Events - DS3 UCSD';
+       export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
+
+<svelte:head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:image" content="/favicon.png">
+  <meta property="og:url" content="https://www.ds3ucsd.com/events">
+  <meta property="og:type" content="website">
+  </svelte:head>
 
 <section id="title-section">
 	<div class="seperator">
