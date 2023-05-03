@@ -2,7 +2,7 @@
 	import InfoCard from "./infoCard.svelte";
         import infoCardData from "../../web-config/infoCardData.json";
 	
-	export let title = 'Upcoming Events - DS3 UCSD';
+	export let title = 'Join us - DS3 UCSD';
         export let description = `Get involved with DS3 - a not-for-profit organization empowering the next generation of data scientists. Donate to support our cause or join our community through social media and membership.`;
 </script>
 
