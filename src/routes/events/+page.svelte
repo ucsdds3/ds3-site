@@ -5,17 +5,6 @@
     export let data: PageData;
 </script>
 
-<script>
-  import EventsPreviewCard from '../components/EventsPreviewCard.svelte';
-  export let endpoint = 'events';
-</script>
-
-<main>
-  {#if endpoint === 'events'}
-    <EventsPreviewCard title="My Events Page" description="Check out my latest events!" image="/events-preview.jpg" />
-</main>
-
-
 <section>
     <div class="title-sec">
         <h1>EVENTS</h1>
