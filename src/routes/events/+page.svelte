@@ -1,14 +1,17 @@
 <script lang='ts'>
     import type { PageData } from './$types';
     import EventCard from './eventCard.svelte';
-
     export let data: PageData;
     
-    export let EventsMetaData = {
-      title: "Events Page",
-      description: "Check out our upcoming events!",
-      image: "/images/events.jpg"
-    };
+    function getEventsMetaData() {
+      return {
+        title: 'Upcoming Events',
+        description: 'Check out our upcoming events!',
+        image: '/favicon.png'
+      };
+    }
+    
+    export let EventsMetaData = getEventsMetaData();
 </script>
 
 <head>
