@@ -1,4 +1,4 @@
-</script> 
+<script> 
   export let title = 'Upcoming Events - DS3 UCSD';
   export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
 </script>
