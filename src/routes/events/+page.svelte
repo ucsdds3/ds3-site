@@ -5,20 +5,6 @@
     export let data: PageData;
 </script>
 
-<script>
-  export let metadata = {
-    title: "Events Page",
-    description: "Check out our upcoming events!",
-    image: "/images/events.jpg"
-  };
-</script>
-
-<head>
-  <meta property="og:title" content="{metadata.title}">
-  <meta property="og:description" content="{metadata.description}">
-  <meta property="og:image" content="{metadata.image}">
-</head>
-
 <section>
     <div class="title-sec">
         <h1>EVENTS</h1>
