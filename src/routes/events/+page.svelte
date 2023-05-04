@@ -17,7 +17,7 @@
   <meta property="og:image" content="/favicon.png">
   <meta property="og:url" content="https://www.ds3ucsd.com/events">
   <meta property="og:type" content="website">
-  </svelte:head>
+</svelte:head>
 
 
 
