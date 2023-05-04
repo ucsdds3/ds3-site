@@ -4,7 +4,6 @@
     export let data: PageData;
     
     export let title = 'Sponsors - DS3 UCSD';
-    
     export let description = `Discover the organizations powering DS3's mission - meet our esteemed sponsors, including CSE UCSD, Halıcıoğlu Data Science Institute, and Palantir.`;
 </script>
 
@@ -18,7 +17,7 @@
   <meta property="og:image" content="/favicon.png">
   <meta property="og:url" content="https://www.ds3ucsd.com/sponsors">
   <meta property="og:type" content="website">
-  </svelte:head>
+</svelte:head>
 
 <section>
     <div class="title-sec">
