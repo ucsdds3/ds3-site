@@ -1,7 +1,23 @@
 <script lang='ts'>
     import boardMembers from "$web-config/board.json"
     import BoardCard from "./boardCard.svelte";
+    
+    export let title = 'Get to know the board - DS3 UCSD';
+    export let description = `Learn about the brilliant minds behind DS3 - meet the team of dedicated undergraduates leading the charge.`;
 </script>
+
+<svelte:head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:image" content="/favicon.png">
+  <meta property="og:url" content="https://www.ds3ucsd.com/board">
+  <meta property="og:type" content="website">
+</svelte:head>
+
 
 <section>
     <div class="title-sec">

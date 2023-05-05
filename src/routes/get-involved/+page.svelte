@@ -1,7 +1,22 @@
 <script lang='ts'>
 	import InfoCard from "./infoCard.svelte";
-    import infoCardData from "../../web-config/infoCardData.json";
+        import infoCardData from "../../web-config/infoCardData.json";
+	
+	export let title = 'Join us - DS3 UCSD';
+        export let description = `Get involved with DS3 - a not-for-profit organization empowering the next generation of data scientists. Donate to support our cause or join our community through social media and membership.`;
 </script>
+
+<svelte:head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:image" content="/favicon.png">
+  <meta property="og:url" content="https://www.ds3ucsd.com/get-involved">
+  <meta property="og:type" content="website">
+</svelte:head>
 
 <section>
     <div class="title-sec">
