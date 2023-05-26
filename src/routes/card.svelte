@@ -9,7 +9,7 @@
 
 <div class="card">
     {#if !imageDirection}
-        <img class="left" src="{imageURL}" alt="ds3 demo">
+        <img class="left" src="{imageURL}" alt="ds3 demo" loading="lazy">
         <div class="card-information">
             <h3 class="card-title">{title}</h3>
             <p class="card-description">{description}</p>
@@ -35,7 +35,7 @@
                 <button>Learn More</button>
             </a>
         </div>
-        <img class="right" src="{imageURL}" alt="ds3 demo">
+        <img class="right" src="{imageURL}" alt="ds3 demo" loading="lazy">
     {/if}
 </div>
 

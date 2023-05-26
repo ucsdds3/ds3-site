@@ -26,12 +26,12 @@
 <section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
-		<img src="svgs/splash.svg" alt="computer splash" />
+		<img src="svgs/splash.svg" alt="computer splash"/>
 	</div>
 </section>
 <section id="info-section">
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" />
+		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy" />
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premiere interdisciplinary data science
 			organization on campus, composed of over 100+ undergraduate students passionate about all
@@ -72,6 +72,7 @@
 						.replace('.png', '')
 						.replace('/static/images/company-logos/', '')} company logo`}
 					class="company-logos"
+					loading="lazy"
 				/>
 			{/each}
 		</div>
