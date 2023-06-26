@@ -38,7 +38,7 @@
     </div>
     <div id="sponsor-info">
         <h5 class="sponsor-msg">Interested in hearing how we can help you? Contact us at&nbsp;</h5>
-        <a class="sponsor-msg" href="mailto:ds3@ucsd.edu">ds3.ucsd.edu</a>
+        <a class="sponsor-msg" href="mailto:ds3@ucsd.edu">ds3@ucsd.edu</a>
         <h5 class="sponsor-msg">or view our sponsor packet&nbsp;</h5>
         <a class="sponsor-msg" href="/">here</a>
         <h5 class="sponsor-msg">.</h5>
