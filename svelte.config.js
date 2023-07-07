@@ -11,7 +11,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			"$web-config": "./src/web-config",
-			"$modules": "./src/modules"
+			"$lib": "./src/lib"
 		}
 	}
 };
