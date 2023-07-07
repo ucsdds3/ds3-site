@@ -1,3 +1,9 @@
+<script lang='ts'>
+    import Analytics from "$lib/client/analytics.svelte";
+</script>
+
+<Analytics />
+
 <nav>
     <a href='/'>
         <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
