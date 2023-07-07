@@ -70,7 +70,8 @@ export async function load()  {
     const cleanedData: any = handleGoogleCalendarResponse(rawCalendarData)
 
     return {
-        calendarData: cleanedData
+        calendarData: cleanedData,
+        pastEvents: []
     }
 }
 

@@ -1,6 +1,6 @@
 <script lang='ts'>
     import type { CleanEvent } from "./calendarInterfaces";
-    import Modal, {getModal} from "$modules/Modal.svelte";
+    import Modal, {getModal} from "$lib/client/Modal.svelte";
     export let event: CleanEvent;
 
     // GCP key can be exposed because reqeuests are restricted from the domain request
