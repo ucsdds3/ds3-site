@@ -6,7 +6,7 @@
     export let linkedin: string;
     export let email: string;
     export let img: string;
-    export let resume: string;
+    export let experience: string;
     export let description: string;
 </script>
 
@@ -33,7 +33,7 @@
             <p>{description}</p>
             <div class="modal-links">
                 <a class="orange" href="{linkedin}" rel="noreferrer" target="_blank">LinkedIn</a>
-                <a class="blue" href="{resume}" rel="noreferrer" target="_blank">Resume</a>
+                <a class="blue" href="{experience}" rel="noreferrer" target="_blank">Experience</a>
                 <a class="grey" href="mailto:{email}" rel="noreferrer" target="_blank">Email</a>
             </div>
         </div>
