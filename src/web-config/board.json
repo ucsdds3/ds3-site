@@ -5,7 +5,7 @@
         "linkedin": "https://www.linkedin.com/in/arunav-gupta",
         "email": "arunavg@ucsd.edu",
         "img": "arunav.jpg",
-        "resume": "",
+        "experience": "",
         "description": "Arunav is an aspiring data scientist/software engineer looking to work on large datasets and fast computers. He recently worked on the Sagemaker platform at Amazon for two summers where he built several new (forthcoming) scalable data processing features from scratch."
     },
     {
@@ -14,7 +14,7 @@
         "linkedin": "https://www.linkedin.com/in/kent-utama-42984419b//",
         "email": "kutama@ucsd.edu",
         "img": "kentutama.jpg",
-        "resume": "",
+        "experience": "",
         "description": "Kent is a data science student at UC San Diego and a business intelligence engineer intern at Amazon. He has interned at Bukalapak, one of Indonesia's unicorns, where he helped build a recommender system. He is passionate about learning new technologies and solving real-world problems with data."
     },
     {
@@ -23,7 +23,7 @@
         "linkedin": "https://www.linkedin.com/in/lauren-sidarto-57ba9b196",
         "email": "lsidarto@ucsd.edu",
         "img": "lauren.jpg",
-        "resume": "https://drive.google.com/open?id=1MTWN5qqMUEupoFMO6Nl3iPKGlOnjYIKt",
+        "experience": "https://drive.google.com/open?id=1MTWN5qqMUEupoFMO6Nl3iPKGlOnjYIKt",
         "description": "Lauren is a data science student at UC San Diego and a strategy and analytics intern at Deloitte. She has worked as a project manager at BizBaz, a London-based fintech firm that uses AI and ML to help the unbanked and unaccounted in Asia."
     },
     {
@@ -32,7 +32,7 @@
         "linkedin": "https://www.linkedin.com/in/ro-mish/",
         "email": "r1mishra@ucsd.edu",
         "img": "rohit.jpeg",
-        "resume": "",
+        "experience": "",
         "description": "Rohit is a senior at UC San Diego studying Data Science under the Halıcıoğlu Data Science Institute and also pursuing a minor in Business. He is primarily Interested in Data Science, Machine Learning Engineering, and Software Engineering."
     },
     {
@@ -41,7 +41,7 @@
         "linkedin": "https://www.linkedin.com/in/riya-mhatre/",
         "email": "rmhatre@ucsd.edu",
         "img": "riya.png",
-        "resume": "https://drive.google.com/open?id=1twaF3xtJxABXfKkpNt6GqPRLp5jUvYr5",
+        "experience": "https://drive.google.com/open?id=1twaF3xtJxABXfKkpNt6GqPRLp5jUvYr5",
         "description": "Riya is a data science and business psychology student at UC San Diego. She is the online content director of the Data Science Student Society at UCSD and a Deloitte data science mentee. She has interned at Katch, an entertainment data company."
     },
     {
@@ -50,7 +50,7 @@
         "linkedin": "https://www.linkedin.com/in/gauri-samith-7b489919a/",
         "email": "gsamith@ucsd.edu",
         "img": "gauri.jpg",
-        "resume": "",
+        "experience": "https://github.com/",
         "description": "Gauri is a data science and cognitive science student at UC San Diego. She is a research intern at the San Diego Supercomputer Center and the director of projects of the Data Science Student Society at UCSD."
     },
     {
@@ -59,7 +59,7 @@
         "linkedin": "https://www.linkedin.com/in/brian-huang-b5238817b",
         "email": "bjh009@ucsd.edu",
         "img": "bhuang.jpg",
-        "resume": "https://drive.google.com/open?id=1G8OJAjpMd8TUiUYTD2YtDjzAvyC3h15_",
+        "experience": "https://drive.google.com/open?id=1G8OJAjpMd8TUiUYTD2YtDjzAvyC3h15_",
         "description": "Brian is a data science student at UC San Diego. He is a software development intern at Amazon and the director of workshops of the Data Science Student Society at UCSD. He has also tutored data science courses at UC San Diego and interned at Personal.ai."
     },
     {
@@ -68,7 +68,7 @@
         "linkedin": "https://www.linkedin.com/in/pravar-bhandari/",
         "email": "psbhanda@ucsd.edu",
         "img": "pravarb.jpg",
-        "resume": "https://drive.google.com/file/d/1AkMTF3c8TaR9htO2lT1NF-BMI76ERh-6/view?pli=1",
+        "experience": "https://drive.google.com/file/d/1AkMTF3c8TaR9htO2lT1NF-BMI76ERh-6/view?pli=1",
         "description": "Pravar is a 4th year Data Science Major with a Math Minor. He has experience in various areas of data science. He has also completed internships at IBM, Genentech, and UCSD Athletics, and will be joining IBM as a full-time Data Scientist upon graduation."
     },
     {
@@ -77,7 +77,7 @@
         "linkedin": "https://www.linkedin.com/in/shengqiujin/",
         "email": "s3jin@ucsd.edu",
         "img": "goldiej.jpeg",
-        "resume": "",
+        "experience": "",
         "description": "Goldie is a Computer Engineering student at UC San Diego. She has lived in a foreign country for years and is comfortable working in a bilingual environment. She wishes to contribute with her unique experience from UCSD to any computer engineering or/and machine learning-related industry."
     },  
     {
@@ -86,7 +86,7 @@
         "linkedin": "https://www.linkedin.com/in/aryaman-sinha/",
         "email": "a2sinha@ucsd.edu",
         "img": "aryaman.jpeg",
-        "resume": "",
+        "experience": "",
         "description": "Aryaman is a data science student at UC San Diego. He is a data science intern at Fractal, where he works on web scraping and natural language processing. He is also an instructional assistant at UC San Diego and the assistant projects director of the Data Science Student Society at UCSD."
     },
     {
@@ -95,7 +95,7 @@
         "linkedin": "https://www.linkedin.com/in/chavez-francisco/",
         "email": "fchavezg@ucsd.edu",
         "img": "fchavez.jpg",
-        "resume": "https://drive.google.com/open?id=1LvR2u7BdSlwfJpla1hCsxxa6ckvXykYh",
+        "experience": "https://drive.google.com/open?id=1LvR2u7BdSlwfJpla1hCsxxa6ckvXykYh",
         "description": "Francisco is a data science student at UC San Diego. He has skills in data analysis, machine learning, and programming. He is a part-time events and concessions lead at UC San Diego and a former Triton Health Ambassador."
     },
     {
@@ -104,7 +104,7 @@
         "linkedin": "https://www.linkedin.com/in/josephguzman03/",
         "email": "j4guzman@ucsd.edu",
         "img": "jguzman.jpg",
-        "resume": "",
+        "experience": "",
         "description": "Joseph is a data science and business economics student at UC San Diego. He is a financial coordinator at Compass, where he manages financial records, budgets, and forecasts. He has also worked as a modeling engineer at Compass and a Triton Health Ambassador at UC San Diego."
     },
     {
@@ -113,7 +113,7 @@
         "linkedin": "https://www.linkedin.com/in/john-mauricio-b427a4216/",
         "email": "jxmauric@ucsd.edu",
         "img": "jmauricio.jpeg",
-        "resume": "",
+        "experience": "",
         "description": "John is a data science and business economics student at UC San Diego. He is an incoming software engineer at Loopnet. He has also worked as a course instructor at iD Tech Camps and a data science intern at Symba."
     },
     {
@@ -122,7 +122,7 @@
         "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
         "email": "jolo@ucsd.edu",
         "img": "jonathan.jpg",
-        "resume": "",
+        "experience": "",
         "description": "Jonathan is a data science student at UC San Diego. He is a software engineer intern at San Diego Supercomputer Center, where he works on data-enabled scientific computing. He has also been a webmaster of the Data Science Student Society at UCSD and a data quality intern at Fluidra North America."
     }
 ]
