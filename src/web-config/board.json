@@ -1,120 +1,48 @@
 [
     {
-        "name": "Arunav Gupta",
-        "title": "President & Consulting Co-Director",
-        "linkedin": "https://www.linkedin.com/in/arunav-gupta",
-        "email": "arunavg@ucsd.edu",
-        "img": "arunav.jpg",
-        "experience": "",
-        "description": "Arunav is an aspiring data scientist/software engineer looking to work on large datasets and fast computers. He recently worked on the Sagemaker platform at Amazon for two summers where he built several new (forthcoming) scalable data processing features from scratch."
+        "name": "Atharva Kulkarni",
+        "title": "President",
+        "linkedin": "https://www.linkedin.com/in/atharva-pk/",
+        "email": "apkulkarni@ucsd.edu",
+        "img": "atharva.jpg",
+        "experience": "https://atharvak.me/",
+        "description": "Atharva is an aspiring data scientist looking to use his experience for the broader social good. He has worked on finding keystone gut microbiota that can mitigate refractory epilepsy and a semi-supervised model that can detect illegal activity in graph social networks. But he knows not everything good in life has to start with pd.read_csv() -  he enjoys cooking, exploring the outdoors, and reading books related to history, philosophy, and the sciences."
     },
     {
-        "name": "Kent Utama",
-        "title": "VP External",
-        "linkedin": "https://www.linkedin.com/in/kent-utama-42984419b//",
-        "email": "kutama@ucsd.edu",
-        "img": "kentutama.jpg",
-        "experience": "",
-        "description": "Kent is a data science student at UC San Diego and a business intelligence engineer intern at Amazon. He has interned at Bukalapak, one of Indonesia's unicorns, where he helped build a recommender system. He is passionate about learning new technologies and solving real-world problems with data."
-    },
-    {
-        "name": "Lauren Sidarto",
-        "title": "VP Internal",
-        "linkedin": "https://www.linkedin.com/in/lauren-sidarto-57ba9b196",
-        "email": "lsidarto@ucsd.edu",
-        "img": "lauren.jpg",
-        "experience": "https://drive.google.com/open?id=1MTWN5qqMUEupoFMO6Nl3iPKGlOnjYIKt",
-        "description": "Lauren is a data science student at UC San Diego and a strategy and analytics intern at Deloitte. She has worked as a project manager at BizBaz, a London-based fintech firm that uses AI and ML to help the unbanked and unaccounted in Asia."
-    },
-    {
-        "name": "Rohit Mishra",
-        "title": "VP Finance & Consulting Co-Director",
-        "linkedin": "https://www.linkedin.com/in/ro-mish/",
-        "email": "r1mishra@ucsd.edu",
-        "img": "rohit.jpeg",
-        "experience": "",
-        "description": "Rohit is a senior at UC San Diego studying Data Science under the Halıcıoğlu Data Science Institute and also pursuing a minor in Business. He is primarily Interested in Data Science, Machine Learning Engineering, and Software Engineering."
-    },
-    {
-        "name": "Riya Mhatre",
+        "name": "Shivangi Gupta",
         "title": "Online Content Director",
-        "linkedin": "https://www.linkedin.com/in/riya-mhatre/",
-        "email": "rmhatre@ucsd.edu",
-        "img": "riya.png",
-        "experience": "https://drive.google.com/open?id=1twaF3xtJxABXfKkpNt6GqPRLp5jUvYr5",
-        "description": "Riya is a data science and business psychology student at UC San Diego. She is the online content director of the Data Science Student Society at UCSD and a Deloitte data science mentee. She has interned at Katch, an entertainment data company."
+        "linkedin": "https://www.linkedin.com/in/shivangi-gupta24/",
+        "email": "shg010@ucsd.edu",
+        "img": "shivangi.jpeg",
+        "experience": "https://drive.google.com/open?id=1yK8XycUncoWlls3NTGimF8UT4SWeDFcN",
+        "description": "Shivangi is an economics and data science student who is hopeful about working as a data scientist upon graduation. She's interned at SDG&E, where she built a ML model to optimize customers' journeys when interacting with the online self-service portal, MyAccount. In her free time, she loves to read romance and thriller novels, watch reality TV shows, and play chess!"
     },
     {
-        "name": "Gauri Samith",
-        "title": "Projects Committee Director",
-        "linkedin": "https://www.linkedin.com/in/gauri-samith-7b489919a/",
-        "email": "gsamith@ucsd.edu",
-        "img": "gauri.jpg",
-        "experience": "https://github.com/",
-        "description": "Gauri is a data science and cognitive science student at UC San Diego. She is a research intern at the San Diego Supercomputer Center and the director of projects of the Data Science Student Society at UCSD."
+        "name": "Luran Zhang",
+        "title": "Professional Events Co-Director",
+        "linkedin": "https://www.linkedin.com/in/luran-zhang/",
+        "email": "luz010@ucsd.edu",
+        "img": "luran.jpeg",
+        "experience": "https://drive.google.com/file/d/1m_tRVzadxZzf9avUVVzRXpTDbPMJW9Mk/view",
+        "description": "Hello, this is Luran (Lauren)😄. I am a third year student from Muir college double major in Data Science and Joint Math Econ. During my free time, I enjoy solving puzzles, watching movies, snowboarding, and rock climbing (just picked it up this summer). "
     },
     {
-        "name": "Brian Huang",
-        "title": "Workshops Director",
-        "linkedin": "https://www.linkedin.com/in/brian-huang-b5238817b",
-        "email": "bjh009@ucsd.edu",
-        "img": "bhuang.jpg",
-        "experience": "https://drive.google.com/open?id=1G8OJAjpMd8TUiUYTD2YtDjzAvyC3h15_",
-        "description": "Brian is a data science student at UC San Diego. He is a software development intern at Amazon and the director of workshops of the Data Science Student Society at UCSD. He has also tutored data science courses at UC San Diego and interned at Personal.ai."
+        "name": "Advaith Ravishankar",
+        "title": "Projects Director",
+        "linkedin": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
+        "email": "aravishankar@ucsd.edu",
+        "img": "advaith.jpg",
+        "experience": "https://drive.google.com/file/d/1_53tUzmjGWVMjYNy9blpUJNDYW_4qGhX/view",
+        "description": "I am a third-year undergraduate at UC San Diego who specializes in Computer Vision and Data Science. I have over 2 years of research experience applying computer vision models in computational neuroscience, making it easier to annotate 2D poses in video data. I am currently interested in generative AI by combining both NLP and computer vision to automatically generate videos based on text prompts."
     },
     {
-        "name": "Pravar Bhandari",
-        "title": "Professional Events Director",
-        "linkedin": "https://www.linkedin.com/in/pravar-bhandari/",
-        "email": "psbhanda@ucsd.edu",
-        "img": "pravarb.jpg",
-        "experience": "https://drive.google.com/file/d/1AkMTF3c8TaR9htO2lT1NF-BMI76ERh-6/view?pli=1",
-        "description": "Pravar is a 4th year Data Science Major with a Math Minor. He has experience in various areas of data science. He has also completed internships at IBM, Genentech, and UCSD Athletics, and will be joining IBM as a full-time Data Scientist upon graduation."
-    },
-    {
-        "name": "Goldie Jin",
-        "title": "Design Director",
-        "linkedin": "https://www.linkedin.com/in/shengqiujin/",
-        "email": "s3jin@ucsd.edu",
-        "img": "goldiej.jpeg",
-        "experience": "",
-        "description": "Goldie is a Computer Engineering student at UC San Diego. She has lived in a foreign country for years and is comfortable working in a bilingual environment. She wishes to contribute with her unique experience from UCSD to any computer engineering or/and machine learning-related industry."
-    },  
-    {
-        "name": "Aryaman Sinha",
-        "title": "Projects Co-Director",
-        "linkedin": "https://www.linkedin.com/in/aryaman-sinha/",
-        "email": "a2sinha@ucsd.edu",
-        "img": "aryaman.jpeg",
-        "experience": "",
-        "description": "Aryaman is a data science student at UC San Diego. He is a data science intern at Fractal, where he works on web scraping and natural language processing. He is also an instructional assistant at UC San Diego and the assistant projects director of the Data Science Student Society at UCSD."
-    },
-    {
-        "name": "Francisco Chavez",
-        "title": "Marketing Director",
-        "linkedin": "https://www.linkedin.com/in/chavez-francisco/",
-        "email": "fchavezg@ucsd.edu",
-        "img": "fchavez.jpg",
-        "experience": "https://drive.google.com/open?id=1LvR2u7BdSlwfJpla1hCsxxa6ckvXykYh",
-        "description": "Francisco is a data science student at UC San Diego. He has skills in data analysis, machine learning, and programming. He is a part-time events and concessions lead at UC San Diego and a former Triton Health Ambassador."
-    },
-    {
-        "name": "Joseph Guzman",
-        "title": "DEI Director",
-        "linkedin": "https://www.linkedin.com/in/josephguzman03/",
-        "email": "j4guzman@ucsd.edu",
-        "img": "jguzman.jpg",
-        "experience": "",
-        "description": "Joseph is a data science and business economics student at UC San Diego. He is a financial coordinator at Compass, where he manages financial records, budgets, and forecasts. He has also worked as a modeling engineer at Compass and a Triton Health Ambassador at UC San Diego."
-    },
-    {
-        "name": "John Mauricio",
-        "title": "Social Events Director",
-        "linkedin": "https://www.linkedin.com/in/john-mauricio-b427a4216/",
-        "email": "jxmauric@ucsd.edu",
-        "img": "jmauricio.jpeg",
-        "experience": "",
-        "description": "John is a data science and business economics student at UC San Diego. He is an incoming software engineer at Loopnet. He has also worked as a course instructor at iD Tech Camps and a data science intern at Symba."
+        "name": "Trey Scheid",
+        "title": "Professional Events Director, HDSI Liaison",
+        "linkedin": "https://www.linkedin.com/in/treyscheid/",
+        "email": "tscheid@ucsd.edu",
+        "img": "trey.jpg",
+        "experience": "https://drive.google.com/open?id=1dj36nMJSk6cBbvSKW6uQ1K7K4EZ6gMEY",
+        "description": "Trey is a Data Science major with an interest in recommender systems and machine learning methods. He has gained valuable experience in roles ranging from a student startup to the manufacturing industry where he created classification models and evaluated production using Operational Equipment Effectiveness. In addition to his academic pursuits, he enjoys photography and fringe \"sports\"."
     },
     {
         "name": "Jonathan Lo",
