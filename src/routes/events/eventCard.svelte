@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import type { CleanEvent } from "./calendarInterfaces";
+    import type { CleanEvent } from "$lib/server/calendarInterfaces";
     import Modal, {getModal} from "$lib/client/Modal.svelte";
     export let event: CleanEvent;
 
@@ -9,24 +9,23 @@
     const eventImage: string = (event.image) ? event.image : "event-placeholder.jpg";
 
     // Process Google Maps Location Query
-    let eventGoogleMapLocation: string;
-    if (event.location.mapsLocation) {
-        eventGoogleMapLocation = event.location.mapsLocation;
-    } else if (event.location.roomLocation) {
-        eventGoogleMapLocation = `UCSD ${event.location.roomLocation}`;
+    let eventGoogleMapLocation: string | undefined;
+    if (event.location) {
+        eventGoogleMapLocation = event.location;
     } else {
         eventGoogleMapLocation = `UCSD, La Jolla, CA`;
     }
 
     // Process Room Number information
-    let eventRoomLocation: string;
-    if (event.location.roomLocation && event.location.roomLocation != "undefined") {
-        eventRoomLocation = event.location.roomLocation;
-    } else if (event.location.mapsLocation && event.location.mapsLocation != "undefined") {
-        eventRoomLocation = event.location.mapsLocation;
-    } else {
-        eventRoomLocation = "Location TBD";
-    }
+    let eventRoomLocation: string | undefined;
+    eventRoomLocation = eventGoogleMapLocation;
+    // if (event.location.roomLocation && event.location.roomLocation != "undefined") {
+    //     eventRoomLocation = event.location.roomLocation;
+    // } else if (event.location.mapsLocation && event.location.mapsLocation != "undefined") {
+    //     eventRoomLocation = event.location.mapsLocation;
+    // } else {
+    //     eventRoomLocation = "Location TBD";
+    // }
 
     // Display Logical Description
     let eventDescription: string;

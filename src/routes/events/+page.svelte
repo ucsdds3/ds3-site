@@ -3,6 +3,8 @@
   import EventCard from './eventCard.svelte';
   export let data: PageData;
 
+  console.log(data)
+
   export let title = 'Upcoming Events - DS3 UCSD';
   export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
 </script>
@@ -24,12 +26,17 @@
         <h1>EVENTS</h1>
     </div>
     <div id="centralizer">
+        {#if Object.keys(data).includes("error")}
+        <div>
+            <p>Error: {data.error}</p>
+        </div>
+        {:else}
         <div id="event-sec">
             <div class="event-display">
                 <h2>Upcoming Events</h2>
-                {#if data.calendarData}
+                {#if data.msg}
                     <div class="event-grid">
-                        {#each data.calendarData as event}
+                        {#each data.msg as event}
                             <EventCard {event} />
                         {/each}
                     </div>
@@ -55,6 +62,7 @@
                 {/if}
             </div>
         </div>
+        {/if}
     </div>
 </section>
 

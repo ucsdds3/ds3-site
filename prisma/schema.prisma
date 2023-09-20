@@ -1,0 +1,59 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model AuthUser {
+  id            String @id @map("_id")
+  auth_session  AuthSession[]
+  auth_key      AuthKey[]
+  name          String
+  email         String
+  staff         Boolean
+  subcom        String
+  createdEvents Event[]
+  @@map("auth_user")
+}
+
+model AuthSession {
+  id             String @id @map("_id")
+  user_id        String
+  active_expires BigInt
+  idle_expires   BigInt
+  auth_user      AuthUser   @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("auth_session")
+}
+
+model AuthKey {
+  id              String @id @map("_id")
+  hashed_password String?
+  user_id         String
+  primary_key     Boolean
+  expires         BigInt?
+  auth_user       AuthUser    @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("auth_key")
+}
+
+model Event {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt        DateTime @default(now())
+  creator          AuthUser @relation(references: [id], fields: [creatorID], onDelete: Cascade)
+  creatorID        String
+  title            String
+  datetime         DateTime
+  description      String
+  editedAt         DateTime[]
+  image            String?
+  location         String?
+  presenters       String?
+  registrationLink String?
+}
