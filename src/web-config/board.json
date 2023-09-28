@@ -9,6 +9,24 @@
         "description": "Atharva is an aspiring data scientist looking to use his experience for the broader social good. He has worked on finding keystone gut microbiota that can mitigate refractory epilepsy and a semi-supervised model that can detect illegal activity in graph social networks. But he knows not everything good in life has to start with pd.read_csv() -  he enjoys cooking, exploring the outdoors, and reading books related to history, philosophy, and the sciences."
     },
     {
+        "name": "Prabina Pokharel",
+        "title": "VP Finance",
+        "linkedin": "https://www.linkedin.com/in/prabina-pokharel/",
+        "email": "p2pokharel@ucsd.edu",
+        "img": "prabina.JPG",
+        "experience": "https://www.prabina.me/",
+        "description": "Prabina is an aspiring data scientist exploring the many possibilities to use data to make a difference in the world. At SANDAG, she led efforts to create a dashboard which tracks San Diego's compliance with UN SDG's. Currently, she's working with an AI lab at UCSD to detect intoxicated drivers. In her spare time, she enjoys running, hiking, and spending time with her family and friends."
+    },
+    {
+        "name": "Jack Kai Lim",
+        "title": "VP External",
+        "linkedin": "https://www.linkedin.com/in/jklim3/",
+        "email": "jklim@ucsd.edu",
+        "img": "jackl.jpg",
+        "experience": "https://drive.google.com/open?id=1dYX6b3EvJZWp4dSdv7fvLjgi_su8cKoJ",
+        "description": "Hello everyone, my name is Jack Kai Lim. I am the Vice President External from Malaysia, with a focus in Machine Learning and AI. I look forward to having a great year with all of you!"
+    },
+    {
         "name": "Shivangi Gupta",
         "title": "Online Content Director",
         "linkedin": "https://www.linkedin.com/in/shivangi-gupta24/",
@@ -27,17 +45,8 @@
         "description": "Hello, this is Luran (Lauren)😄. I am a third year student from Muir college double major in Data Science and Joint Math Econ. During my free time, I enjoy solving puzzles, watching movies, snowboarding, and rock climbing (just picked it up this summer). "
     },
     {
-        "name": "Advaith Ravishankar",
-        "title": "Projects Director",
-        "linkedin": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
-        "email": "aravishankar@ucsd.edu",
-        "img": "advaith.jpg",
-        "experience": "https://drive.google.com/file/d/1_53tUzmjGWVMjYNy9blpUJNDYW_4qGhX/view",
-        "description": "I am a third-year undergraduate at UC San Diego who specializes in Computer Vision and Data Science. I have over 2 years of research experience applying computer vision models in computational neuroscience, making it easier to annotate 2D poses in video data. I am currently interested in generative AI by combining both NLP and computer vision to automatically generate videos based on text prompts."
-    },
-    {
         "name": "Trey Scheid",
-        "title": "Professional Events Director, HDSI Liaison",
+        "title": "Professional Events Co-Director",
         "linkedin": "https://www.linkedin.com/in/treyscheid/",
         "email": "tscheid@ucsd.edu",
         "img": "trey.jpg",
@@ -45,12 +54,48 @@
         "description": "Trey is a Data Science major with an interest in recommender systems and machine learning methods. He has gained valuable experience in roles ranging from a student startup to the manufacturing industry where he created classification models and evaluated production using Operational Equipment Effectiveness. In addition to his academic pursuits, he enjoys photography and fringe \"sports\"."
     },
     {
+        "name": "Advaith Ravishankar",
+        "title": "Projects Co-Director",
+        "linkedin": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
+        "email": "aravishankar@ucsd.edu",
+        "img": "advaith.jpg",
+        "experience": "https://drive.google.com/file/d/1_53tUzmjGWVMjYNy9blpUJNDYW_4qGhX/view",
+        "description": "I am a third-year undergraduate at UC San Diego who specializes in Computer Vision and Data Science. I have over 2 years of research experience applying computer vision models in computational neuroscience, making it easier to annotate 2D poses in video data. I am currently interested in generative AI by combining both NLP and computer vision to automatically generate videos based on text prompts."
+    },
+    {
+        "name": "Victor Thai",
+        "title": "Projects Co-Director",
+        "linkedin": "linkedin.com/in/victor-thai",
+        "email": "v3thai@ucsd.edu",
+        "img": "victor.jpeg",
+        "experience": "https://drive.google.com/open?id=1jljbp-IvaT5ZSwgzxwg__Ww54TrjAWPx",
+        "description": "Victor is a fourth year data science major and also pursuing a minor in cognitive science. He has interests in data science, but also software engineering as well where he currently works as a student developer for UCSD ITS."
+    },
+    {
+        "name": "Goldie Jin",
+        "title": "Design Director",
+        "linkedin": "https://www.linkedin.com/in/shengqiujin/",
+        "email": "s3jin@ucsd.edu",
+        "img": "goldie.jpg",
+        "experience": "https://drive.google.com/open?id=1SqjmumAlxHrXdQGOAxUPH-isUj9NVv8C",
+        "description": "I'm Goldie Jin, a fourth-year Computer Engineering student at UC San Diego. My blend of technical skills and graphic design expertise from UCSD drives my passion for technology and innovation. I'm eager to contribute to Computer Engineering and Data Visualization fields and excited to connect with new DS3 members."
+    },
+    {
+        "name": "Anthony Dang",
+        "title": "Social Director",
+        "linkedin": "https://www.linkedin.com/in/anthony-dangg/",
+        "email": "jandang@ucsd.edu",
+        "img": "anthonyd.jpeg",
+        "experience": "",
+        "description": "Hi! I'm Anthony, a fourth year, who will be your Social Director this year. Let's fight the stigma that UCSD data science majors are socially dead and have a fun filled year!"
+    },
+    {
         "name": "Jonathan Lo",
         "title": "Infrastructure Director",
         "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
         "email": "jolo@ucsd.edu",
         "img": "jonathan.jpg",
-        "experience": "",
+        "experience": "https://drive.google.com/file/d/1z--wfJulcVulc1YcT0Ap_w9OQ8JUZ4AI/view",
         "description": "Jonathan is a data science student at UC San Diego. He is a software engineer intern at San Diego Supercomputer Center, where he works on data-enabled scientific computing. He has also been a webmaster of the Data Science Student Society at UCSD and a data quality intern at Fluidra North America."
     }
 ]
