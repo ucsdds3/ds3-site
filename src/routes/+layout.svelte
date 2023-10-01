@@ -1,7 +1,21 @@
 <script lang='ts'>
     import Analytics from "$lib/client/analytics.svelte";
+
+    export const title = "DS3 at UCSD";
+    export const description = "Data Science Student Society";
 </script>
 
+<svelte:head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{description}">
+    <meta property="og:image" content="/favicon.png">
+    <meta property="og:url" content="https://www.ds3ucsd.com/">
+    <meta property="og:type" content="website">
+</svelte:head>
 <Analytics />
 
 <nav>
