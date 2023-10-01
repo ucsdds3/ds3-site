@@ -1,10 +1,10 @@
 <script lang='ts'>
-  import type { PageData } from './$types';
-  import EventCard from './eventCard.svelte';
-  export let data: PageData;
+    import type { PageData } from './$types';
+    import EventCard from './eventCard.svelte';
 
-  export let title = 'Upcoming Events - DS3 UCSD';
-  export let description = `Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.`;
+    export let data: PageData;
+    export const title = "Events | DS3 at UCSD";
+    export const description = "Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.";
 </script>
 
 <svelte:head>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{description}">
     <meta property="og:image" content="/favicon.png">
-    <meta property="og:url" content="https://www.ds3ucsd.com/events">
+    <meta property="og:url" content="https://www.ds3ucsd.com/">
     <meta property="og:type" content="website">
 </svelte:head>
 
@@ -39,9 +39,9 @@
                     </div>
                 {/if}
             </div>
-            <div class="event-display">
+            <!-- <div class="event-display">
                 <h2>Past Events</h2>
-                <!-- Need to add past events here -->
+                <-- Need to add past events here ->
                 {#if data.pastEvents}
                 <div class="event-grid">
                     {#each data.pastEvents as event}
@@ -53,7 +53,7 @@
                         <h3>Temporarily Unavailable</h3>
                     </div>
                 {/if}
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
