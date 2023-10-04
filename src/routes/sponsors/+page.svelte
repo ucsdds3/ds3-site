@@ -39,7 +39,7 @@
         <h5 class="sponsor-msg">Interested in hearing how we can help you? Contact us at&nbsp;</h5>
         <a class="sponsor-msg" href="mailto:ds3@ucsd.edu">ds3@ucsd.edu</a>
         <h5 class="sponsor-msg">or view our sponsor packet&nbsp;</h5>
-        <a class="sponsor-msg" href="/DS3_Package.pdf" download = "DS3_Package.pdf">here</a>
+        <a class="sponsor-msg" href="/documents/DS3_Sponsors_23-24.pdf" target = '_blank'>here</a>
         <h5 class="sponsor-msg">.</h5>
     </div>
 </section>
