@@ -3,11 +3,11 @@
         <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
     </a>
     <div id="routes">
-        <a class="nav-item" href="/">Home</a>
-        <a class="nav-item" href="/events">Events</a>
-        <a class="nav-item" href="/board">Board</a>
-        <a class="nav-item" href="/sponsors">Sponsors</a>
-        <a class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
         <a class="nav-item last" href="/get-involved">Get Involved</a>
     </div>
 </nav>
