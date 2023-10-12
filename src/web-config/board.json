@@ -90,6 +90,15 @@
         "description": "Hi! I'm Anthony, a fourth year, who will be your Social Director this year. Let's fight the stigma that UCSD data science majors are socially dead and have a fun filled year!"
     },
     {
+        "name": "Christine Deng",
+        "title": "Marketing Director",
+        "linkedin": "https://www.linkedin.com/in/christine-deng-/",
+        "email": "cydeng@ucsd.edu",
+        "img": "christine.png",
+        "experience": "",
+        "description": "Christine is a data science student interested in data-driven content creation. She loves creating compelling content and connecting to audiences through an analytical and creative approach. She also works as a student graphic designer for the Halıcıoğlu Data Science Institute. Outside of academics, you can find her on-air DJing for UCSD's radio station!"
+    },
+    {
         "name": "Jonathan Lo",
         "title": "Infrastructure Director",
         "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
