@@ -73,12 +73,21 @@
     },
     {
         "name": "Goldie Jin",
-        "title": "Design Director",
+        "title": "Design Co-Director",
         "linkedin": "https://www.linkedin.com/in/shengqiujin/",
         "email": "s3jin@ucsd.edu",
         "img": "goldie.jpg",
         "experience": "https://drive.google.com/open?id=1SqjmumAlxHrXdQGOAxUPH-isUj9NVv8C",
         "description": "I'm Goldie Jin, a fourth-year Computer Engineering student at UC San Diego. My blend of technical skills and graphic design expertise from UCSD drives my passion for technology and innovation. I'm eager to contribute to Computer Engineering and Data Visualization fields and excited to connect with new DS3 members."
+    },
+    {
+        "name": "Kai Chester Ni",
+        "title": "Design Co-Director",
+        "linkedin": "https://www.linkedin.com/in/ckai-io/",
+        "email": "c5ni@ucsd.edu",
+        "img": "kai.jpg",
+        "experience": "",
+        "description": "Kai is a fourth year data science major at Muir College at UCSD. Kai believes in a better future of tech, where every individual's digital rights and privacy are protected. In working with data, he hopes to bring emphasis to the real people and real stories behind each datapoint, and leverage the skills and experience he develops to build a safe and constructive cyberverse for all."
     },
     {
         "name": "Anthony Dang",
