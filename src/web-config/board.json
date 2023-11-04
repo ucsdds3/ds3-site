@@ -115,5 +115,14 @@
         "img": "jonathan.jpg",
         "experience": "https://drive.google.com/file/d/1z--wfJulcVulc1YcT0Ap_w9OQ8JUZ4AI/view",
         "description": "Jonathan is a data science student at UC San Diego. He is a software engineer intern at San Diego Supercomputer Center, where he works on data-enabled scientific computing. He has also been a webmaster of the Data Science Student Society at UCSD and a data quality intern at Fluidra North America."
+    },
+    {
+        "name": "Jason Gu",
+        "title": "VP Internal",
+        "linkedin": "https://www.linkedin.com/in/jingchenggu/",
+        "email": "jig036@ucsd.edu",
+        "img": "jason.jpg" ,
+        "experience": "https://drive.google.com/open?id=1AwHHIlAteFZorGDis7DcN91biQqYnS3r",
+        "description": "Hi! My name is Jason and I am currently a fourth year data science major. As VP Internal I am here to help members around me and make everyone feel welcomed within this org. In my free time I enjoy playing the guitar, singing, going to the gym, going on late night drives, and any outdoor activities. Feel free to reach out to me whaenever!"
     }
 ]
