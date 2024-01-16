@@ -76,6 +76,20 @@
                             <button class="reg disabled" disabled>Register</button>
                         </div>
                     {/if}
+                    {#if event.location.roomLocation != undefined}
+                    <span>
+                        <div id="button-wrapper">
+                            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text={event.title}&dates={event.dateTime}&details={eventDescription}&location={event.location.roomLocation}" rel="external noreferrer" target="_blank" style="text-decoration:none">Add to Calendar</a>
+                        </div>
+                    </span>
+                    {:else}
+                    <span>
+                        <div id="button-wrapper">
+                            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text={event.title}&dates={event.dateTime}&details={eventDescription}" rel="external noreferrer" target="_blank" style="text-decoration:none">Add to Calendar</a>
+                        </div>
+                    </span>
+                    {/if}
+
                     <div id="modal-spacer">.</div>
                 </div>
             </div>
@@ -227,6 +241,25 @@
     #button-wrapper {
         width: 100%;
         display: inline-block;
+    }
+    #button-wrapper a {
+        background-color: var(--ds3-orange);
+        display: inline-block;
+        border: none;
+        font-size: 1.5vh;
+        font-weight: bold;
+        padding: 1.5% 4%;
+        color: white;
+        border-radius: 5px;
+        text-align: center; 
+        display: inline-block;
+        align-items: center;
+        width: auto;
+        margin-top: 1.5vh;
+    }
+    #button-wrapper a:hover {
+        cursor: pointer;
+        background-color: var(--ds3-orange-lighten);
     }
     #button-wrapper button {
         background-color: var(--ds3-orange);
