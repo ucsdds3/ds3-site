@@ -3,6 +3,12 @@
 
     export const title = "DS3 at UCSD";
     export const description = "Data Science Student Society";
+
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+    }
 </script>
 
 <svelte:head>
@@ -18,6 +24,22 @@
 </svelte:head>
 <Analytics />
 
+<div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu}>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+</div>
+
+<div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
+    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
+    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
+    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
+    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
+    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
+    <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
+</div>
+
+
 <nav>
     <a href='/'>
         <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
@@ -31,6 +53,8 @@
         <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
     </div>
 </nav>
+
+
 <slot></slot>
 <footer>
     <h2 id="footer-title">Connect with us</h2>
@@ -150,6 +174,7 @@
             font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         }
     }
+
     @media (max-height: 1199px) {
         #footer-title {
             font-size: 33px;
@@ -175,5 +200,66 @@
             align-items: center;
             font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         }
+    }
+
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 200; 
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+    }
+
+    .burger-line {
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease
+    }
+
+    .side-drawer {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+        z-index: 150;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column; 
+        padding-top: 60px;
+    }
+
+    .side-drawer.open {
+        right: 0; 
+    }
+
+    .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger-menu.open .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.open .burger-line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+        }
+
     }
 </style>
