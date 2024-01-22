@@ -56,11 +56,9 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
             description: (parsed) ? parsed["trueDescription"] : undefined,
             registerFormURL: (parsed) ? parsed["regForm"] : undefined
         }
-        
-        cleanedEvents.push(cleanEvent)
+        cleanedEvents.push(cleanEvent);
     }
-
-    return cleanedEvents
+    return cleanedEvents;
 }
 
 

@@ -60,6 +60,27 @@
 
 
 <style>
+    @media screen and (max-width: 768px){
+        .event-grid {
+            margin-top: 1vh;
+            display: block;
+            grid-template-columns: repeat(4, 25%);
+            grid-auto-rows: 1fr;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    @media screen and not (max-width: 768px){
+        .event-grid {
+            margin-top: 1vh;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-auto-rows: 1fr;
+            justify-content: space-between;
+            align-items: center;
+            vertical-align: middle;
+        }
+    }
     @font-face {
         font-family: "Montserrat Bold";
         src: url("/fonts/montserrat.bold.ttf");
@@ -99,16 +120,6 @@
         font-size: 60px;
         font-family: 'Montserrat Bold', 'Montserrat';
         margin: 0;
-    }
-
-    .event-grid {
-        margin-top: 1vh;
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-auto-rows: 1fr;
-        justify-content: space-between;
-        align-items: center;
-        vertical-align: middle;
     }
     
     h3 {
