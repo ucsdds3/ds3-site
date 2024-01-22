@@ -41,6 +41,7 @@ interface CleanEvent {
     title: string,
     date: string,
     time: string,
+    dateTime: string,
     image?: string,
     location: {
         mapsLocation?: string,

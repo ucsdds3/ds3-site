@@ -48,6 +48,7 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
             title: event['summary'].replaceAll("[autogen]", ""),
             date: dtString[0],
             time: dtString[1],
+            datetime: dateToRFC5545(event["start"]["dateTime"],event["end"]["dateTime"]),
             location: {
                 mapsLocation: (event["location"]) ? event["location"].trim() : undefined,
                 roomLocation: (parsed) ? parsed["roomLocation"] : undefined
@@ -59,6 +60,13 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
         cleanedEvents.push(cleanEvent);
     }
     return cleanedEvents;
+}
+
+function dateToRFC5545(start: string, end: string): string {
+    start = new Date(start).toISOString().replace(/-|:/g, "")
+    end = new Date(end).toISOString().replace(/-|:/g, "")
+
+    return start + "/" + end
 }
 
 
