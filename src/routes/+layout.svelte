@@ -1,14 +1,31 @@
 <script lang='ts'>
     import Analytics from "$lib/client/analytics.svelte";
+	import { onMount } from "svelte";
 
     export const title = "DS3 at UCSD";
     export const description = "Data Science Student Society";
 
+    let isMobile = false;
     let isMenuOpen = false;
 
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
     }
+
+    onMount(() => {
+        const mql = window.matchMedia('(max-width: 768px)');
+        isMobile = mql.matches;
+
+        function updateMobileState(e: MediaQueryListEvent) {
+            isMobile = e.matches;
+        }
+
+        mql.addEventListener('change', updateMobileState);
+
+        return () => {
+            mql.removeEventListener('change', updateMobileState);
+        };
+    });
 </script>
 
 <svelte:head>
@@ -24,35 +41,40 @@
 </svelte:head>
 <Analytics />
 
-<div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu}>
-    <div class="burger-line"></div>
-    <div class="burger-line"></div>
-    <div class="burger-line"></div>
-</div>
+{#if isMobile}
 
-<div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
-    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
-    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
-    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
-    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
-    <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
-    <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
-</div>
-
-
-<nav>
-    <a href='/'>
-        <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
-    </a>
-    <div id="routes">
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
+    <div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu}>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
     </div>
-</nav>
+
+    <div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/" on:click={toggleMenu}>Home</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events" on:click={toggleMenu}>Events</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board" on:click={toggleMenu}>Board</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors" on:click={toggleMenu}>Sponsors</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer" on:click={toggleMenu}>Consulting</a>
+        <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved" on:click={toggleMenu}>Get Involved</a>
+    </div>
+
+{:else}
+
+    <nav>
+        <a href='/'>
+            <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
+        </a>
+        <div id="routes">
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
+        </div>
+    </nav>
+
+{/if}
 
 
 <slot></slot>
@@ -217,7 +239,7 @@
         height: 4px;
         background-color: #333;
         margin: 5px 0;
-        transition: all 0.3s ease
+        transition: all 0.3s ease;
     }
 
     .side-drawer {
@@ -237,6 +259,27 @@
 
     .side-drawer.open {
         right: 0; 
+    }
+
+    .side-drawer .nav-item {
+        font-family: 'Montserrat';
+        vertical-align: middle;
+        font-size: 23px;
+        text-decoration: none;
+        margin-left: 2vw;
+        margin-top: 2.5%;
+        color: black;
+        text-align: left;
+    }
+
+    .side-drawer .nav-item.last {
+        font-family: "Montserrat SemiBold";
+        color: white;
+        padding: 1%;
+        border-radius: 5px;
+        background-color: var(--ds3-orange);
+        width: auto;
+        white-space: nowrap;
     }
 
     .burger-menu.open .burger-line:nth-child(1) {
