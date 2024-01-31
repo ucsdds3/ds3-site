@@ -290,7 +290,6 @@
         transform: translateY(-11px) rotate(-45deg);
     }
 
-
     @media (max-width: 768px) {
         nav {
             display: none;
