@@ -42,7 +42,6 @@
 <Analytics />
 
 {#if isMobile}
-
     <div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu}>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
@@ -57,9 +56,7 @@
         <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer" on:click={toggleMenu}>Consulting</a>
         <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved" on:click={toggleMenu}>Get Involved</a>
     </div>
-
 {:else}
-
     <nav>
         <a href='/'>
             <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
@@ -73,7 +70,6 @@
             <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
         </div>
     </nav>
-
 {/if}
 
 
