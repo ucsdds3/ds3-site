@@ -5,6 +5,51 @@
     export let data: PageData;
     export const title = "Events | DS3 at UCSD";
     export const description = "Check out our upcoming events! Join us to learn from industry professionals and network with like-minded individuals.";
+    data.calendarData = [{
+            title: "DS3 Info Session With Board",
+            date: '1/2/2024',
+            time: '6:00pm',
+            location: {
+                mapsLocation: '10530 Wood Duck Drive',
+                roomLocation: 'HS1231'
+            },
+            presenters: 'John Doe and Jane Doe',
+            description: 'Come out to the event and meet lots of new people. I\'m sure it\'ll be a lot of fun!',
+            registerFormURL: 'https://www.google.com'
+        },{
+            title: "21321",
+            date: '32131',
+            time: '32131',
+            location: {
+                mapsLocation: '3213',
+                roomLocation: '32132'
+            },
+            presenters: '22',
+            description: '22',
+            registerFormURL: '12321'
+        },{
+            title: "21321",
+            date: '32131',
+            time: '32131',
+            location: {
+                mapsLocation: '3213',
+                roomLocation: '32132'
+            },
+            presenters: '22',
+            description: '22',
+            registerFormURL: '12321'
+        },{
+            title: "21321",
+            date: '32131',
+            time: '32131',
+            location: {
+                mapsLocation: '3213',
+                roomLocation: '32132'
+            },
+            presenters: '22',
+            description: '22',
+            registerFormURL: '12321'
+        }]
 </script>
 
 <svelte:head>
@@ -60,6 +105,27 @@
 
 
 <style>
+    @media screen and (max-width: 768px){
+        .event-grid {
+            margin-top: 1vh;
+            display: block;
+            grid-template-columns: repeat(4, 25%);
+            grid-auto-rows: 1fr;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    @media screen and not (max-width: 768px){
+        .event-grid {
+            margin-top: 1vh;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-auto-rows: 1fr;
+            justify-content: space-between;
+            align-items: center;
+            vertical-align: middle;
+        }
+    }
     @font-face {
         font-family: "Montserrat Bold";
         src: url("/fonts/montserrat.bold.ttf");
@@ -100,15 +166,10 @@
         font-family: 'Montserrat Bold', 'Montserrat';
         margin: 0;
     }
-
-    .event-grid {
-        margin-top: 1vh;
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-auto-rows: 1fr;
-        justify-content: space-between;
-        align-items: center;
-        vertical-align: middle;
+    @media (max-width: 768px) {
+    .event-display h2 {
+        text-align:center;
+    }
     }
     
     h3 {
