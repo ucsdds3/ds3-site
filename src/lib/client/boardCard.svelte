@@ -46,7 +46,6 @@
     .card {
         display: flex;
         flex-direction: column;
-        height: 45vh;
         margin: 2.5%;
         border-radius: 5px;
         background: white;

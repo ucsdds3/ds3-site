@@ -45,7 +45,7 @@
     }
     
     .title-sec {
-        height: 40vh;
+        /* height: 40vh; */
         background-image: url("/images/backgrounds/placeholder.jpg");
         background-size: cover;
         background-position: center;
@@ -53,6 +53,7 @@
         align-items: center;
         text-align: center;
         justify-content: space-around;
+        width: 100%;
     }
     .title-sec h1 {
         color: white;
@@ -80,4 +81,30 @@
         width: 75%;
         margin: auto;
     }
+
+    @media screen and (min-width: 1100px)
+    {
+        .title-sec 
+        {
+            height: 30vh;
+        }
+    }
+
+    @media screen and (max-width: 1100px)
+    {
+        #people-grid 
+        {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+
+    @media screen and (max-width: 480px)
+    {
+        #people-grid 
+        {
+            grid-template-columns: repeat(1, 100%);
+        }
+
+    }
+
 </style>
