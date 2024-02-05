@@ -42,20 +42,25 @@
 <Analytics />
 
 {#if isMobile}
-    <div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu}>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-    </div>
+    <nav>
+        <a href='/'>
+            <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
+        </a>
+        <div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu} on:keydown={toggleMenu}>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
 
-    <div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/" on:click={toggleMenu}>Home</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events" on:click={toggleMenu}>Events</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board" on:click={toggleMenu}>Board</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors" on:click={toggleMenu}>Sponsors</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer" on:click={toggleMenu}>Consulting</a>
-        <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved" on:click={toggleMenu}>Get Involved</a>
-    </div>
+        <div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/" on:click={toggleMenu}>Home</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events" on:click={toggleMenu}>Events</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board" on:click={toggleMenu}>Board</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors" on:click={toggleMenu}>Sponsors</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer" on:click={toggleMenu}>Consulting</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved" on:click={toggleMenu}>Get Involved</a>
+        </div>
+    </nav>
 {:else}
     <nav>
         <a href='/'>
@@ -291,10 +296,6 @@
     }
 
     @media (max-width: 768px) {
-        nav {
-            display: none;
-        }
-
         .burger-menu {
             display: block;
         }
