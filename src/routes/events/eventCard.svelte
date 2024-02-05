@@ -292,6 +292,11 @@
         align-items: center;
         padding: 2%;
     }
+    @media (max-width: 768px) {
+    .right {
+        display:none;
+    }
+    }
     .right iframe {
         background: transparent url("gifs/loading.gif") no-repeat center center;
         background-size: contain;
