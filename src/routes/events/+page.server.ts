@@ -48,7 +48,7 @@ function handleGoogleCalendarResponse(raw: GoogleCalendarResponse): CleanEvent[]
             title: event['summary'].replaceAll("[autogen]", ""),
             date: dtString[0],
             time: dtString[1],
-            datetime: dateToRFC5545(event["start"]["dateTime"],event["end"]["dateTime"]),
+            datetime: (event["start"]["dateTime"]) ? dateToRFC5545(event["start"]["dateTime"],event["end"]["dateTime"]) : undefined,
             location: {
                 mapsLocation: (event["location"]) ? event["location"].trim() : undefined,
                 roomLocation: (parsed) ? parsed["roomLocation"] : undefined
