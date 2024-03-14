@@ -37,6 +37,8 @@
     }
 
     const redirect = (url: string | undefined) => window.open(url, '_blank', 'noopener')
+
+    console.log(event.date)
 </script>
 
 <div class="card" on:click={()=>getModal(event.title).open()} on:keydown={()=>getModal(event.title).open()}>
@@ -44,8 +46,12 @@
     <div class="card-info">
         <div class="info-split"><h1>{event.title}</h1></div>
         <div class="info-split">
+            {#if event.date !== 'undefined NaN'}
             <span>{event.date}</span>
             <span>{event.time}</span>
+            {:else}
+            <span>All Day</span>
+            {/if}
         </div>
         <div class="info-split"><div>
             <button>Learn More</button>
@@ -59,7 +65,11 @@
             <div class="left">
                 <div id="modal-info">
                     <h1 id="modal-title">{event.title}</h1>
+                    {#if event.date !== 'undefined NaN'}
                     <span>{event.date}, {event.time}</span>
+                    {:else}
+                    <span>All Day</span>
+                    {/if}
                     <span>{eventRoomLocation}</span>
                     {#if eventDescription != ""}
                         <p id="desc">{eventDescription}</p>
