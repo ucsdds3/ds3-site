@@ -1,8 +1,31 @@
 <script lang='ts'>
     import Analytics from "$lib/client/analytics.svelte";
+	import { onMount } from "svelte";
 
     export const title = "DS3 at UCSD";
     export const description = "Data Science Student Society";
+
+    let isMobile = false;
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+    }
+
+    onMount(() => {
+        const mql = window.matchMedia('(max-width: 768px)');
+        isMobile = mql.matches;
+
+        function updateMobileState(e: MediaQueryListEvent) {
+            isMobile = e.matches;
+        }
+
+        mql.addEventListener('change', updateMobileState);
+
+        return () => {
+            mql.removeEventListener('change', updateMobileState);
+        };
+    });
 </script>
 
 <svelte:head>
@@ -18,19 +41,43 @@
 </svelte:head>
 <Analytics />
 
-<nav>
-    <a href='/'>
-        <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
-    </a>
-    <div id="routes">
-        <a class="nav-item" href="/">Home</a>
-        <a class="nav-item" href="/events">Events</a>
-        <a class="nav-item" href="/board">Board</a>
-        <a class="nav-item" href="/sponsors">Sponsors</a>
-        <a class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
-        <a class="nav-item last" href="/get-involved">Get Involved</a>
-    </div>
-</nav>
+{#if isMobile}
+    <nav>
+        <a href='/'>
+            <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
+        </a>
+        <div class="burger-menu {isMenuOpen ? 'open' : ''}" on:click={toggleMenu} on:keydown={toggleMenu}>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+
+        <div class="side-drawer {isMenuOpen ? 'open' : ''}"> 
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/" on:click={toggleMenu}>Home</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events" on:click={toggleMenu}>Events</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board" on:click={toggleMenu}>Board</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors" on:click={toggleMenu}>Sponsors</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer" on:click={toggleMenu}>Consulting</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved" on:click={toggleMenu}>Get Involved</a>
+        </div>
+    </nav>
+{:else}
+    <nav>
+        <a href='/'>
+            <div id="img-wrapper"><img src="/images/logos/logo-dark.png" alt="ds3 logo"/></div>
+        </a>
+        <div id="routes">
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/">Home</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/events">Events</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/board">Board</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="/sponsors">Sponsors</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item" href="https://ds3.ucsd.edu/consulting" target="_blank" referrerpolicy="no-referrer" rel="noreferrer">Consulting</a>
+            <a data-sveltekit-preload-data = 'hover' class="nav-item last" href="/get-involved">Get Involved</a>
+        </div>
+    </nav>
+{/if}
+
+
 <slot></slot>
 <footer>
     <h2 id="footer-title">Connect with us</h2>
@@ -150,6 +197,7 @@
             font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         }
     }
+
     @media (max-height: 1199px) {
         #footer-title {
             font-size: 33px;
@@ -175,5 +223,82 @@
             align-items: center;
             font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
         }
+    }
+
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 200; 
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+    }
+
+    .burger-line {
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .side-drawer {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+        z-index: 150;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column; 
+        padding-top: 60px;
+    }
+
+    .side-drawer.open {
+        right: 0; 
+    }
+
+    .side-drawer .nav-item {
+        font-family: 'Montserrat';
+        vertical-align: middle;
+        font-size: 23px;
+        text-decoration: none;
+        margin-left: 2vw;
+        margin-top: 2.5%;
+        color: black;
+        text-align: left;
+    }
+
+    .side-drawer .nav-item.last {
+        font-family: "Montserrat SemiBold";
+        color: white;
+        padding: 1%;
+        border-radius: 5px;
+        background-color: var(--ds3-orange);
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .burger-menu.open .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger-menu.open .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.open .burger-line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+        .burger-menu {
+            display: block;
+        }
+
     }
 </style>

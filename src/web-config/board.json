@@ -27,6 +27,16 @@
         "description": "Hello everyone, my name is Jack Kai Lim. I am the Vice President External from Malaysia, with a focus in Machine Learning and AI. I look forward to having a great year with all of you!"
     },
     {
+        "name": "Jason Gu",
+        "title": "VP Internal",
+        "linkedin": "https://www.linkedin.com/in/jingchenggu/",
+        "email": "jig036@ucsd.edu",
+        "img": "jason.jpg" ,
+        "experience": "https://drive.google.com/open?id=1AwHHIlAteFZorGDis7DcN91biQqYnS3r",
+        "description": "Hi! My name is Jason and I am currently a fourth year data science major. As VP Internal I am here to help members around me and make everyone feel welcomed within this org. In my free time I enjoy playing the guitar, singing, going to the gym, going on late night drives, and any outdoor activities. Feel free to reach out to me whaenever!"
+    },
+    
+    {
         "name": "Shivangi Gupta",
         "title": "Online Content Director",
         "linkedin": "https://www.linkedin.com/in/shivangi-gupta24/",
@@ -73,12 +83,21 @@
     },
     {
         "name": "Goldie Jin",
-        "title": "Design Director",
+        "title": "Design Co-Director",
         "linkedin": "https://www.linkedin.com/in/shengqiujin/",
         "email": "s3jin@ucsd.edu",
         "img": "goldie.jpg",
         "experience": "https://drive.google.com/open?id=1SqjmumAlxHrXdQGOAxUPH-isUj9NVv8C",
         "description": "I'm Goldie Jin, a fourth-year Computer Engineering student at UC San Diego. My blend of technical skills and graphic design expertise from UCSD drives my passion for technology and innovation. I'm eager to contribute to Computer Engineering and Data Visualization fields and excited to connect with new DS3 members."
+    },
+    {
+        "name": "Kai Chester Ni",
+        "title": "Design Co-Director",
+        "linkedin": "https://www.linkedin.com/in/ckai-io/",
+        "email": "c5ni@ucsd.edu",
+        "img": "kai.jpg",
+        "experience": "",
+        "description": "Kai is a fourth year data science major at Muir College at UCSD. Kai believes in a better future of tech, where every individual's digital rights and privacy are protected. In working with data, he hopes to bring emphasis to the real people and real stories behind each datapoint, and leverage the skills and experience he develops to build a safe and constructive cyberverse for all."
     },
     {
         "name": "Anthony Dang",
@@ -90,6 +109,33 @@
         "description": "Hi! I'm Anthony, a fourth year, who will be your Social Director this year. Let's fight the stigma that UCSD data science majors are socially dead and have a fun filled year!"
     },
     {
+        "name": "Neil Sharma",
+        "title": "Workshop Director",
+        "linkedin": "https://www.linkedin.com/in/neil-sharma-88451b1b6/",
+        "email": "n9sharma@ucsd.edu",
+        "img": "neil.jpg",
+        "experience": "https://drive.google.com/file/d/1OdT1ICaXw7-djmO7bmrZdo79xEfBbUAs/view",
+        "description": "Neil is a data science major whose love of science fiction drives him to want to create the technology of tomorrow. He's interned at Intel, where he used bash scripting to collect data on remote servers and repair them. He's also interned at CY Vision, where he created facial landmarking models for technology incorporated into intelligent automobiles. In his free time, you'll find him watching or playing basketball, playing saxophone, or hiking."
+    },
+    {
+        "name": "Jared Simpauco",
+        "title": "DataHacks Director",
+        "linkedin": "https://www.linkedin.com/in/jared-simpauco-6a0731223/",
+        "email": "jsimpauco@ucsd.edu",
+        "img": "jared.jpg",
+        "experience": "",
+        "description": "Hello! I'm Jared, a third year majoring in Data Science with a minor in Cognitive Science. I enjoy working out, solving puzzles, and playing basketball in my free time. I am excited to help organize this year's hackathon and can't wait to see you all there!"
+    },
+    {
+        "name": "Christine Deng",
+        "title": "Marketing Director",
+        "linkedin": "https://www.linkedin.com/in/christine-deng-/",
+        "email": "cydeng@ucsd.edu",
+        "img": "christine.png",
+        "experience": "",
+        "description": "Christine is a data science student interested in data-driven content creation. She loves creating compelling content and connecting to audiences through an analytical and creative approach. She also works as a student graphic designer for the Halıcıoğlu Data Science Institute. Outside of academics, you can find her on-air DJing for UCSD's radio station!"
+    },
+    {
         "name": "Jonathan Lo",
         "title": "Infrastructure Director",
         "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
@@ -98,4 +144,5 @@
         "experience": "https://drive.google.com/file/d/1z--wfJulcVulc1YcT0Ap_w9OQ8JUZ4AI/view",
         "description": "Jonathan is a data science student at UC San Diego. He is a software engineer intern at San Diego Supercomputer Center, where he works on data-enabled scientific computing. He has also been a webmaster of the Data Science Student Society at UCSD and a data quality intern at Fluidra North America."
     }
+    
 ]
