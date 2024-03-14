@@ -38,7 +38,6 @@
 
     const redirect = (url: string | undefined) => window.open(url, '_blank', 'noopener')
 
-    console.log(event.date)
 </script>
 
 <div class="card" on:click={()=>getModal(event.title).open()} on:keydown={()=>getModal(event.title).open()}>
