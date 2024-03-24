@@ -31,7 +31,7 @@
 		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy" />
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premiere interdisciplinary data science
-			organization on campus, composed of over 100+ undergraduate students passionate about all
+			organization on campus, composed of over 400+ undergraduate students passionate about all
 			facets of Data Science. As the largest data science organization, we offer many resources,
 			events, and opportunities, designed to encourage career development amongst all of our
 			members, as well as provide a strong student community. Organized by over 45 students, we

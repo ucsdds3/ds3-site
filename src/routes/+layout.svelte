@@ -88,6 +88,8 @@
         <a href="https://medium.com/ds3ucsd" rel="noreferrer" target="_blank"><img src="/svgs/icons/medium_icon.svg" alt="medium icon"></a>
         <a href="mailto:ds3@ucsd.edu" rel="noreferrer" target="_blank"><img src="/svgs/icons/email_icon.svg" alt="email icon"></a>
         <a href="https://open.spotify.com/show/7yHiQn4eqjy2EAzRNEmQdf" rel="noreferrer" target="_blank"><img src="/svgs/icons/spotify_icon.svg" alt="spotify icon"></a>
+        <a href="https://www.linkedin.com/company/data-science-student-society-at-ucsd/mycompany/" rel="noreferrer" target="_blank"><img src="/svgs/icons/linkedin_icon2.svg" alt="email icon"></a>
+        <a href="https://www.youtube.com/@data-science-student-society" rel="noreferrer" target="_blank"><img src="/svgs/icons/youtube_icon.svg" alt="spotify icon"></a>
     </div>
 </footer>
 
@@ -185,6 +187,7 @@
         #socials-section img {
             height: 50px;
             vertical-align: middle;
+            margin: 0.5rem;
         }
         footer {
             width: 100%;
