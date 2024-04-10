@@ -46,17 +46,8 @@
         "description": "Shivangi is an economics and data science student who is hopeful about working as a data scientist upon graduation. She's interned at SDG&E, where she built a ML model to optimize customers' journeys when interacting with the online self-service portal, MyAccount. In her free time, she loves to read romance and thriller novels, watch reality TV shows, and play chess!"
     },
     {
-        "name": "Luran Zhang",
-        "title": "Professional Events Co-Director",
-        "linkedin": "https://www.linkedin.com/in/luran-zhang/",
-        "email": "luz010@ucsd.edu",
-        "img": "luran.jpeg",
-        "experience": "https://drive.google.com/file/d/1m_tRVzadxZzf9avUVVzRXpTDbPMJW9Mk/view",
-        "description": "Hello, this is Luran (Lauren)😄. I am a third year student from Muir college double major in Data Science and Joint Math Econ. During my free time, I enjoy solving puzzles, watching movies, snowboarding, and rock climbing (just picked it up this summer). "
-    },
-    {
         "name": "Trey Scheid",
-        "title": "Professional Events Co-Director",
+        "title": "Professional Events Director",
         "linkedin": "https://www.linkedin.com/in/treyscheid/",
         "email": "tscheid@ucsd.edu",
         "img": "trey.jpg",
