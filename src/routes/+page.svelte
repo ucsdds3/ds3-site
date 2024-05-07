@@ -118,34 +118,22 @@
 	/* Individual section styling */
 	@media (min-height: 1200px) {
 		#title {
-			font-family: 'Montserrat Bold';
-			font-size: 8vh;
-			color: #333333;
 			font-weight: bold;
 			width: 35vw;
-			margin: 0;
-			display: flex;
-			align-items: center;
 		}
 	}
 	@media (max-height: 1199px) {
 		#title {
-			font-family: 'Montserrat Bold';
-			font-size: 10vh;
-			color: #333333;
 			font-weight: bolder;
-			width: 45vw;
-			margin: 0;
-			display: flex;
-			align-items: center;
 		}
 	}
 	#title-section {
-		height: 75vh;
+		min-height: 75vh;
 		display: flex;
 		align-items: center;
 		background: white;
 		max-width: 100%;
+		overflow-x: hidden;
 	}
 	#title-section div {
 		display: flex;
@@ -153,19 +141,19 @@
 		margin-top: 5vh;
 	}
 	#title-section img {
-		height: 60vh;
+		width: 60vw;
 		-webkit-animation: MoveUpDown 5s infinite linear;
 		animation: MoveUpDown 5s infinite linear;
 	}
-	@media screen and (max-width: 1300px) {
-		#title-section img {
-			height: 30vh;
+	@media screen and (max-width: 1000px) {
+		#title { 
+			font-size: 60px;
 		}
 		#title-section div {
 			flex-direction: column;
 		}
-		#title {
-			font-size: 5vh;
+		#title-section img {
+			margin: 0 auto;
 		}
 	}
 
@@ -182,7 +170,7 @@
 	}
 	#info-section #info-paragraph {
 		font-size: 30px;
-		text-align: center;
+		text-align: left;
 		background-color: rgba(40, 10, 0, 0.5);
 		padding: 10px;
 		border: 0.1px solid white;
@@ -234,20 +222,20 @@
 
 	#title {
 		font-family: 'Montserrat Bold';
-		font-size: 10vh;
+		font-size: 70px;
 		color: #333333;
 		font-weight: bolder;
-		width: 45vw;
 		margin: 0;
 		display: flex;
 		align-items: center;
 		opacity: 0;
+		text-align: center;
 		transform: translateY(-50px);
 		animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
 	}
 
 	#title-section img {
-		height: 60vh;
+		height: 60vw;
 		opacity: 0;
 		transform: translateY(-100%);
 		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;

@@ -43,7 +43,6 @@
     .card {
         border-radius: 7.5px;
         margin-bottom: 7.5vh;
-        height: 50vh;
         display: flex;
         position: relative;
         background-color: #fff;
@@ -74,7 +73,7 @@
         }
     @media (min-height: 1200px) {
         .card-title {
-            font-size: 3.5vh;
+            font-size: 5vh;
             margin: 0;
         }
         .card-description {
@@ -95,7 +94,7 @@
     }
     @media (max-height: 1199px) {
         .card-title {
-            font-size: 3.5vh;
+            font-size: 5vh;
             margin: 0;
         }
         .card-description {
@@ -118,7 +117,6 @@
         .card {
             flex-direction: row;
             padding: 35px;
-            height: 30vh;
         }
         .card-information {
             flex-direction: column;
@@ -145,7 +143,6 @@
     @media (max-width: 1199px) {
         .card {
             flex-direction: column;
-            height: 50vh;
         }
         img {
             padding: 10px;
@@ -156,7 +153,6 @@
     @media (max-width: 700px) {
         .card {
             flex-direction: column;
-            height: 60vh;
         }
         img {
             padding: 10px;
