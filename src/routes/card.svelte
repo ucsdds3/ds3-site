@@ -47,40 +47,51 @@
         display: flex;
         position: relative;
         background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 12px;
+        max-width: 100%;
     }
     img {
         flex: 1;
         height: 100%;
     }
-    .left { border-radius: 7.5px 0 0 7.5px; }
-    .right { border-radius: 0 7.5px 7.5px 0; }
+    .left { 
+        border-radius: 7.5px 0 0 7.5px; 
+    }
+    .right { 
+        border-radius: 0 7.5px 7.5px 0; 
+    }
     .card-information {
         flex: 1;
-        padding: 2.5% 5%;
+        padding: 2% 5%;
         display: flex;
+        flex-direction: row;
         vertical-align: middle;
         flex-direction: column;
         justify-content: space-evenly;
     }
+    .card-title {
+        text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.4);
+        }
     @media (min-height: 1200px) {
         .card-title {
-            font-size: 4vh;
+            font-size: 3.5vh;
             margin: 0;
         }
         .card-description {
-            font-size: 29px;
+            font-size: 25px;
             margin: 0;
+            padding: 5px;
         }
         button {
             background-color: var(--ds3-orange);
             color: white;
-            padding: 1.5% 5%;
+            padding: 1.5% 8%;
             border-style: none;
             font-size: 27.5px;
             font-weight: bold;
             transition: 0.3s;
         }
+
     }
     @media (max-height: 1199px) {
         .card-title {
@@ -88,8 +99,9 @@
             margin: 0;
         }
         .card-description {
-            font-size: 22px;
+            font-size: 20px;
             margin: 0;
+            padding: 5px;
         }
         button {
             background-color: var(--ds3-orange);
@@ -101,6 +113,60 @@
             transition: 0.3s;
         }
     }
+
+    @media (max-width: 1950px) {
+        .card {
+            flex-direction: row;
+            padding: 35px;
+            height: 30vh;
+        }
+        .card-information {
+            flex-direction: column;
+        }
+        img {
+            padding: 10px;
+            align-self: center;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 1650px) {
+        img {
+            padding: 10px;
+            align-self: center;
+            max-width: 60%;
+        }
+        .card-description {
+            font-size: 18px;
+            margin: 0;
+            padding: 5px;
+        }
+    }
+    @media (max-width: 1199px) {
+        .card {
+            flex-direction: column;
+            height: 50vh;
+        }
+        img {
+            padding: 10px;
+            align-self: center;
+            max-width: 80%;
+        }
+    }
+    @media (max-width: 700px) {
+        .card {
+            flex-direction: column;
+            height: 60vh;
+        }
+        img {
+            padding: 10px;
+            align-self: center;
+            max-width: 100%;
+        }
+    }
+
+
+
     
     button:hover {
         background-color: var(--ds3-orange-lighten);

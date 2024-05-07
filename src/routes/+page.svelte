@@ -28,7 +28,7 @@
 </section>
 <section id="info-section">
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy" />
+		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy"/>
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -40,27 +40,29 @@
 		</p>
 		<div id="countbox-row">
 			<div class="countbox">
-				<p>35</p>
-				 Articles Written
+				<p class="number-display">35</p>
+				 Articles <br> Written
 			</div>
 			<div class="countbox">
 				<p>500+</p>
-				 Hackathon Attendees
+				 Hackathon <br> Attendees
 			</div>
+		</div>
+		<div id="countbox-row">
 			<div class="countbox">
 				<p>28</p>
-				 Projects Completed
+				 Projects <br> Completed
 			</div>
 			<div class="countbox">
 				<p>78</p>
-				 Workshops Hosted
+				 Workshops <br> Hosted
 			</div>
 		</div>
 	</div>
 </section>
 <section id="companies-section">
 	<div class="seperator">
-		<h2 class="lower-title">Where We've been</h2>
+		<h2 class="lower-title">Where We've Been</h2>
 		<div id="logo-grid">
 			{#each data.imagePaths as imageURL}
 				<img
@@ -142,6 +144,8 @@
 		height: 75vh;
 		display: flex;
 		align-items: center;
+		background: white;
+		max-width: 100%;
 	}
 	#title-section div {
 		display: flex;
@@ -153,8 +157,21 @@
 		-webkit-animation: MoveUpDown 5s infinite linear;
 		animation: MoveUpDown 5s infinite linear;
 	}
+	@media screen and (max-width: 1300px) {
+		#title-section img {
+			height: 30vh;
+		}
+		#title-section div {
+			flex-direction: column;
+		}
+		#title {
+			font-size: 5vh;
+		}
+	}
+
 	#info-section {
 		background-image: url('/images/stock-people/librarywalk.png');
+		background-color: rgba(255, 255, 255, 0.9);
 		background-size: cover;
 		background-position: center;
 		color: white;
@@ -165,6 +182,11 @@
 	}
 	#info-section #info-paragraph {
 		font-size: 30px;
+		text-align: center;
+		background-color: rgba(40, 10, 0, 0.5);
+		padding: 10px;
+		border: 0.1px solid white;
+		box-shadow: 40px;
 	}
 	#info-section #countbox-row {
 		display: flex;
@@ -173,12 +195,20 @@
 		text-align: center;
 		justify-content: space-between;
 		width: 100%;
-		margin: 7vh auto;
+		margin-top: 2vh auto;
+		margin-bottom: 0;
+		
 	}
 	#countbox-row .countbox {
 		flex: 1;
 		margin: 0;
 		font-size: 5vh;
+		font-weight: bolder;
+		border-top: 2.5px solid white;
+		border-bottom: 2.5px solid white;
+		padding: 5px;
+		max-width: 100%;
+		text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
 	}
 	.countbox p {
 		font-family: 'Montserrat Bold';
@@ -186,10 +216,11 @@
 		margin: 1vh 0;
 		color: var(--ds3-orange);
 		font-weight: bold;
+		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 	}
 	#logo-grid {
 		display: grid;
-		grid-template-columns: repeat(5, 19%);
+		grid-template-columns: repeat(4, 25%);
 		grid-auto-rows: 0.5fr;
 		gap: 1rem;
 		justify-content: space-between;
@@ -257,6 +288,21 @@
 		}
 		75% {
 			transform: translateY(10px);
+		}
+	}
+
+	@media screen and (max-width: 760px) {
+		#logo-grid {
+        	grid-template-columns: repeat(3, 30%);
+    	}
+		#info-section #info-paragraph {
+			font-size: 24px;
+		}
+		#info-section #countbox-row {
+			flex-direction: column;
+		}
+		#countbox-row .countbox {
+			font-size: 40px;
 		}
 	}
 </style>
