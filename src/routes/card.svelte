@@ -145,7 +145,7 @@
             height: 300px;
         }
     }
-    @media (max-width: 950px) {
+    @media (max-width: 850px) {
         .card {
             flex-direction: column;
         }
