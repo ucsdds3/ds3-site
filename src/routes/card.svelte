@@ -51,17 +51,18 @@
     }
     img {
         flex: 1;
-        height: 100%;
+        max-width: 900px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }
     .left { 
-        border-radius: 7.5px 0 0 7.5px; 
+        border-radius: 7.5px; 
     }
     .right { 
-        border-radius: 0 7.5px 7.5px 0; 
+        border-radius: 7.5px; 
     }
     .card-information {
         flex: 1;
-        padding: 2% 5%;
+        padding: 2% 6%;
         display: flex;
         flex-direction: row;
         vertical-align: middle;
@@ -73,7 +74,7 @@
         }
     @media (min-height: 1200px) {
         .card-title {
-            font-size: 5vh;
+            font-size: 3.5vh;
             margin: 0;
         }
         .card-description {
@@ -94,7 +95,7 @@
     }
     @media (max-height: 1199px) {
         .card-title {
-            font-size: 5vh;
+            font-size: 3.5vh;
             margin: 0;
         }
         .card-description {
@@ -113,6 +114,11 @@
         }
     }
 
+    @media (max-width: 2100px) {
+        img { 
+            width: 750px;
+        }
+    }
     @media (max-width: 1950px) {
         .card {
             flex-direction: row;
@@ -121,45 +127,50 @@
         .card-information {
             flex-direction: column;
         }
-        img {
-            padding: 10px;
-            align-self: center;
-            max-width: 100%;
+        img { 
+            width: 500px;
         }
     }
 
     @media (max-width: 1650px) {
-        img {
-            padding: 10px;
-            align-self: center;
-            max-width: 60%;
-        }
         .card-description {
             font-size: 18px;
             margin: 0;
             padding: 5px;
         }
     }
-    @media (max-width: 1199px) {
+    @media (max-width: 1400px) {
+        img { 
+            width: 400px;
+            height: 300px;
+        }
+    }
+    @media (max-width: 950px) {
         .card {
             flex-direction: column;
         }
-        img {
-            padding: 10px;
+        img { 
             align-self: center;
-            max-width: 80%;
+            width: 600px;
+            height: 300px;
         }
     }
-    @media (max-width: 700px) {
-        .card {
-            flex-direction: column;
-        }
-        img {
-            padding: 10px;
-            align-self: center;
-            max-width: 100%;
+    @media (max-width: 1050px) {
+        img { 
+            width: 400px;
+            height: 300px;
         }
     }
+    @media (max-width: 600px) {
+        img { 
+            width: 300px;
+            height: 300px;
+        }
+        .card-description {
+            font-size: 15px;
+        }
+    }
+    
 
 
 

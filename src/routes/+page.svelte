@@ -95,7 +95,7 @@
 	}
 	section {
 		font-family: 'Montserrat', 'Poppins';
-		padding: 10vh 0;
+		padding: 10vh 2vh;
 		background-color: var(--base-bg);
 		/* height: 100vh; */
 	}
@@ -133,7 +133,8 @@
 		align-items: center;
 		background: white;
 		max-width: 100%;
-		overflow-x: hidden;
+		overflow-x: overlay;
+		overflow-y: hidden;
 	}
 	#title-section div {
 		display: flex;
@@ -141,19 +142,20 @@
 		margin-top: 5vh;
 	}
 	#title-section img {
-		width: 60vw;
+		width: 600px;
 		-webkit-animation: MoveUpDown 5s infinite linear;
 		animation: MoveUpDown 5s infinite linear;
 	}
-	@media screen and (max-width: 1000px) {
-		#title { 
-			font-size: 60px;
-		}
+	@media screen and (max-width: 1220px) {
 		#title-section div {
 			flex-direction: column;
 		}
 		#title-section img {
+			height: 400px;
 			margin: 0 auto;
+		}
+		.seperator {
+			margin: 0 0vw;
 		}
 	}
 
@@ -193,7 +195,7 @@
 		font-size: 5vh;
 		font-weight: bolder;
 		border-top: 2.5px solid white;
-		border-bottom: 2.5px solid white;
+		
 		padding: 5px;
 		max-width: 100%;
 		text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
@@ -222,7 +224,7 @@
 
 	#title {
 		font-family: 'Montserrat Bold';
-		font-size: 70px;
+		font-size: 90px;
 		color: #333333;
 		font-weight: bolder;
 		margin: 0;
@@ -235,7 +237,7 @@
 	}
 
 	#title-section img {
-		height: 60vw;
+
 		opacity: 0;
 		transform: translateY(-100%);
 		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
@@ -278,7 +280,11 @@
 			transform: translateY(10px);
 		}
 	}
-
+	@media screen and (max-width: 1200px) {
+		#info-section #countbox-row {
+			flex-direction: column;
+		}
+	}
 	@media screen and (max-width: 760px) {
 		#logo-grid {
         	grid-template-columns: repeat(3, 30%);
@@ -286,11 +292,12 @@
 		#info-section #info-paragraph {
 			font-size: 24px;
 		}
-		#info-section #countbox-row {
-			flex-direction: column;
-		}
 		#countbox-row .countbox {
 			font-size: 40px;
 		}
+		#title {
+			max-width: 100%;
+			font-size: 40px;
+	}
 	}
 </style>
