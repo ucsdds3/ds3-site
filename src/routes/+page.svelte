@@ -133,7 +133,7 @@
 		align-items: center;
 		background: white;
 		max-width: 100%;
-		overflow-x: overlay;
+		overflow-x: hidden;
 		overflow-y: hidden;
 	}
 	#title-section div {
@@ -142,7 +142,7 @@
 		margin-top: 5vh;
 	}
 	#title-section img {
-		width: 600px;
+		max-width: 600px;
 		-webkit-animation: MoveUpDown 5s infinite linear;
 		animation: MoveUpDown 5s infinite linear;
 	}
@@ -171,7 +171,7 @@
 		margin: 10vh 0 4vh;
 	}
 	#info-section #info-paragraph {
-		font-size: 30px;
+		font-size: 24px;
 		text-align: left;
 		background-color: rgba(40, 10, 0, 0.5);
 		padding: 10px;
@@ -224,7 +224,7 @@
 
 	#title {
 		font-family: 'Montserrat Bold';
-		font-size: 90px;
+		font-size: 60px;
 		color: #333333;
 		font-weight: bolder;
 		margin: 0;
@@ -290,14 +290,17 @@
         	grid-template-columns: repeat(3, 30%);
     	}
 		#info-section #info-paragraph {
-			font-size: 24px;
+			font-size: 18px;
 		}
 		#countbox-row .countbox {
-			font-size: 40px;
+			font-size: 30px;
 		}
 		#title {
 			max-width: 100%;
 			font-size: 40px;
-	}
+		}
+		.countbox p { 
+			font-size: 80px;
+		}
 	}
 </style>
