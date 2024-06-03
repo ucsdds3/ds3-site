@@ -28,7 +28,7 @@
 </section>
 <section id="info-section">
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy" />
+		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy"/>
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -40,27 +40,29 @@
 		</p>
 		<div id="countbox-row">
 			<div class="countbox">
-				<p>35</p>
-				 Articles Written
+				<p class="number-display">35</p>
+				 Articles <br> Written
 			</div>
 			<div class="countbox">
 				<p>500+</p>
-				 Hackathon Attendees
+				 Hackathon <br> Attendees
 			</div>
+		</div>
+		<div id="countbox-row">
 			<div class="countbox">
 				<p>28</p>
-				 Projects Completed
+				 Projects <br> Completed
 			</div>
 			<div class="countbox">
 				<p>78</p>
-				 Workshops Hosted
+				 Workshops <br> Hosted
 			</div>
 		</div>
 	</div>
 </section>
 <section id="companies-section">
 	<div class="seperator">
-		<h2 class="lower-title">Where We've been</h2>
+		<h2 class="lower-title">Where We've Been</h2>
 		<div id="logo-grid">
 			{#each data.imagePaths as imageURL}
 				<img
@@ -93,7 +95,7 @@
 	}
 	section {
 		font-family: 'Montserrat', 'Poppins';
-		padding: 10vh 0;
+		padding: 10vh 2vh;
 		background-color: var(--base-bg);
 		/* height: 100vh; */
 	}
@@ -116,32 +118,23 @@
 	/* Individual section styling */
 	@media (min-height: 1200px) {
 		#title {
-			font-family: 'Montserrat Bold';
-			font-size: 8vh;
-			color: #333333;
 			font-weight: bold;
 			width: 35vw;
-			margin: 0;
-			display: flex;
-			align-items: center;
 		}
 	}
 	@media (max-height: 1199px) {
 		#title {
-			font-family: 'Montserrat Bold';
-			font-size: 10vh;
-			color: #333333;
 			font-weight: bolder;
-			width: 45vw;
-			margin: 0;
-			display: flex;
-			align-items: center;
 		}
 	}
 	#title-section {
-		height: 75vh;
+		min-height: 75vh;
 		display: flex;
 		align-items: center;
+		background: white;
+		max-width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	#title-section div {
 		display: flex;
@@ -149,12 +142,26 @@
 		margin-top: 5vh;
 	}
 	#title-section img {
-		height: 60vh;
+		max-width: 600px;
 		-webkit-animation: MoveUpDown 5s infinite linear;
 		animation: MoveUpDown 5s infinite linear;
 	}
+	@media screen and (max-width: 1220px) {
+		#title-section div {
+			flex-direction: column;
+		}
+		#title-section img {
+			height: 400px;
+			margin: 0 auto;
+		}
+		.seperator {
+			margin: 0 0vw;
+		}
+	}
+
 	#info-section {
 		background-image: url('/images/stock-people/librarywalk.png');
+		background-color: rgba(255, 255, 255, 0.9);
 		background-size: cover;
 		background-position: center;
 		color: white;
@@ -164,7 +171,12 @@
 		margin: 10vh 0 4vh;
 	}
 	#info-section #info-paragraph {
-		font-size: 30px;
+		font-size: 24px;
+		text-align: left;
+		background-color: rgba(40, 10, 0, 0.5);
+		padding: 10px;
+		border: 0.1px solid white;
+		box-shadow: 40px;
 	}
 	#info-section #countbox-row {
 		display: flex;
@@ -173,12 +185,20 @@
 		text-align: center;
 		justify-content: space-between;
 		width: 100%;
-		margin: 7vh auto;
+		margin-top: 2vh auto;
+		margin-bottom: 0;
+		
 	}
 	#countbox-row .countbox {
 		flex: 1;
 		margin: 0;
 		font-size: 5vh;
+		font-weight: bolder;
+		border-top: 2.5px solid white;
+		
+		padding: 5px;
+		max-width: 100%;
+		text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
 	}
 	.countbox p {
 		font-family: 'Montserrat Bold';
@@ -186,10 +206,11 @@
 		margin: 1vh 0;
 		color: var(--ds3-orange);
 		font-weight: bold;
+		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 	}
 	#logo-grid {
 		display: grid;
-		grid-template-columns: repeat(5, 19%);
+		grid-template-columns: repeat(4, 25%);
 		grid-auto-rows: 0.5fr;
 		gap: 1rem;
 		justify-content: space-between;
@@ -203,20 +224,20 @@
 
 	#title {
 		font-family: 'Montserrat Bold';
-		font-size: 10vh;
+		font-size: 60px;
 		color: #333333;
 		font-weight: bolder;
-		width: 45vw;
 		margin: 0;
 		display: flex;
 		align-items: center;
 		opacity: 0;
+		text-align: center;
 		transform: translateY(-50px);
 		animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
 	}
 
 	#title-section img {
-		height: 60vh;
+
 		opacity: 0;
 		transform: translateY(-100%);
 		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
@@ -257,6 +278,29 @@
 		}
 		75% {
 			transform: translateY(10px);
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		#info-section #countbox-row {
+			flex-direction: column;
+		}
+	}
+	@media screen and (max-width: 760px) {
+		#logo-grid {
+        	grid-template-columns: repeat(3, 30%);
+    	}
+		#info-section #info-paragraph {
+			font-size: 18px;
+		}
+		#countbox-row .countbox {
+			font-size: 30px;
+		}
+		#title {
+			max-width: 100%;
+			font-size: 40px;
+		}
+		.countbox p { 
+			font-size: 80px;
 		}
 	}
 </style>

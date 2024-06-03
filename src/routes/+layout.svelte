@@ -122,7 +122,7 @@
     }
   
     nav {
-        background-color: #fff;
+        background-color: white;
         width: 100%;
         height: 10vh;
         z-index: 1;
@@ -190,7 +190,7 @@
             margin: 0.5rem;
         }
         footer {
-            width: 100%;
+            max-width: 100%;
             height: 15vh;
             display: flex;
             padding: 1% 0;
@@ -205,6 +205,7 @@
         #footer-title {
             font-size: 33px;
             font-weight: bold;
+            text-align: center;
             margin: 0;
         }
         #socials-section {
@@ -215,9 +216,10 @@
         #socials-section img {
             height: 30px;
             vertical-align: middle;
+            align-items: center;
         }
         footer {
-            width: 100%;
+            max-width: 100%;
             height: 15vh;
             display: flex;
             padding: 2% 0;
