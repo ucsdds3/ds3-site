@@ -1,6 +1,10 @@
 <script lang='ts'>
     import Analytics from "$lib/client/analytics.svelte";
 	import { onMount } from "svelte";
+    import { inject } from '@vercel/analytics'
+    import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+    injectSpeedInsights();
 
     export const title = "DS3 at UCSD";
     export const description = "Data Science Student Society";
