@@ -118,6 +118,7 @@
     .modal {
         position: relative;
         height: 75vh;
+        overflow-y: auto;
     }
     .modal #modal-bg {
         max-width: 80vw;
@@ -147,9 +148,10 @@
         align-items: center;
         flex-direction: column; */
         font-family: 'Montserrat';
+        
     }
     .modal-info h1 {
-        font-size: 40px;
+        font-size: 30px;
         margin: 5vh 0 1vh;
     }
     .modal-info h2 {
@@ -158,22 +160,40 @@
     .modal-info p {
         width: 75%;
         margin: 2.5vh auto;
+        white-space: pre-wrap;
     }
     .modal-links {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: auto;
-        grid-template-columns: repeat(3, 33%);
+        /* grid-template-columns: repeat(3, 33%);
         grid-auto-rows: 0.5fr;
-        width: 75%;
+        width: 75%; */
     }
     .modal-links a {
-        font-size: 20px;
+        font-size: 1em;
         text-decoration: none;
         color: white;
         font-weight: bold;
         text-align: center;
-        margin: 0 3%;
-        padding: 3%;
+        margin: 0.5em 0;
+        padding: 0.5em 1em;
+    }
+
+    @media (min-width: 500px) {
+    .modal-links {
+        flex-direction: row; 
+    }
+    .modal-links a {
+        margin: 0 0.5em; 
+        margin-bottom: 1em;
+    }
+    .modal-info h1 {
+        font-size: 40px;
+        margin: 5vh 0 1vh;
+    }
     }
 
     @media (min-height: 1200px) {
@@ -196,7 +216,9 @@
         }
         .modal-links a {
             font-size: 2vh;
-            padding: 6%;
+            padding: 0.5em 1em;
+            margin: 0 0.5em; 
+            margin-bottom: 1em;
         }
     }
 
