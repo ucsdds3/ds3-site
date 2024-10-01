@@ -1,139 +1,165 @@
 [
     {
-        "name": "Atharva Kulkarni",
+        "name": "Advaith Ravishankar",
         "title": "President",
-        "linkedin": "https://www.linkedin.com/in/atharva-pk/",
-        "email": "apkulkarni@ucsd.edu",
-        "img": "atharva.jpg",
-        "experience": "https://atharvak.me/",
+        "linkedin": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
+        "email": "advaith.ravishankar2002@gmail.com",
+        "img": "advaithravishankar.png",
+        "experience": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
         "description": "Atharva is an aspiring data scientist looking to use his experience for the broader social good. He has worked on finding keystone gut microbiota that can mitigate refractory epilepsy and a semi-supervised model that can detect illegal activity in graph social networks. But he knows not everything good in life has to start with pd.read_csv() -  he enjoys cooking, exploring the outdoors, and reading books related to history, philosophy, and the sciences."
     },
     {
-        "name": "Prabina Pokharel",
+        "name": "Jared Simpauco",
         "title": "VP Finance",
-        "linkedin": "https://www.linkedin.com/in/prabina-pokharel/",
-        "email": "p2pokharel@ucsd.edu",
-        "img": "prabina.JPG",
-        "experience": "https://www.prabina.me/",
-        "description": "Prabina is an aspiring data scientist exploring the many possibilities to use data to make a difference in the world. At SANDAG, she led efforts to create a dashboard which tracks San Diego's compliance with UN SDG's. Currently, she's working with an AI lab at UCSD to detect intoxicated drivers. In her spare time, she enjoys running, hiking, and spending time with her family and friends."
-    },
-    {
-        "name": "Jack Kai Lim",
-        "title": "VP External",
-        "linkedin": "https://www.linkedin.com/in/jklim3/",
-        "email": "jklim@ucsd.edu",
-        "img": "jackl.jpg",
-        "experience": "https://drive.google.com/open?id=1dYX6b3EvJZWp4dSdv7fvLjgi_su8cKoJ",
-        "description": "Hello everyone, my name is Jack Kai Lim. I am the Vice President External from Malaysia, with a focus in Machine Learning and AI. I look forward to having a great year with all of you!"
-    },
-    {
-        "name": "Jason Gu",
-        "title": "VP Internal",
-        "linkedin": "https://www.linkedin.com/in/jingchenggu/",
-        "email": "jig036@ucsd.edu",
-        "img": "jason.jpg" ,
-        "experience": "https://drive.google.com/open?id=1AwHHIlAteFZorGDis7DcN91biQqYnS3r",
-        "description": "Hi! My name is Jason and I am currently a fourth year data science major. As VP Internal I am here to help members around me and make everyone feel welcomed within this org. In my free time I enjoy playing the guitar, singing, going to the gym, going on late night drives, and any outdoor activities. Feel free to reach out to me whaenever!"
-    },
-    
-    {
-        "name": "Shivangi Gupta",
-        "title": "Online Content Director",
-        "linkedin": "https://www.linkedin.com/in/shivangi-gupta24/",
-        "email": "shg010@ucsd.edu",
-        "img": "shivangi.jpeg",
-        "experience": "https://drive.google.com/open?id=1yK8XycUncoWlls3NTGimF8UT4SWeDFcN",
-        "description": "Shivangi is an economics and data science student who is hopeful about working as a data scientist upon graduation. She's interned at SDG&E, where she built a ML model to optimize customers' journeys when interacting with the online self-service portal, MyAccount. In her free time, she loves to read romance and thriller novels, watch reality TV shows, and play chess!"
-    },
-    {
-        "name": "Trey Scheid",
-        "title": "Professional Events Director",
-        "linkedin": "https://www.linkedin.com/in/treyscheid/",
-        "email": "tscheid@ucsd.edu",
-        "img": "trey.jpg",
-        "experience": "https://drive.google.com/open?id=1dj36nMJSk6cBbvSKW6uQ1K7K4EZ6gMEY",
-        "description": "Trey is a Data Science major with an interest in recommender systems and machine learning methods. He has gained valuable experience in roles ranging from a student startup to the manufacturing industry where he created classification models and evaluated production using Operational Equipment Effectiveness. In addition to his academic pursuits, he enjoys photography and fringe \"sports\"."
-    },
-    {
-        "name": "Advaith Ravishankar",
-        "title": "Projects Co-Director",
-        "linkedin": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
-        "email": "aravishankar@ucsd.edu",
-        "img": "advaith.jpg",
-        "experience": "https://drive.google.com/file/d/1_53tUzmjGWVMjYNy9blpUJNDYW_4qGhX/view",
-        "description": "I am a third-year undergraduate at UC San Diego who specializes in Computer Vision and Data Science. I have over 2 years of research experience applying computer vision models in computational neuroscience, making it easier to annotate 2D poses in video data. I am currently interested in generative AI by combining both NLP and computer vision to automatically generate videos based on text prompts."
-    },
-    {
-        "name": "Victor Thai",
-        "title": "Projects Co-Director",
-        "linkedin": "linkedin.com/in/victor-thai",
-        "email": "v3thai@ucsd.edu",
-        "img": "victor.jpeg",
-        "experience": "https://drive.google.com/open?id=1jljbp-IvaT5ZSwgzxwg__Ww54TrjAWPx",
-        "description": "Victor is a fourth year data science major and also pursuing a minor in cognitive science. He has interests in data science, but also software engineering as well where he currently works as a student developer for UCSD ITS."
-    },
-    {
-        "name": "Goldie Jin",
-        "title": "Design Co-Director",
-        "linkedin": "https://www.linkedin.com/in/shengqiujin/",
-        "email": "s3jin@ucsd.edu",
-        "img": "goldie.jpg",
-        "experience": "https://drive.google.com/open?id=1SqjmumAlxHrXdQGOAxUPH-isUj9NVv8C",
-        "description": "I'm Goldie Jin, a fourth-year Computer Engineering student at UC San Diego. My blend of technical skills and graphic design expertise from UCSD drives my passion for technology and innovation. I'm eager to contribute to Computer Engineering and Data Visualization fields and excited to connect with new DS3 members."
+        "linkedin": "https://www.linkedin.com/in/jared-simpauco-6a0731223/",
+        "email": "jsimpauco@ucsd.edu",
+        "img": "jared.jpg",
+        "experience": "https://www.linkedin.com/in/jared-simpauco-6a0731223/",
+        "description": "Hello! I'm Jared, a fourth year majoring in Data Science with a minor in Cognitive Science. I enjoy rock climbing, solving puzzles, and playing basketball in my free time. I am excited to meet you all and have a fun year!"
     },
     {
         "name": "Kai Chester Ni",
-        "title": "Design Co-Director",
+        "title": "VP External",
         "linkedin": "https://www.linkedin.com/in/ckai-io/",
         "email": "c5ni@ucsd.edu",
         "img": "kai.jpg",
         "experience": "",
-        "description": "Kai is a fourth year data science major at Muir College at UCSD. Kai believes in a better future of tech, where every individual's digital rights and privacy are protected. In working with data, he hopes to bring emphasis to the real people and real stories behind each datapoint, and leverage the skills and experience he develops to build a safe and constructive cyberverse for all."
+        "description": "Kai is a fifth-year Data Science major at Muir College at UC San Diego. Kai believes in a future of tech where every digital citizen is respected as an individual, especially in terms of digital rights and privacy. As a Data Scientist, he hopes to bring emphasis to the real people and stories behind each data point, and work in organizations that strive to create positive influence."
     },
     {
-        "name": "Anthony Dang",
-        "title": "Social Director",
-        "linkedin": "https://www.linkedin.com/in/anthony-dangg/",
-        "email": "jandang@ucsd.edu",
-        "img": "anthonyd.jpeg",
+        "name": "Trey Scheid",
+        "title": "VP Internal",
+        "linkedin": "https://www.linkedin.com/in/treyscheid/",
+        "email": "tscheid@ucsd.edu",
+        "img": "trey.jpg",
+        "experience": "https://drive.google.com/open?id=1dj36nMJSk6cBbvSKW6uQ1K7K4EZ6gMEY",
+        "description": "Trey is finishing his bachelors in Data Science this year with a focus on LLMs. He has gained valuable knowledge from experiences ranging from a student startup to the operational efficiency and consumer packaged goods sales. He has built classification models, evaluated Operational Equipment Effectiveness, and consulted on sales controllables. In addition to his academic pursuits, he enjoys photography and fringe \"sports\"."
+    },
+    {
+        "name": "Vrisan Dubey",
+        "title": "Online Content Director",
+        "linkedin": "https://www.linkedin.com/in/vrisan-dubey-889421235/",
+        "email": "vdubey@ucsd.edu",
+        "img": "vrisandubey.png",
+        "experience": "https://drive.google.com/file/d/1E8QFrKHd-cLxdJF99PVvq_RfAE7GG2De/view?usp=sharing",
+        "description": "Vrisan is a fourth year data science student. He's super interested in basically anything data science ranging from NLP to computer vision to building out customer solutions. When its not data science, Vrisan likes playing and watching basketball and football. He'll be your best friend if you're a Golden State Warriors fan."
+    },
+    {
+        "name": "Zoe Ludena",
+        "title": "Professional Events Co-Director",
+        "linkedin": "https://www.linkedin.com/in/zoe-ludena/",
+        "email": "zludena@ucsd.edu",
+        "img": "zoeludena.jpg",
+        "experience": "https://zoeludena.github.io/zoe_ludena/",
+        "description": "Zoe is a data scientist who works for the San Diego Sheriff's Department and is a tutor for the Halıcıoğlu Data Science Institute. Her domain is economics, but is comfortable with machine learning. She is passionate about conservation (of animals and the environment), teaching, and coding. She loves helping others in any way she can, as well as singing, baking, and hiking."
+    },
+    {
+        "name": "Sid Joshi",
+        "title": "Professional Events Co-Director",
+        "linkedin": "https://www.linkedin.com/in/sid-jo/",
+        "email": "s1joshi@ucsd.edu",
+        "img": "sidjoshi.png",
+        "experience": "https://sid-jo.github.io/",
+        "description": "Sid is a cognitive science student specializing in machine learning with a minor in math. With a variety of experiences ranging from working with transcriptomic pipelines for neuroscience research to rapid development of AI-powered solutions for industrial applications, Sid is passionate about data-driven problem-solving and practical machine learning. Aside from academics, he enjoys playing the violin, spending time with friends, and is an avid board game enthusiast."
+    },
+    {
+        "name": "Kaii Bijlani",
+        "title": "Projects Director",
+        "linkedin": "https://www.linkedin.com/in/kaii-bijlani",
+        "email": "bijlanikaii@gmail.com",
+        "img": "kaiibijlani.png",
+        "experience": "https://drive.google.com/file/d/19nskAPS41-rzh9bZRcVcSjPtSvNcgtwO/view?usp=sharing",
+        "description": "Kaii is a second year data scientist focused on broadening artificial cognition and applying it to solve global issues. Currently he is working with the Data Science Alliance to optimize homelessness in San Diego County via analyzing its housing market, particularly by engineering features that reflect socioeconomic and geospatial attributes of housing in San Diego. Aside from getting caught up in current AI scandals and programming tomfoolery, Kaii also partakes in leaving his room -- he specializes in being slightly above average at pickup sports like soccer and basketball, and loves hikes."
+    },
+    {
+        "name": "Kylee Kim",
+        "title": "Design Co-Director",
+        "linkedin": "https://www.linkedin.com/in/kylee-kim-919a85260/",
+        "email": "kyleeautumnkim@gmail.com",
+        "img": "kyleekim.png",
+        "experience": "https://www.canva.com/design/DAF1NlZWYV4/fjND3P_0Y8p0ZuvicwN13A/edit?utm_content=DAF1NlZWYV4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+        "description": "Hi! I'm Kylee Kim, a second-year Cognitive Science student with a specialization in Design and Interaction, and a minor in Computation Social Science at UC San Diego. I'm looking to pursue UX/UI design and hope to design in a way that allows more accessibility to unreached audiences. - outside of academics, I like to play volleyball, go on late night food runs with friends, journal, and play guitar."
+    },
+    {
+        "name": "Jennifer Chang",
+        "title": "Design Co-Director",
+        "linkedin": "http://www.linkedin.com/in/jennifer-chang-769ba71b3",
+        "email": "jtc006@ucsd.edu",
+        "img": "jenniferchang.png",
+        "experience": "https://docs.google.com/document/d/1zzIwa-Jh21kA63RngJjH3YCSALFvKMDteGS8lFTcMwU/edit",
+        "description": "Jennifer is an aspiring data scientist interested in exploring ML and generative AI. She has experience analyzing historical sales performance and performing time series analysis for a local medical non-profit. She loves designing visually compelling content to share with others. In her spare time, she enjoys paddling, drawing, and journaling!"
+    },
+    {
+        "name": "James Yeh",
+        "title": "Social Co-Director",
+        "linkedin": "https://www.linkedin.com/in/james-yeh-78582b1b0/",
+        "email": "yehjames526@gmail.com",
+        "img": "jamesyeh.jpg",
+        "experience": "https://drive.google.com/file/d/1bS88t8tXlL_4nptfHirQC9nstuTIVCoQ/view?usp=sharing",
+        "description": "James navigates the intersection of linguistics, mathematics, and cognitive science, drawing from each discipline to uncover innovative solutions to the challenges faced by modern speech recognition systems. But life isn't always about vocoding Peter Griffin’s voice onto everything. James also finds joy in life’s smaller pleasures: savoring a morning coffee at Copa Vida, playing late-night tennis, and unwinding with Twitch.tv binge sessions."
+    },
+    {
+        "name": "Nian-Nian Wang",
+        "title": "Social Co-Director",
+        "linkedin": "https://www.linkedin.com/in/nian-nian-wang-681485153/",
+        "email": "niw002@ucsd.edu",
+        "img": "niannianwang.png",
         "experience": "",
-        "description": "Hi! I'm Anthony, a fourth year, who will be your Social Director this year. Let's fight the stigma that UCSD data science majors are socially dead and have a fun filled year!"
+        "description": "Nian-Nian is a third year data science and math-computer science major student with an interest in machine learning and a broad curiosity for exploring data science across various domains. She has experience in developing web applications and machine learning, including projects in classification and generative AI. She will be starting research in applying machine learning to signal processing. Outside of her studies, she enjoys hiking, drinking boba, and has recently taken up tennis."
     },
     {
-        "name": "Neil Sharma",
-        "title": "Workshop Director",
-        "linkedin": "https://www.linkedin.com/in/neil-sharma-88451b1b6/",
-        "email": "n9sharma@ucsd.edu",
-        "img": "neil.jpg",
-        "experience": "https://drive.google.com/file/d/1OdT1ICaXw7-djmO7bmrZdo79xEfBbUAs/view",
-        "description": "Neil is a data science major whose love of science fiction drives him to want to create the technology of tomorrow. He's interned at Intel, where he used bash scripting to collect data on remote servers and repair them. He's also interned at CY Vision, where he created facial landmarking models for technology incorporated into intelligent automobiles. In his free time, you'll find him watching or playing basketball, playing saxophone, or hiking."
+        "name": "So Hirota",
+        "title": "DataHacks Co-Director",
+        "linkedin": "https://www.linkedin.com/in/so-hirota/",
+        "email": "hirotaso92602@gmail.com",
+        "img": "hirotaso.png",
+        "experience": "https://soh09.github.io/",
+        "description": "As an aspiring Data Scientist with industry experience, So brings a curious and open-minded approach to problems ranging from Anomaly Detection to Music Genre Classification. With honed communication and teamwork skills, he thrives in fast-paced multi-disciplinary environments, while applying my Machine Learning and Data Analysis skills. So is currently working on a neuro-evolutionary algorithm, with the end goal of making it play 2048!"
     },
     {
-        "name": "Jared Simpauco",
-        "title": "DataHacks Director",
-        "linkedin": "https://www.linkedin.com/in/jared-simpauco-6a0731223/",
-        "email": "jsimpauco@ucsd.edu",
-        "img": "jared.jpg",
-        "experience": "",
-        "description": "Hello! I'm Jared, a third year majoring in Data Science with a minor in Cognitive Science. I enjoy working out, solving puzzles, and playing basketball in my free time. I am excited to help organize this year's hackathon and can't wait to see you all there!"
+        "name": "Jennifer Hung",
+        "title": "DataHacks Co-Director",
+        "linkedin": "https://www.linkedin.com/in/yun-chen-hung-767152257/",
+        "email": "yunchen.hung@gmail.com",
+        "img": "jenniferhung.jpg",
+        "experience": "https://yunchen-hung.github.io/yhung.github.io",
+        "description": "Jennifer is a Fourth Year Data Science and Cognitive Science major, aspiring to understand human cognition via computation (whether it's neural networks, LLMs, or something completely new!!) She is currently a research assistant at an on campus lab, helping with developing data processing toolboxes and analyzing eye-tracking data. Beyond academics, she is eager to empower students of different backgrounds in enjoying computing. Some may know her better as the Creative Director of the Cheese Club at UC San Diego🧀"
     },
     {
-        "name": "Christine Deng",
+        "name": "Kate Feng",
         "title": "Marketing Director",
-        "linkedin": "https://www.linkedin.com/in/christine-deng-/",
-        "email": "cydeng@ucsd.edu",
-        "img": "christine.png",
-        "experience": "",
-        "description": "Christine is a data science student interested in data-driven content creation. She loves creating compelling content and connecting to audiences through an analytical and creative approach. She also works as a student graphic designer for the Halıcıoğlu Data Science Institute. Outside of academics, you can find her on-air DJing for UCSD's radio station!"
+        "linkedin": "https://www.linkedin.com/in/katefeng/",
+        "email": "kate18005@gmail.com",
+        "img": "katefeng.jpg",
+        "experience": "https://drive.google.com/file/d/1IImrOJAUrVFEaBZ-zYoEz_I-2YuK1U0l/view?usp=sharing",
+        "description": "Kate is an aspiring data analyst with a strong interest in media marketing. She currently works as a Data Analysis Intern at Y Montessori and tutors at the Halıcıoğlu Data Science Institute. Outside of academics, she spends her time training with the Taekwondo club or editing videos for her YouTube channel."
     },
     {
-        "name": "Jonathan Lo",
+        "name": "Ansh Bhatnagar",
         "title": "Infrastructure Director",
-        "linkedin": "https://www.linkedin.com/in/jonathanlo411/",
-        "email": "jolo@ucsd.edu",
-        "img": "jonathan.jpg",
-        "experience": "https://drive.google.com/file/d/1z--wfJulcVulc1YcT0Ap_w9OQ8JUZ4AI/view",
-        "description": "Jonathan is a data science student at UC San Diego. He is a software engineer intern at San Diego Supercomputer Center, where he works on data-enabled scientific computing. He has also been a webmaster of the Data Science Student Society at UCSD and a data quality intern at Fluidra North America."
+        "linkedin": "https://www.linkedin.com/in/ansh-bhatnagar-721286234/",
+        "email": "abhatnagar@ucsd.edu",
+        "img": "anshbhatnagar.png",
+        "experience": "https://anshu-b.github.io/ansh/",
+        "description": "Ansh is an aspiring data scientist and machine learning engineer looking to connect his technical skills to his passions in sports, biology, and market analytics. He has experience in multiple software fields and is taking 3 minors in math, cognitive science, and supply chain. He enjoys the process of learning, and is particularly interested in cooking, plants, pets, football, & basketball."
+    },
+    {
+        "name": "Camille Sicat",
+        "title": "Workshop Director",
+        "linkedin": "https://www.linkedin.com/in/camille-sicat-8b3267256/",
+        "email": "camillesicatwork@gmail.com",
+        "img": "camillesicat.png",
+        "experience": "https://docs.google.com/document/d/1ZNN62iaBgX6vG8cF3zpq-QTMRQt3xhgZYZG7vstM608/edit?usp=sharing",
+        "description": "Camille is an aspiring consultant who wants to make a difference for her community. As an IRIS-HEP fellow, she has worked on the Rucio-SENSE DMM project on network monitoring usage. In her free time, she's an aspiring writer and artist."
+    },
+    {
+        "name": "Vaidehi Karve",
+        "title": "Events Coordinator",
+        "linkedin": "https://www.linkedin.com/in/vaidehi-karve",
+        "email": "vkarve@ucsd.edu",
+        "img": "vaidehikarve.png",
+        "experience": "",
+        "description": "Vaidehi is a second-year data science major also pursuing a minor in biology. In her free time, she loves to read mystery novels, go hiking, and play music with her friends."
     }
     
 ]
