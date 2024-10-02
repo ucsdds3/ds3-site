@@ -6,7 +6,7 @@
         "email": "advaith.ravishankar2002@gmail.com",
         "img": "advaithravishankar.png",
         "experience": "https://www.linkedin.com/in/advaith-ravishankar-232b601b8/",
-        "description": "Atharva is an aspiring data scientist looking to use his experience for the broader social good. He has worked on finding keystone gut microbiota that can mitigate refractory epilepsy and a semi-supervised model that can detect illegal activity in graph social networks. But he knows not everything good in life has to start with pd.read_csv() -  he enjoys cooking, exploring the outdoors, and reading books related to history, philosophy, and the sciences."
+        "description": "Advaith is an expert AI/ML engineer with over 3 years of experience working with Generative AI, Reinforcement Learning, NLP and Computer Vision. With this expertise, Advaith aims to create real-world solution and change the learning paradigm for predictive models to accurately mimic human domain expertise."
     },
     {
         "name": "Jared Simpauco",
@@ -160,6 +160,15 @@
         "img": "vaidehikarve.png",
         "experience": "",
         "description": "Vaidehi is a second-year data science major also pursuing a minor in biology. In her free time, she loves to read mystery novels, go hiking, and play music with her friends."
+    },
+    {
+        "name": "Kendall Underwood",
+        "title": "Reimbursement Chair",
+        "linkedin": "https://www.linkedin.com/in/kendall-underwood-a316232a9/",
+        "email": "keunderwood@ucsd.edu",
+        "img": "kendallunderwood.png",
+        "experience": "https://www.linkedin.com/in/kendall-underwood-a316232a9/",
+        "description": "Kendall is a third-year data science student who is interested in consulting and biotechnology. She has worked on biomedical research projects analyzing data from DNA cells and hopes to continue finding her passion in data science. Outside of school, she likes to cook, hike, and hang out with friends and family."
     }
     
 ]

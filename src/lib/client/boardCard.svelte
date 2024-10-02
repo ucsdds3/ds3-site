@@ -165,9 +165,10 @@
         grid-template-columns: repeat(3, 33%);
         grid-auto-rows: 0.5fr;
         width: 75%;
+        padding-bottom: 20px;
     }
     .modal-links a {
-        font-size: 20px;
+        font-size: 0.85rem;
         text-decoration: none;
         color: white;
         font-weight: bold;

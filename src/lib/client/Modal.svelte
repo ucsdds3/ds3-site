@@ -98,7 +98,7 @@
 		visibility: visible !important;
 	}
 	#modal-content {
-		overflow: hidden;
+		overflow: auto;
 	}
 	.material-symbols-outlined {
 		position: absolute;
