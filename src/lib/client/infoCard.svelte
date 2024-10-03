@@ -42,7 +42,7 @@
         text-align: left;
     }
 
-    @media (min-width: 912px) {
+    @media (min-width: 769px) {
         .card {
             width: 30vw;
         }
@@ -86,7 +86,7 @@
         vertical-align: middle;
         width: 2.5vw;
     }
-    @media (max-width: 911px) {
+    @media (max-width: 768px) {
         .card-description {
             font-size: 1.5vh;
         }

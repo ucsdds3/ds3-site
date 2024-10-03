@@ -95,7 +95,7 @@
             justify-content: space-around;
             flex-direction: row;
     }
-    @media (min-width: 912px) {
+    @media (min-width: 769px) {
         .card-container {
             display: flex;
             justify-content: space-around;
@@ -103,7 +103,7 @@
         }
     }
 
-    @media (max-width: 911px) {
+    @media (max-width: 768px) {
         .card-container {
             display: block;
             justify-content: space-around;
