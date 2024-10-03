@@ -18,13 +18,13 @@
     <meta property="og:type" content="website">
 </svelte:head>
 
-<section>
-    <div class="title-sec">
-        <h1>GET INVOLVED</h1>
+<section class = "container-page">
+    <div class="title-sec" >
+        <h1 class = "content">GET INVOLVED</h1>
     </div>
     <div class= "info-sec">
-        <h2>Get Involved</h2>
-        <p>
+        <h2 class = "content">Get Involved</h2>
+        <p class = "content">
             As a not-for-profit student organization, the Data Science Student Society (DS3) is funded largely through donations. 
             You can support our cause by donating, which allows us to increase the extent to which we can achieve our mission. 
             Each donation goes a long way and makes a huge difference.
@@ -50,7 +50,9 @@
         font-family: 'Montserrat';
         background-color: var(--base-bg);
     }
-    
+    .content {
+        white-space: normal;
+    }
     .title-sec {
         height: 40vh;
         background-image: url("/images/backgrounds/city_skyline.jpg");
@@ -60,6 +62,8 @@
         align-items: center;
         text-align: center;
         justify-content: space-around;
+        text-wrap: wrap;
+
     }
     .title-sec h1 {
         color: white;
@@ -72,6 +76,8 @@
         padding-bottom: 5vh;
         margin-left: 15vw;
         margin-right: 15vw;
+       
+        
     }
     .info-sec h2 {
         text-align: center;
@@ -83,9 +89,27 @@
         font-family: 'Montserrat';
         font-size: 25px;
     }
-
+    
     .card-container {
-        display: flex;
-        justify-content: space-around;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
     }
+    @media (min-width: 912px) {
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 911px) {
+        .card-container {
+            display: block;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+    }
+    
+
 </style>

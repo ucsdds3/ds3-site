@@ -181,11 +181,11 @@
         }
         #socials-section {
             display: flex;
-            width: 20%;
             justify-content: space-evenly;
         }
         #socials-section img {
             height: 50px;
+            width: 80%;
             vertical-align: middle;
             margin: 0.5rem;
         }
@@ -208,13 +208,13 @@
             text-align: center;
             margin: 0;
         }
-        #socials-section {
+        #socials-section {  
             display: flex;
-            width: 25%;
             justify-content: space-evenly;
         }
         #socials-section img {
-            height: 30px;
+            height: 40px;
+            width: 80%;
             vertical-align: middle;
             align-items: center;
         }
