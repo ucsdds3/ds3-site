@@ -111,7 +111,7 @@ function parseDTInfo(start: any, end: any): string[] {
     const startObject: Date = new Date(start["dateTime"])
     const endObject: Date = new Date(end["dateTime"])
 
-    const date: string = `${monthHash[startObject.getMonth()]} ${startObject.getDate()}`
+    const date: string = `${monthHash[startObject.getMonth()]} ${startObject.getDate() - 1}`
     const startTime: string = startObject.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" })
     const endTime: string = endObject.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" })
 
