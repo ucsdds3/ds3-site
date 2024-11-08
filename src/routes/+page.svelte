@@ -1,34 +1,44 @@
+<!-- +page.svelte - Home Page Component -->
+
 <script lang="ts">
+	// Imports
 	import type { PageData } from './$types';
-	import Card from './card.svelte';
-	import cardData from '$web-config/landing-cards.json';
+	import Card from './card.svelte'; // Component for individual cards
+	import cardData from '$web-config/landing-cards.json'; // Data for the cards
 
 	export let data: PageData;
+
+	// Page metadata
 	export const title = "DS3 at UCSD";
 	export const description = "DS3 is the largest interdisciplinary data science organization on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, and opportunities for career development and community building.";
 </script>
 
+<!-- Page head metadata -->
 <svelte:head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{title}</title>
-    <meta name="description" content="{description}">
-    <meta property="og:title" content="{title}">
-    <meta property="og:description" content="{description}">
-    <meta property="og:image" content="/favicon.png">
-    <meta property="og:url" content="https://www.ds3ucsd.com/">
-    <meta property="og:type" content="website">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{title}</title>
+	<meta name="description" content="{description}" />
+	<!-- Graph meta tags -->
+	<meta property="og:title" content="{title}" />
+	<meta property="og:description" content="{description}" />
+	<meta property="og:image" content="/favicon.png" />
+	<meta property="og:url" content="https://www.ds3ucsd.com/" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
+<!-- Title Section -->
 <section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
-		<img src="svgs/splash.svg" alt="computer splash"/>
+		<img src="svgs/splash.svg" alt="computer splash" />
 	</div>
 </section>
+
+<!-- Info Section -->
 <section id="info-section">
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy"/>
+		<img src="/images/logos/big-logo-light.png" alt="DS3 logo" loading="lazy" />
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -38,28 +48,28 @@
 			offer professional development events, technical workshops, fully-fledged projects,
 			Hackathons, and online articles and podcasts.
 		</p>
-		<div id="countbox-row">
+		<div id="countbox-container">
 			<div class="countbox">
 				<p class="number-display">35</p>
-				 Articles <br> Written
+				Articles Written
 			</div>
 			<div class="countbox">
-				<p>500+</p>
-				 Hackathon <br> Attendees
-			</div>
-		</div>
-		<div id="countbox-row">
-			<div class="countbox">
-				<p>28</p>
-				 Projects <br> Completed
+				<p class="number-display">500+</p>
+				Hackathon Attendees
 			</div>
 			<div class="countbox">
-				<p>78</p>
-				 Workshops <br> Hosted
+				<p class="number-display">28</p>
+				Projects Completed
+			</div>
+			<div class="countbox">
+				<p class="number-display">78</p>
+				Workshops Hosted
 			</div>
 		</div>
 	</div>
 </section>
+
+<!-- Companies Section -->
 <section id="companies-section">
 	<div class="seperator">
 		<h2 class="lower-title">Where We've Been</h2>
@@ -67,19 +77,22 @@
 			{#each data.imagePaths as imageURL}
 				<img
 					src={imageURL.replace('/static', '')}
-					alt={`${imageURL
+					alt="{imageURL
 						.replace('.png', '')
-						.replace('/static/images/company-logos/', '')} company logo`}
-					class="company-logos"
+						.replace('/static/images/company-logos/', '')} company logo"
+					class="company-logo"
 					loading="lazy"
 				/>
 			{/each}
 		</div>
 	</div>
 </section>
+
+<!-- Events Section -->
 <section id="events-section">
 	<div class="seperator">
 		<h2 class="lower-title">What We Do</h2>
+		<!-- Iterative card display -->
 		{#each cardData as card}
 			<Card {...card} />
 		{/each}
@@ -87,163 +100,153 @@
 </section>
 
 <style>
-	/* Meta Styling */
+	/* Global Styles */
 	@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-	@font-face {
-		font-family: 'Montserrat Bold';
-		src: url('/fonts/montserrat.bold.ttf');
+
+	:global(body) {
+		font-family: 'Montserrat', 'Poppins', sans-serif;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+
+		/* Colors */
+		--ds3-orange: #f58134;
+		--ds3-blue: #11b3c9;
+		--ds3-gray: #2e2e2e;
+		--ds3-orange-lighten: #f29c62;
+		--ds3-blue-lighten: #75c8d3;
+		--ds3-gray-lighten: #575757;
+		--base-bg: #f8f8f8;
 	}
+
+	/* Reset box-sizing for all elements */
+	*, *::before, *::after {
+		box-sizing: inherit;
+	}
+
+	/* Base styles */
 	section {
-		font-family: 'Montserrat', 'Poppins';
-		padding: 10vh 2vh;
+		padding: 10vh 2vw;
 		background-color: var(--base-bg);
-		/* height: 100vh; */
 	}
-	@media (min-height: 1200px) {
-		.seperator {
-			margin: 0 17.5vw;
-		}
+
+	.seperator {
+		max-width: 1200px;
+		margin: 0 auto;
 	}
-	@media (max-height: 1199px) {
-		.seperator {
-			margin: 0 10vw;
-		}
-	}
-	.lower-title {
-		font-family: 'Montserrat Bold';
-		font-size: 67.5px;
-		font-weight: 1000;
-		text-align: center;
-	}
-	/* Individual section styling */
-	@media (min-height: 1200px) {
-		#title {
-			font-weight: bold;
-			width: 35vw;
-		}
-	}
-	@media (max-height: 1199px) {
-		#title {
-			font-weight: bolder;
-		}
-	}
+
+	/* Title Section */
 	#title-section {
 		min-height: 75vh;
 		display: flex;
 		align-items: center;
-		background: white;
-		max-width: 100%;
-		overflow-x: hidden;
-		overflow-y: hidden;
-	}
-	#title-section div {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 5vh;
-	}
-	#title-section img {
-		max-width: 600px;
-		-webkit-animation: MoveUpDown 5s infinite linear;
-		animation: MoveUpDown 5s infinite linear;
-	}
-	@media screen and (max-width: 1220px) {
-		#title-section div {
-			flex-direction: column;
-		}
-		#title-section img {
-			height: 400px;
-			margin: 0 auto;
-		}
-		.seperator {
-			margin: 0 0vw;
-		}
+		background-color: white;
+		overflow: hidden;
 	}
 
-	#info-section {
-		background-image: url('/images/stock-people/librarywalk.png');
-		background-color: rgba(255, 255, 255, 0.9);
-		background-size: cover;
-		background-position: center;
-		color: white;
-	}
-	#info-section img {
-		height: 20vh;
-		margin: 10vh 0 4vh;
-	}
-	#info-section #info-paragraph {
-		font-size: 24px;
-		text-align: left;
-		background-color: rgba(40, 10, 0, 0.5);
-		padding: 10px;
-		border: 0.1px solid white;
-		box-shadow: 40px;
-	}
-	#info-section #countbox-row {
+	#title-section .seperator {
 		display: flex;
-		flex-direction: row;
-		font-size: 4vh;
-		text-align: center;
-		justify-content: space-between;
-		width: 100%;
-		margin-top: 2vh auto;
-		margin-bottom: 0;
-		
-	}
-	#countbox-row .countbox {
-		flex: 1;
-		margin: 0;
-		font-size: 5vh;
-		font-weight: bolder;
-		border-top: 2.5px solid white;
-		
-		padding: 5px;
-		max-width: 100%;
-		text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.7);
-	}
-	.countbox p {
-		font-family: 'Montserrat Bold';
-		font-size: 100px;
-		margin: 1vh 0;
-		color: var(--ds3-orange);
-		font-weight: bold;
-		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
-	}
-	#logo-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 25%);
-		grid-auto-rows: 0.5fr;
-		gap: 1rem;
-		justify-content: space-between;
+		flex-direction: column;
 		align-items: center;
-		vertical-align: middle;
+		text-align: center;
 	}
-	.company-logos {
-		max-width: 50%;
-		margin: 0 auto;
+
+	#title-section img {
+		max-width: 100%;
+		height: auto;
+		margin-top: 2rem;
+		animation: MoveUpDown 5s infinite linear;
+		opacity: 0;
+		transform: translateY(-50%);
+		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
 	}
 
 	#title {
-		font-family: 'Montserrat Bold';
-		font-size: 60px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 2.5rem;
 		color: #333333;
-		font-weight: bolder;
+		font-weight: bold;
 		margin: 0;
-		display: flex;
-		align-items: center;
 		opacity: 0;
-		text-align: center;
 		transform: translateY(-50px);
 		animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
 	}
 
-	#title-section img {
-
-		opacity: 0;
-		transform: translateY(-100%);
-		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
+	/* Info Section */
+	#info-section {
+		background-image: linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url('/images/stock-people/librarywalk.png');
+		background-size: cover;
+		background-position: center;
+		color: white;
 	}
 
-	/* Animation for Title */
+	#info-section img {
+		height: 20vh;
+		margin: 5vh 0 4vh;
+	}
+
+	#info-paragraph {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+
+	/* Statistics Boxes */
+	#countbox-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.countbox {
+		flex: 1 1 200px;
+		text-align: center;
+	}
+
+	.number-display {
+		font-family: 'Montserrat Bold', sans-serif;
+		font-size: 3rem;
+		margin: 0.5rem 0;
+		color: var(--ds3-orange);
+	}
+
+	/* Companies Section */
+	#companies-section {
+		background-color: #fff;
+	}
+
+	.lower-title {
+		font-family: 'Montserrat Bold', sans-serif;
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	#logo-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 1.5rem;
+		align-items: center;
+	}
+
+	.company-logo {
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	/* Events Section */
+	#events-section {
+		background-color: var(--base-bg);
+	}
+
+	/* Animations */
 	@keyframes fadeAndSlideDownTitle {
 		0% {
 			opacity: 0;
@@ -255,7 +258,6 @@
 		}
 	}
 
-	/* Animation for Splash */
 	@keyframes fadeInSplash {
 		0% {
 			opacity: 0;
@@ -263,13 +265,13 @@
 		}
 		100% {
 			opacity: 1;
-			transform: translateY(50%);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes MoveUpDown {
 		0%,
-	    50%,
+		50%,
 		100% {
 			transform: translateY(0);
 		}
@@ -280,27 +282,40 @@
 			transform: translateY(10px);
 		}
 	}
-	@media screen and (max-width: 1200px) {
-		#info-section #countbox-row {
-			flex-direction: column;
-		}
+
+	/* Responsive font sizes */
+	h1, h2 {
+		margin: 0.5rem 0;
 	}
-	@media screen and (max-width: 760px) {
-		#logo-grid {
-        	grid-template-columns: repeat(3, 30%);
-    	}
-		#info-section #info-paragraph {
-			font-size: 18px;
-		}
-		#countbox-row .countbox {
-			font-size: 30px;
-		}
-		#title {
-			max-width: 100%;
-			font-size: 40px;
-		}
-		.countbox p { 
-			font-size: 80px;
-		}
+
+	h1 {
+		font-size: 2.5rem;
 	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin: 0.5rem 0;
+	}
+
+	/* Responsive Images */
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Cards Responsiveness */
+	#events-section .seperator {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	Card {
+		width: 100%;
+	}
+
+	/* Removed unnecessary media queries and rely on flex and grid for responsiveness */
 </style>
