@@ -31,7 +31,6 @@
 <section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
-		<img src="svgs/splash.svg" alt="computer splash" />
 	</div>
 </section>
 
