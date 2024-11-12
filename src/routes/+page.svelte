@@ -5,12 +5,29 @@
 	import type { PageData } from './$types';
 	import Card from './card.svelte'; // Component for individual cards
 	import cardData from '$web-config/landing-cards.json'; // Data for the cards
+	import { onMount } from 'svelte';
+	import { tweened } from 'svelte/motion';
+	import { quintOut } from 'svelte/easing'; // Easing function for smooth animation
 
 	export let data: PageData;
 
 	// Page metadata
 	export const title = "DS3 at UCSD";
 	export const description = "DS3 is the largest interdisciplinary data science organization on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, and opportunities for career development and community building.";
+
+	// Animated counters
+	const count1 = tweened(0, { duration: 2000, easing: quintOut });
+	const count2 = tweened(0, { duration: 2000, easing: quintOut });
+	const count3 = tweened(0, { duration: 2000, easing: quintOut });
+	const count4 = tweened(0, { duration: 2000, easing: quintOut });
+
+	// Set final values on component mount
+	onMount(() => {
+		count1.set(1700);
+		count2.set(700);
+		count3.set(100);
+		count4.set(100);
+	});
 </script>
 
 <!-- Page head metadata -->
@@ -37,7 +54,7 @@
 <!-- Info Section -->
 <section id="info-section">
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="DS3 logo" loading="lazy" />
+		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy"/>
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -48,41 +65,28 @@
 			Hackathons, and online articles and podcasts.
 		</p>
 		<div id="countbox-container">
-			<div class="countbox">
-				<p class="number-display">35</p>
-				Articles Written
+			<!-- First row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count1)}+</p>
+					<p class="stat-title">Discord <br /> Members</p>
+				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count2)}+</p>
+					<p class="stat-title">Hackathon <br /> Attendees</p>
+				</div>
 			</div>
-			<div class="countbox">
-				<p class="number-display">500+</p>
-				Hackathon Attendees
+			<!-- Second row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count3)}+</p>
+					<p class="stat-title">Projects <br /> Mentored</p>
+				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count4)}+</p>
+					<p class="stat-title">Workshops <br /> Hosted</p>
+				</div>
 			</div>
-			<div class="countbox">
-				<p class="number-display">28</p>
-				Projects Completed
-			</div>
-			<div class="countbox">
-				<p class="number-display">78</p>
-				Workshops Hosted
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Companies Section -->
-<section id="companies-section">
-	<div class="seperator">
-		<h2 class="lower-title">Where We've Been</h2>
-		<div id="logo-grid">
-			{#each data.imagePaths as imageURL}
-				<img
-					src={imageURL.replace('/static', '')}
-					alt="{imageURL
-						.replace('.png', '')
-						.replace('/static/images/company-logos/', '')} company logo"
-					class="company-logo"
-					loading="lazy"
-				/>
-			{/each}
 		</div>
 	</div>
 </section>
@@ -98,9 +102,30 @@
 	</div>
 </section>
 
+<!-- Companies Section -->
+<section id="companies-section">
+	<div class="seperator">
+		<h2 class="lower-title">Where We've Been</h2>
+		<div id="logo-grid">
+			{#each data.imagePaths as imageURL}
+				<img
+					src={imageURL.replace('/static', '')}
+					alt="{imageURL.replace('.png', '').replace('/static/images/company-logos/', '')} company logo"
+					class="company-logo"
+					loading="lazy"
+				/>
+			{/each}
+		</div>
+	</div>
+</section>
+
 <style>
 	/* Global Styles */
 	@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+	@font-face {
+		font-family: 'Montserrat Bold';
+		src: url('/fonts/montserrat.bold.ttf');
+	}
 
 	:global(body) {
 		font-family: 'Montserrat', 'Poppins', sans-serif;
@@ -132,11 +157,12 @@
 	.seperator {
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0 2vw;
 	}
 
 	/* Title Section */
 	#title-section {
-		min-height: 75vh;
+		min-height: 50vh; /* Adjusted height */
 		display: flex;
 		align-items: center;
 		background-color: white;
@@ -150,21 +176,11 @@
 		text-align: center;
 	}
 
-	#title-section img {
-		max-width: 100%;
-		height: auto;
-		margin-top: 2rem;
-		animation: MoveUpDown 5s infinite linear;
-		opacity: 0;
-		transform: translateY(-50%);
-		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
-	}
-
 	#title {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Montserrat Bold';
 		font-size: 2.5rem;
 		color: #333333;
-		font-weight: bold;
+		font-weight: bolder; /* Ensuring bold font */
 		margin: 0;
 		opacity: 0;
 		transform: translateY(-50px);
@@ -191,32 +207,68 @@
 	#info-paragraph {
 		font-size: 1.1rem;
 		line-height: 1.6;
-		margin-bottom: 2rem;
+		padding: 1.5rem;
+		border: 2px solid white;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		margin: 0 auto 2rem;
+		width: 100%;
 	}
 
 	/* Statistics Boxes */
 	#countbox-container {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		gap: 2rem;
 	}
 
+	#countbox-row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
 	.countbox {
-		flex: 1 1 200px;
+		flex: 1;
 		text-align: center;
+		padding: 1rem;
+		position: relative;
 	}
 
+	/* Styling for the numbers */
 	.number-display {
-		font-family: 'Montserrat Bold', sans-serif;
-		font-size: 3rem;
-		margin: 0.5rem 0;
+		font-family: 'Montserrat Bold';
+		font-size: 4rem;
+		margin: 1vh 0;
 		color: var(--ds3-orange);
+		font-weight: bold;
+		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 	}
 
-	/* Companies Section */
-	#companies-section {
-		background-color: #fff;
+	/* Emphasize text under numbers */
+	.stat-title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: white;
+		margin: 0;
+	}
+
+	/* White line between numbers */
+	#countbox-row .countbox:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		top: 10%;
+		right: 0;
+		transform: translateY(0);
+		width: 1px;
+		height: 80%;
+		background-color: white;
+	}
+
+	/* Events Section */
+	#events-section {
+		background-color: var(--base-bg);
 	}
 
 	.lower-title {
@@ -225,6 +277,11 @@
 		font-weight: bold;
 		text-align: center;
 		margin-bottom: 2rem;
+	}
+
+	/* Companies Section */
+	#companies-section {
+		background-color: #fff;
 	}
 
 	#logo-grid {
@@ -240,11 +297,6 @@
 		margin: 0 auto;
 	}
 
-	/* Events Section */
-	#events-section {
-		background-color: var(--base-bg);
-	}
-
 	/* Animations */
 	@keyframes fadeAndSlideDownTitle {
 		0% {
@@ -254,31 +306,6 @@
 		100% {
 			opacity: 1;
 			transform: translateY(0);
-		}
-	}
-
-	@keyframes fadeInSplash {
-		0% {
-			opacity: 0;
-			transform: translateY(-50%);
-		}
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	@keyframes MoveUpDown {
-		0%,
-		50%,
-		100% {
-			transform: translateY(0);
-		}
-		25% {
-			transform: translateY(-10px);
-		}
-		75% {
-			transform: translateY(10px);
 		}
 	}
 
@@ -312,9 +339,4 @@
 		align-items: center;
 	}
 
-	Card {
-		width: 100%;
-	}
-
-	/* Removed unnecessary media queries and rely on flex and grid for responsiveness */
 </style>
