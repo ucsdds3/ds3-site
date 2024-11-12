@@ -3,11 +3,11 @@
 <script lang="ts">
 	// Imports
 	import type { PageData } from './$types';
-	import Card from './card.svelte'; // Component for individual cards
+	import Card from './card.svelte'; // Component for "What We Do" cards
 	import cardData from '$web-config/landing-cards.json'; // Data for the cards
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import { tweened } from 'svelte/motion';
-	import { quintOut } from 'svelte/easing'; // Easing function for smooth animation
+	import { cubicInOut } from 'svelte/easing'; //Easing function for smooth animation, for numbers in stats section
 
 	export let data: PageData;
 
@@ -15,18 +15,64 @@
 	export const title = "DS3 at UCSD";
 	export const description = "DS3 is the largest interdisciplinary data science organization on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, and opportunities for career development and community building.";
 
-	// Animated counters
-	const count1 = tweened(0, { duration: 2000, easing: quintOut });
-	const count2 = tweened(0, { duration: 2000, easing: quintOut });
-	const count3 = tweened(0, { duration: 2000, easing: quintOut });
-	const count4 = tweened(0, { duration: 2000, easing: quintOut });
+	// Animated counters with updated easing and increased duration for smoother animation
+	const count1 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count2 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count3 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count4 = tweened(0, { duration: 4000, easing: cubicInOut });
 
-	// Set final values on component mount
-	onMount(() => {
+	let statsSection: HTMLElement;
+	let observer: IntersectionObserver;
+
+	// Function to start counters
+	function startCounters() {
 		count1.set(1700);
 		count2.set(700);
 		count3.set(100);
 		count4.set(100);
+	}
+
+	// The following function is used to animate the stats section when it is visible, not when the page is immediately loaded
+	// Set up Intersection Observer
+	function observeStatsSection() {
+		// Ensure IntersectionObserver exists (it won't on the server)
+		if (typeof IntersectionObserver === 'undefined') {
+			// Fallback: start counters immediately
+			startCounters();
+			return;
+		}
+
+		observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						startCounters();
+						if (observer && entry.target) {
+							observer.unobserve(entry.target); // Stop observing after counters have started
+						}
+					}
+				});
+			},
+			{
+				threshold: 0.3, // Start animation when 30% of the section is visible
+			}
+		);
+		if (statsSection) {
+			observer.observe(statsSection);
+		}
+	}
+
+	// Initialize observer on component mount
+	onMount(() => {
+		observeStatsSection();
+	});
+
+	// Clean up observer on component destroy
+	onDestroy(() => {
+		if (observer && statsSection) {
+			observer.unobserve(statsSection);
+			observer.disconnect();
+		}
 	});
 </script>
 
@@ -42,6 +88,8 @@
 	<meta property="og:image" content="/favicon.png" />
 	<meta property="og:url" content="https://www.ds3ucsd.com/" />
 	<meta property="og:type" content="website" />
+	<!-- Google Fonts Import for Montserrat Bold -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <!-- Title Section -->
@@ -52,9 +100,9 @@
 </section>
 
 <!-- Info Section -->
-<section id="info-section">
+<section id="info-section" bind:this={statsSection}>
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="ds3 logo big" loading="lazy"/>
+		<img src="/images/logos/big-logo-light.png" alt="DS3 logo big" loading="lazy"/>
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -110,7 +158,9 @@
 			{#each data.imagePaths as imageURL}
 				<img
 					src={imageURL.replace('/static', '')}
-					alt="{imageURL.replace('.png', '').replace('/static/images/company-logos/', '')} company logo"
+					alt={`${imageURL
+						.replace('.png', '')
+						.replace('/static/images/company-logos/', '')} company logo`}
 					class="company-logo"
 					loading="lazy"
 				/>
@@ -120,13 +170,10 @@
 </section>
 
 <style>
-	/* Global Styles */
-	@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-	@font-face {
-		font-family: 'Montserrat Bold';
-		src: url('/fonts/montserrat.bold.ttf');
-	}
+	/* Google Font - Montserrat Bold */
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+	/* Global Styles */
 	:global(body) {
 		font-family: 'Montserrat', 'Poppins', sans-serif;
 		margin: 0;
@@ -162,11 +209,12 @@
 
 	/* Title Section */
 	#title-section {
-		min-height: 50vh; /* Adjusted height */
+		min-height: 75vh;
 		display: flex;
 		align-items: center;
-		background-color: white;
-		overflow: hidden;
+		background: white;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
 	#title-section .seperator {
@@ -177,23 +225,30 @@
 	}
 
 	#title {
-		font-family: 'Montserrat Bold';
+		font-family: 'Montserrat', sans-serif; /* Reverted to Montserrat */
 		font-size: 2.5rem;
 		color: #333333;
-		font-weight: bolder; /* Ensuring bold font */
+		font-weight: 700; 
 		margin: 0;
+		display: flex;
+		align-items: center;
 		opacity: 0;
+		text-align: center;
 		transform: translateY(-50px);
 		animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
 	}
 
+	#title-section img {
+		max-width: 600px;
+		opacity: 0;
+		transform: translateY(-100%);
+		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
+	}
+
 	/* Info Section */
 	#info-section {
-		background-image: linear-gradient(
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.5)
-			),
-			url('/images/stock-people/librarywalk.png');
+		background-image: url('/images/stock-people/librarywalk.png');
+		background-color: rgba(255, 255, 255, 0.9);
 		background-size: cover;
 		background-position: center;
 		color: white;
@@ -201,7 +256,7 @@
 
 	#info-section img {
 		height: 20vh;
-		margin: 5vh 0 4vh;
+		margin: 10vh 0 4vh;
 	}
 
 	#info-paragraph {
@@ -212,7 +267,7 @@
 		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 10px;
 		margin: 0 auto 2rem;
-		width: 100%;
+		width: 80%; 
 	}
 
 	/* Statistics Boxes */
@@ -234,22 +289,26 @@
 		text-align: center;
 		padding: 1rem;
 		position: relative;
+		min-height: 6rem; /* Ensure enough space for number */
 	}
 
 	/* Styling for the numbers */
 	.number-display {
-		font-family: 'Montserrat Bold';
-		font-size: 4rem;
+		font-family: 'Montserrat', sans-serif; 
+		font-weight: 700; 
+		font-size: 4rem; 
 		margin: 1vh 0;
 		color: var(--ds3-orange);
-		font-weight: bold;
 		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+		/* Prevent layout shift by setting a fixed height */
+		line-height: 1;
+		height: 4rem; /* Same as font-size */
 	}
 
 	/* Emphasize text under numbers */
 	.stat-title {
-		font-size: 1.5rem;
-		font-weight: bold;
+		font-size: 1.5rem; 
+		font-weight: bold; 
 		color: white;
 		margin: 0;
 	}
@@ -272,7 +331,7 @@
 	}
 
 	.lower-title {
-		font-family: 'Montserrat Bold', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 2.5rem;
 		font-weight: bold;
 		text-align: center;
@@ -309,6 +368,42 @@
 		}
 	}
 
+	/* Animation for Splash */
+	@keyframes fadeInSplash {
+		0% {
+			opacity: 0;
+			transform: translateY(-50%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(50%);
+		}
+	}
+
+	/* Movement Animation */
+	@keyframes MoveUpDown {
+		0%,
+		50%,
+		100% {
+			transform: translateY(0);
+		}
+		25% {
+			transform: translateY(-10px);
+		}
+		75% {
+			transform: translateY(10px);
+		}
+	}
+
+	/* Prevent layout shifts by setting fixed height */
+	.countbox {
+		flex: 1;
+		text-align: center;
+		padding: 1rem;
+		position: relative;
+		min-height: 6rem; /* Ensure enough space for number */
+	}
+
 	/* Responsive font sizes */
 	h1, h2 {
 		margin: 0.5rem 0;
@@ -339,4 +434,26 @@
 		align-items: center;
 	}
 
+	/* Card {
+		width: 100%;
+	} */
+
+	@media screen and (max-width: 760px) {
+		#logo-grid {
+			grid-template-columns: repeat(3, 30%);
+		}
+		#info-paragraph {
+			font-size: 18px;
+		}
+		#countbox-row .countbox {
+			font-size: 30px;
+		}
+		#title {
+			max-width: 100%;
+			font-size: 40px;
+		}
+		.number-display { 
+			font-size: 80px;
+		}
+	}
 </style>
