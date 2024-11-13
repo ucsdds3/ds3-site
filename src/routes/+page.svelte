@@ -20,6 +20,8 @@
 	const count2 = tweened(0, { duration: 4000, easing: cubicInOut });
 	const count3 = tweened(0, { duration: 4000, easing: cubicInOut });
 	const count4 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count5 = tweened(0, { duration: 4000, easing: cubicInOut });
+
 
 	let statsSection: HTMLElement;
 	let observer: IntersectionObserver;
@@ -30,6 +32,7 @@
 		count2.set(700);
 		count3.set(100);
 		count4.set(100);
+		count5.set(35);
 	}
 
 	// The following function is used to animate the stats section when it is visible, not when the page is immediately loaded
@@ -93,11 +96,11 @@
 </svelte:head>
 
 <!-- Title Section -->
-<section id="title-section">
+<!-- <section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
 	</div>
-</section>
+</section> -->
 
 <!-- Info Section -->
 <section id="info-section" bind:this={statsSection}>
@@ -133,6 +136,13 @@
 				<div class="countbox">
 					<p class="number-display">{Math.floor($count4)}+</p>
 					<p class="stat-title">Workshops <br /> Hosted</p>
+				</div>
+			</div>
+			<!-- Third row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count5)}+</p>
+					<p class="stat-title">Articles <br /> Written</p>
 				</div>
 			</div>
 		</div>
