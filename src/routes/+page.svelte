@@ -96,11 +96,12 @@
 </svelte:head>
 
 <!-- Title Section -->
-<!-- <section id="title-section">
+<section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
+		<img src="svgs/splash.svg" alt="computer splash" />
 	</div>
-</section> -->
+</section>
 
 <!-- Info Section -->
 <section id="info-section" bind:this={statsSection}>
@@ -229,7 +230,7 @@
 
 	#title-section .seperator {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
 		text-align: center;
 	}
