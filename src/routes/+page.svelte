@@ -3,14 +3,81 @@
 <script lang="ts">
 	// Imports
 	import type { PageData } from './$types';
-	import Card from './card.svelte'; // Component for individual cards
+	import Card from './card.svelte'; // Component for "What We Do" cards
 	import cardData from '$web-config/landing-cards.json'; // Data for the cards
+	import { onMount, onDestroy } from 'svelte';
+	import { tweened } from 'svelte/motion';
+	import { cubicInOut } from 'svelte/easing'; //Easing function for smooth animation, for numbers in stats section
 
 	export let data: PageData;
 
 	// Page metadata
 	export const title = "DS3 at UCSD";
 	export const description = "DS3 is the largest interdisciplinary data science organization on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, and opportunities for career development and community building.";
+
+	// Animated counters with updated easing and increased duration for smoother animation
+	const count1 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count2 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count3 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count4 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count5 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count6 = tweened(0, { duration: 4000, easing: cubicInOut });
+
+
+	let statsSection: HTMLElement;
+	let observer: IntersectionObserver;
+
+	// counters
+	function startCounters() {
+		count1.set(1700);
+		count2.set(700);
+		count3.set(100);
+		count4.set(100);
+		count5.set(35);
+		count6.set(20);
+	}
+
+	// The following function is used to animate the stats section when it is visible, not when the page is immediately loaded
+	function observeStatsSection() {
+		// Ensure IntersectionObserver exists (it won't on the server)
+		if (typeof IntersectionObserver === 'undefined') {
+			// Fallback: start counters immediately
+			startCounters();
+			return;
+		}
+
+		observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						startCounters();
+						if (observer && entry.target) {
+							observer.unobserve(entry.target); // Stop observing after counters have started
+						}
+					}
+				});
+			},
+			{
+				threshold: 0.3, // Start animation when 30% of the section is visible
+			}
+		);
+		if (statsSection) {
+			observer.observe(statsSection);
+		}
+	}
+
+	// Initialize observer on component mount
+	onMount(() => {
+		observeStatsSection();
+	});
+
+	// Clean up observer on component destroy
+	onDestroy(() => {
+		if (observer && statsSection) {
+			observer.unobserve(statsSection);
+			observer.disconnect();
+		}
+	});
 </script>
 
 <!-- Page head metadata -->
@@ -25,6 +92,8 @@
 	<meta property="og:image" content="/favicon.png" />
 	<meta property="og:url" content="https://www.ds3ucsd.com/" />
 	<meta property="og:type" content="website" />
+	<!-- Google Fonts Import for Montserrat Bold -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <!-- Title Section -->
@@ -36,9 +105,9 @@
 </section>
 
 <!-- Info Section -->
-<section id="info-section">
+<section id="info-section" bind:this={statsSection}>
 	<div class="seperator">
-		<img src="/images/logos/big-logo-light.png" alt="DS3 logo" loading="lazy" />
+		<img src="/images/logos/big-logo-light.png" alt="DS3 logo big" loading="lazy"/>
 		<p id="info-paragraph">
 			The Data Science Student Society (DS3) is the premier interdisciplinary data science
 			organization on campus, composed of over 400+ undergraduate students passionate about all
@@ -49,41 +118,39 @@
 			Hackathons, and online articles and podcasts.
 		</p>
 		<div id="countbox-container">
-			<div class="countbox">
-				<p class="number-display">35</p>
-				Articles Written
+			<!-- First row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count1)}+</p>
+					<p class="stat-title">Discord <br /> Members</p>
+				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count2)}+</p>
+					<p class="stat-title">Hackathon <br /> Attendees</p>
+				</div>
 			</div>
-			<div class="countbox">
-				<p class="number-display">500+</p>
-				Hackathon Attendees
+			<!-- Second row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count3)}+</p>
+					<p class="stat-title">Projects <br /> Mentored</p>
+				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count4)}+</p>
+					<p class="stat-title">Workshops <br /> Hosted</p>
+				</div>
 			</div>
-			<div class="countbox">
-				<p class="number-display">28</p>
-				Projects Completed
+			<!-- Third row of statistics -->
+			<div id="countbox-row">
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count5)}+</p>
+					<p class="stat-title">Articles <br /> Written</p>
+				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count6)}+</p>
+					<p class="stat-title">Industry <br /> Partners</p>
+				</div>
 			</div>
-			<div class="countbox">
-				<p class="number-display">78</p>
-				Workshops Hosted
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Companies Section -->
-<section id="companies-section">
-	<div class="seperator">
-		<h2 class="lower-title">Where We've Been</h2>
-		<div id="logo-grid">
-			{#each data.imagePaths as imageURL}
-				<img
-					src={imageURL.replace('/static', '')}
-					alt="{imageURL
-						.replace('.png', '')
-						.replace('/static/images/company-logos/', '')} company logo"
-					class="company-logo"
-					loading="lazy"
-				/>
-			{/each}
 		</div>
 	</div>
 </section>
@@ -99,10 +166,30 @@
 	</div>
 </section>
 
-<style>
-	/* Global Styles */
-	@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+<!-- Companies Section -->
+<section id="companies-section">
+	<div class="seperator">
+		<h2 class="lower-title">Where We've Been</h2>
+		<div id="logo-grid">
+			{#each data.imagePaths as imageURL}
+				<img
+					src={imageURL.replace('/static', '')}
+					alt={`${imageURL
+						.replace('.png', '')
+						.replace('/static/images/company-logos/', '')} company logo`}
+					class="company-logo"
+					loading="lazy"
+				/>
+			{/each}
+		</div>
+	</div>
+</section>
 
+<style>
+	/* Google Font - Montserrat Bold */
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+	/* Global Styles */
 	:global(body) {
 		font-family: 'Montserrat', 'Poppins', sans-serif;
 		margin: 0;
@@ -133,6 +220,7 @@
 	.seperator {
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0 2vw;
 	}
 
 	/* Title Section */
@@ -140,45 +228,42 @@
 		min-height: 75vh;
 		display: flex;
 		align-items: center;
-		background-color: white;
-		overflow: hidden;
+		background: white;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
 	#title-section .seperator {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
 		text-align: center;
 	}
 
-	#title-section img {
-		max-width: 100%;
-		height: auto;
-		margin-top: 2rem;
-		animation: MoveUpDown 5s infinite linear;
-		opacity: 0;
-		transform: translateY(-50%);
-		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
-	}
-
 	#title {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Montserrat', sans-serif; 
 		font-size: 2.5rem;
 		color: #333333;
-		font-weight: bold;
+		font-weight: 700; 
 		margin: 0;
+		display: flex;
+		align-items: center;
 		opacity: 0;
+		text-align: center;
 		transform: translateY(-50px);
 		animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
 	}
 
-	/* Info Section */
+	#title-section img {
+		max-width: 600px;
+		opacity: 0;
+		transform: translateY(-100%);
+		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
+	}
+
 	#info-section {
-		background-image: linear-gradient(
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.5)
-			),
-			url('/images/stock-people/librarywalk.png');
+		background-image: url('/images/stock-people/librarywalk.png');
+		background-color: rgba(255, 255, 255, 0.9);
 		background-size: cover;
 		background-position: center;
 		color: white;
@@ -186,46 +271,88 @@
 
 	#info-section img {
 		height: 20vh;
-		margin: 5vh 0 4vh;
+		margin: 10vh 0 4vh;
 	}
 
 	#info-paragraph {
 		font-size: 1.1rem;
 		line-height: 1.6;
-		margin-bottom: 2rem;
+		padding: 1.5rem;
+		border: 2px solid white;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		margin: 0 auto 2rem;
+		width: 80%; 
 	}
 
-	/* Statistics Boxes */
 	#countbox-container {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		gap: 2rem;
 	}
 
+	#countbox-row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+	}
+
 	.countbox {
-		flex: 1 1 200px;
+		flex: 1;
 		text-align: center;
+		padding: 1rem;
+		position: relative;
+		min-height: 6rem; 
 	}
 
 	.number-display {
-		font-family: 'Montserrat Bold', sans-serif;
-		font-size: 3rem;
-		margin: 0.5rem 0;
+		font-family: 'Montserrat', sans-serif; 
+		font-weight: 700; 
+		font-size: 4rem; 
+		margin: 1vh 0;
 		color: var(--ds3-orange);
+		text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+		/* Prevent layout shift by setting a fixed height */
+		line-height: 1;
+		height: 4rem; /* Same as font-size */
 	}
 
-	/* Companies Section */
-	#companies-section {
-		background-color: #fff;
+	/* Emphasize text under numbers */
+	.stat-title {
+		font-size: 1.5rem; 
+		font-weight: bold; 
+		color: white;
+		margin: 0;
+	}
+
+	/* White line between numbers */
+	#countbox-row .countbox:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		top: 10%;
+		right: 0;
+		transform: translateY(0);
+		width: 1px;
+		height: 80%;
+		background-color: white;
+	}
+
+	#events-section {
+		background-color: var(--base-bg);
 	}
 
 	.lower-title {
-		font-family: 'Montserrat Bold', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 2.5rem;
 		font-weight: bold;
 		text-align: center;
 		margin-bottom: 2rem;
+	}
+
+	#companies-section {
+		background-color: #fff;
 	}
 
 	#logo-grid {
@@ -241,12 +368,6 @@
 		margin: 0 auto;
 	}
 
-	/* Events Section */
-	#events-section {
-		background-color: var(--base-bg);
-	}
-
-	/* Animations */
 	@keyframes fadeAndSlideDownTitle {
 		0% {
 			opacity: 0;
@@ -258,6 +379,7 @@
 		}
 	}
 
+	/* Animation for Splash */
 	@keyframes fadeInSplash {
 		0% {
 			opacity: 0;
@@ -265,10 +387,11 @@
 		}
 		100% {
 			opacity: 1;
-			transform: translateY(0);
+			transform: translateY(50%);
 		}
 	}
 
+	/* Movement Animation */
 	@keyframes MoveUpDown {
 		0%,
 		50%,
@@ -281,6 +404,15 @@
 		75% {
 			transform: translateY(10px);
 		}
+	}
+
+	/* Prevent layout shifts by setting fixed height */
+	.countbox {
+		flex: 1;
+		text-align: center;
+		padding: 1rem;
+		position: relative;
+		min-height: 6rem; /* Ensure enough space for number */
 	}
 
 	/* Responsive font sizes */
@@ -313,9 +445,58 @@
 		align-items: center;
 	}
 
-	Card {
-		width: 100%;
-	}
 
-	/* Removed unnecessary media queries and rely on flex and grid for responsiveness */
+	@media screen and (max-width: 760px) {
+		#logo-grid {
+			grid-template-columns: repeat(3, 30%);
+		}
+		#info-paragraph {
+			font-size: 18px;
+		}
+		#countbox-row .countbox {
+			font-size: 30px;
+		}
+		#title {
+			max-width: 100%;
+			font-size: 40px;
+		}
+		.number-display { 
+			font-size: 80px;
+		}
+
+		/* Added Styles for Mobile Responsiveness */
+
+		/* Stack title and SVG vertically */
+		#title-section .seperator {
+			flex-direction: column;
+		}
+
+		#title-section img {
+			max-width: 100%;
+			margin-bottom: 80px; 
+			transform: translateY(0); 
+			animation: fadeInSplash 1s ease-in-out forwards; 
+		}
+
+		/* Prevent overflow in stats section */
+		#countbox-container {
+			width: 100%;
+			padding: 0 1rem;
+		}
+
+		#countbox-row {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#countbox-row .countbox {
+			width: 80%;
+			margin-bottom: 1rem;
+		}
+
+		/* Remove the white line between countboxes on mobile */
+		#countbox-row .countbox::after {
+			display: none;
+		}
+	}
 </style>
