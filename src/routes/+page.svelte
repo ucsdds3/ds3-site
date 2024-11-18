@@ -21,22 +21,23 @@
 	const count3 = tweened(0, { duration: 4000, easing: cubicInOut });
 	const count4 = tweened(0, { duration: 4000, easing: cubicInOut });
 	const count5 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count6 = tweened(0, { duration: 4000, easing: cubicInOut });
 
 
 	let statsSection: HTMLElement;
 	let observer: IntersectionObserver;
 
-	// Function to start counters
+	// counters
 	function startCounters() {
 		count1.set(1700);
 		count2.set(700);
 		count3.set(100);
 		count4.set(100);
 		count5.set(35);
+		count6.set(20);
 	}
 
 	// The following function is used to animate the stats section when it is visible, not when the page is immediately loaded
-	// Set up Intersection Observer
 	function observeStatsSection() {
 		// Ensure IntersectionObserver exists (it won't on the server)
 		if (typeof IntersectionObserver === 'undefined') {
@@ -145,6 +146,10 @@
 					<p class="number-display">{Math.floor($count5)}+</p>
 					<p class="stat-title">Articles <br /> Written</p>
 				</div>
+				<div class="countbox">
+					<p class="number-display">{Math.floor($count6)}+</p>
+					<p class="stat-title">Industry <br /> Partners</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -236,7 +241,7 @@
 	}
 
 	#title {
-		font-family: 'Montserrat', sans-serif; /* Reverted to Montserrat */
+		font-family: 'Montserrat', sans-serif; 
 		font-size: 2.5rem;
 		color: #333333;
 		font-weight: 700; 
@@ -256,7 +261,6 @@
 		animation: fadeInSplash 1s ease-in-out forwards, MoveUpDown 5s infinite linear 0.5s;
 	}
 
-	/* Info Section */
 	#info-section {
 		background-image: url('/images/stock-people/librarywalk.png');
 		background-color: rgba(255, 255, 255, 0.9);
@@ -281,7 +285,6 @@
 		width: 80%; 
 	}
 
-	/* Statistics Boxes */
 	#countbox-container {
 		display: flex;
 		flex-direction: column;
@@ -293,6 +296,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
 	}
 
 	.countbox {
@@ -300,10 +304,9 @@
 		text-align: center;
 		padding: 1rem;
 		position: relative;
-		min-height: 6rem; /* Ensure enough space for number */
+		min-height: 6rem; 
 	}
 
-	/* Styling for the numbers */
 	.number-display {
 		font-family: 'Montserrat', sans-serif; 
 		font-weight: 700; 
@@ -336,7 +339,6 @@
 		background-color: white;
 	}
 
-	/* Events Section */
 	#events-section {
 		background-color: var(--base-bg);
 	}
@@ -349,7 +351,6 @@
 		margin-bottom: 2rem;
 	}
 
-	/* Companies Section */
 	#companies-section {
 		background-color: #fff;
 	}
@@ -367,7 +368,6 @@
 		margin: 0 auto;
 	}
 
-	/* Animations */
 	@keyframes fadeAndSlideDownTitle {
 		0% {
 			opacity: 0;
@@ -445,9 +445,6 @@
 		align-items: center;
 	}
 
-	/* Card {
-		width: 100%;
-	} */
 
 	@media screen and (max-width: 760px) {
 		#logo-grid {
@@ -465,6 +462,41 @@
 		}
 		.number-display { 
 			font-size: 80px;
+		}
+
+		/* Added Styles for Mobile Responsiveness */
+
+		/* Stack title and SVG vertically */
+		#title-section .seperator {
+			flex-direction: column;
+		}
+
+		#title-section img {
+			max-width: 100%;
+			margin-bottom: 80px; 
+			transform: translateY(0); 
+			animation: fadeInSplash 1s ease-in-out forwards; 
+		}
+
+		/* Prevent overflow in stats section */
+		#countbox-container {
+			width: 100%;
+			padding: 0 1rem;
+		}
+
+		#countbox-row {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#countbox-row .countbox {
+			width: 80%;
+			margin-bottom: 1rem;
+		}
+
+		/* Remove the white line between countboxes on mobile */
+		#countbox-row .countbox::after {
+			display: none;
 		}
 	}
 </style>
