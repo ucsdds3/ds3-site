@@ -16,12 +16,12 @@
 	export const description = "DS3 is the largest interdisciplinary data science organization on campus, comprising of 100+ passionate undergraduate students. We offer resources, events, and opportunities for career development and community building.";
 
 	// Animated counters with updated easing and increased duration for smoother animation
-	const count1 = tweened(0, { duration: 4000, easing: cubicInOut });
-	const count2 = tweened(0, { duration: 4000, easing: cubicInOut });
-	const count3 = tweened(0, { duration: 4000, easing: cubicInOut });
-	const count4 = tweened(0, { duration: 4000, easing: cubicInOut });
-	const count5 = tweened(0, { duration: 4000, easing: cubicInOut });
-	const count6 = tweened(0, { duration: 4000, easing: cubicInOut });
+	const count1 = tweened(0, { duration: 2000, easing: cubicInOut });
+	const count2 = tweened(0, { duration: 2000, easing: cubicInOut });
+	const count3 = tweened(0, { duration: 2000, easing: cubicInOut });
+	const count4 = tweened(0, { duration: 2000, easing: cubicInOut });
+	const count5 = tweened(0, { duration: 2000, easing: cubicInOut });
+	const count6 = tweened(0, { duration: 2000, easing: cubicInOut });
 
 
 	let statsSection: HTMLElement;
