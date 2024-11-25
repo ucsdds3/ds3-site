@@ -1,0 +1,14 @@
+/* ... existing CSS ... */
+
+#title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333333;
+    font-weight: 900; /* Increased from 'bold' to '900' */
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeAndSlideDownTitle 0.3s ease-in-out 0.3s forwards;
+}
+
+/* ... rest of CSS ... */ 
