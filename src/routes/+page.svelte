@@ -8,7 +8,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { tweened } from 'svelte/motion';
 	import { cubicInOut } from 'svelte/easing'; //Easing function for smooth animation, for numbers in stats section
-
+	import EventReminder from './EventReminder.svelte';
 	export let data: PageData;
 
 	// Page metadata
@@ -22,7 +22,7 @@
 	const count4 = tweened(0, { duration: 2000, easing: cubicInOut });
 	const count5 = tweened(0, { duration: 2000, easing: cubicInOut });
 	const count6 = tweened(0, { duration: 2000, easing: cubicInOut });
-
+	let isLoading = true;
 
 	let statsSection: HTMLElement;
 	let observer: IntersectionObserver;
@@ -97,6 +97,13 @@
 </svelte:head>
 
 <!-- Title Section -->
+<EventReminder 
+    eventName="Project Application Deadline 12/9" 
+    eventDate={new Date('2024-12-09T23:59:00')}
+    eventDetails="Click here to apply by 12/9 by 11:59 PM"
+    eventUrl="https://docs.google.com/forms/d/e/1FAIpQLSfLqG-Sl4oDnuveVPutz9mMddTYZCRUh9vN2NU1C0EF0QIbNA/viewform"
+/>
+<!--note event url is optional-->
 <section id="title-section">
 	<div class="seperator">
 		<h1 id="title">Expanding the Data Science Community at UCSD</h1>
