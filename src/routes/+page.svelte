@@ -96,13 +96,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </svelte:head>
 
-<!-- Title Section -->
+<!-- Title Section
 <EventReminder 
     eventName="Project Application Deadline 12/9" 
     eventDate={new Date('2024-12-09T23:59:00')}
     eventDetails="Click here to apply by 12/9 by 11:59 PM"
     eventUrl="https://docs.google.com/forms/d/e/1FAIpQLSfLqG-Sl4oDnuveVPutz9mMddTYZCRUh9vN2NU1C0EF0QIbNA/viewform"
-/>
+/> -->
 <!--note event url is optional-->
 <section id="title-section">
 	<div class="seperator">

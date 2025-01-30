@@ -169,6 +169,15 @@
         "img": "kendallunderwood.png",
         "experience": "https://www.linkedin.com/in/kendall-underwood-a316232a9/",
         "description": "Kendall is a third-year data science student who is interested in consulting and biotechnology. She has worked on biomedical research projects analyzing data from DNA cells and hopes to continue finding her passion in data science. Outside of school, she likes to cook, hike, and hang out with friends and family."
+    },
+    {
+        "name": "Jason Qin",
+        "title": "Social Co-Director",
+        "linkedin": "https://www.linkedin.com/in/jiahe-qin-j17q/",
+        "email": "jiaheqin21@gmail.com",
+        "img": "jasonq.png",
+        "experience": "https://drive.google.com/file/d/1shajwuxNX5HD8wb0kZsTcH88Rg_GRq09/view",
+        "description": "Jason is a second year data science major at seventh college at UC San Diego. With experience in leadership, language education, and business operations, Jason has also developed diverse projects in data analysis, AI, and search systems using Python and Java."
     }
     
 ]
