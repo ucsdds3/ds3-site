@@ -108,6 +108,15 @@
         "description": "Nian-Nian is a third year data science and math-computer science major student with an interest in machine learning and a broad curiosity for exploring data science across various domains. She has experience in developing web applications and machine learning, including projects in classification and generative AI. She will be starting research in applying machine learning to signal processing. Outside of her studies, she enjoys hiking, drinking boba, and has recently taken up tennis."
     },
     {
+        "name": "Jason Qin",
+        "title": "Social Co-Director",
+        "linkedin": "https://www.linkedin.com/in/jiahe-qin-j17q/",
+        "email": "jiaheqin21@gmail.com",
+        "img": "jasonq.png",
+        "experience": "https://drive.google.com/file/d/1shajwuxNX5HD8wb0kZsTcH88Rg_GRq09/view",
+        "description": "Jason is a second year data science major at seventh college at UC San Diego. With experience in leadership, language education, and business operations, Jason has also developed diverse projects in data analysis, AI, and search systems using Python and Java."
+    },
+    {
         "name": "So Hirota",
         "title": "DataHacks Co-Director",
         "linkedin": "https://www.linkedin.com/in/so-hirota/",
